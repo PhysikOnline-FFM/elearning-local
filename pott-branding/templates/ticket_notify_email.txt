@@ -1,0 +1,33 @@
+{% choose ticket.new %}\
+{%   when True %}\
+Neues Ticket von $ticket.reporter zu $ticket.component:
+
+$ticket.description
+{%   end %}\
+{%   otherwise %}\
+{%     if changes_body %}\
+${_('Aenderungen (von %(author)s):', author=change.author)}
+
+$changes_body
+{%     end %}\
+{%     if changes_descr %}\
+{%       if not changes_body and not change.comment and change.author %}\
+${_('Beschreibung geaendert durch %(author)s:', author=change.author)}
+{%       end %}\
+$changes_descr
+{%     end %}\
+{%     if change.comment %}\
+
+${_('Kommentar:') if changes_body else _('Neuer Kommentar von %(author)s:', author=change.author)}
+
+$change.comment
+{%     end %}\
+{%   end %}\
+{% end %}\
+
+Zum Ticket gehen: $ticket.link
+oder auf die Mail antworten zum Kommentieren.
+
+--
+Dies ist eine automatische E-Mail vom $project.name
+$project.descr <${project.url or abs_href()}>

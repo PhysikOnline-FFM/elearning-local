@@ -1,0 +1,11 @@
+Dieses Ticket ist am $ticket.due_date fällig geworden!
+
+$ticket.description
+
+Zum Ticket gehen: $ticket.url
+oder auf diese Mail antworten zum Kommentieren.
+
+--
+Dies ist eine automatische E-Mail vom PhysikOnline POTT
+(Naechtlicher Due Date Cronjob)
+$trac_url

@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:py="http://genshi.edgewall.org/"
+      py:strip="">
+  <!--!
+    This file allows customizing the appearance of the Trac installation.
+    Add your customizations here and rename the file to site.html. Note that
+    it will take precedence over a global site.html placed in the directory
+    specified by [inherit] templates_dir.
+    
+    More information about site appearance customization can be found here:
+    
+      http://trac.edgewall.org/wiki/TracInterfaceCustomization#SiteAppearance
+  -->
+
+  <!-- body-Klassen zusammenbauen (Sensitive Tickets hervorheben, etc) -->
+  <?python
+      from genshi.builder import tag
+      body_klassen = ''
+      if defined('ticket') and ticket['sensitive'] == u'1':
+          body_klassen += ' sensitive-ticket'
+      if defined('page') and page.name.startswith('Intern'):
+          body_klassen += ' sensitive-wiki'
+      # to be used with py:attrs
+      body_klassen_attrs = {'class': body_klassen} ?>
+
+  <body py:match="body" py:attrs="body_klassen_attrs">
+     ${select('*|text()|comment()')}
+  </body>
+
+
+
+  <head py:match="head" py:attrs="select('@*')">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    ${select('*|text()|comment()')}
+    <link rel="stylesheet" type="text/css" href="/projekt/chrome/site/trac-physikonline.css" />
+    <script type="text/javascript" src="/projekt/chrome/site/trac-physikonline.js"></script>
+  </head>
+
+  <div py:match="div[@id='header']" py:attrs="select('@*')">
+     <a href="/projekt" class="logo" title="Zur Projektbereich-Startseite"><img alt="Physik elearning" src="/trac/chrome/site/logo_small-new.png" /></a>
+     <h1 class="toptitle"><a href="/" title="Zur Lernplattform">PhysikOnline</a></h1>
+     <div class="subtitle"><a href="/projekt" title="Zur Projektbereich-Startseite">Projektbereich <acronym title="PhysikOnlines Team Tracker">POTT</acronym></a></div>
+  </div>
+
+  <div py:match="div[@id='mainnav']" id="pe-mainnav">
+    ${select('*|text()|comment()')}
+  </div>
+
+  <div py:match="div[@id='footer']" id="pe-footer">
+    <hr />
+    <a href="/go/impressum">Impressum</a>
+ &middot;   <a href="/go/datenschutz">Nutzungsvereinbarungen und Datenschutz</a>
+ &middot;   <a href="/" title="Zum ILIAS-Lernsystem wechseln">zum eLearning-System</a>
+    <div class="ending">PhysikOnline ist ein Projekt des <a href="http://www.uni-frankfurt.de/fb/fb13/">Fachbereichs Physik</a> der <a href="http://www.uni-frankfurt.de">Uni Frankfurt</a>.</div>
+  </div>
+
+</html>

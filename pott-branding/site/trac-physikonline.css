@@ -1,0 +1,314 @@
+/* Quick & Dirty Trac auf PhysikOnline-Look, 07.12.2011, 25.12.2012 */
+
+body {
+	margin: 0; padding: 0;
+	background-color: #F9F9F9;
+	color: #222222; /* das ILIAS-"schwarz" */
+}
+
+/* Linkstile, global und in Bereichen*/
+:link, :visited {
+	/* Achtung: macht mehr kaputt als es ganz macht. */
+	color: #0033AA;
+	text-decoration: none;
+}
+
+/* Linkfarben an allen moeglichen Stellen durchsetzen */
+dt em, .milestone .info h2 em {
+	color: #0033AA;
+}
+
+a:hover {
+	color: #000;
+}
+
+#banner a:link, #banner a:visited,
+.nav a:link, .nav a:visited {
+	border: none;
+}
+
+.nav a:hover, .nav a:visited:hover {
+	background-color: transparent;
+	color: black;
+}
+
+
+/* Banner. */
+#banner {
+	height: 55px;
+	background: #F0F0F0 url("/projekt/chrome/site/ilias-head_back.gif");
+	position: relative;
+	z-index: 10;
+}
+
+#header a.logo {
+	position: absolute; top: 5px; left: 19px;
+	display: block;
+}
+
+#header h1, #header .subtitle {
+	float: left;
+	font-family: Verdana;
+	font-size: 16px; font-weight: normal;
+	letter-spacing: 0.05em;
+	padding: 16px 0 0 97px; margin: 0;
+	word-spacing: -0.1em;
+	color: #335599;
+}
+
+#header .subtitle {
+	padding-left: 15px;
+	font-size: 14px;
+}
+
+#header .subtitle a:after, #header .subtitle acronym:before {
+	content: url("/projekt/chrome/site/favicon.ico");
+	vertical-align: middle;
+	padding-right: 2px; /* sic - Abstand zu Text in mobile layout */
+}
+
+/* POTT-Label nur fuer mobile layout */
+#header .subtitle acronym { display: none; }
+
+#header a:link, #header a:visited {
+	color: #335599;
+}
+
+#header h1 a:after, #header h1 a:after {
+	/* etwas abgefahrener Effekt */
+	content: attr(title);
+	position: absolute; display: block;
+	top: 4px; left: 97px;
+	font-size: 10px; color: #555555;
+	letter-spacing: normal; word-spacing: normal;
+}
+
+#header h1 a:link:after, #header h1 a:visited:after { display: none; }
+#header h1 a:focus:after, #header h1 a:hover:after { display: block; }
+
+#metanav {
+	padding: 5px 12px;
+}
+
+#search {
+	position: absolute;
+	top: 55px; right: 14px;
+	line-height: 31px;
+}
+
+#pe-mainnav {
+	z-index: 1;
+	position: relative;
+	margin: 0; padding: 0;
+	height: 31px; width: 100%;
+	background-image: url("/projekt/chrome/site/ilias-mm_back.gif");
+}
+
+#pe-mainnav ul {
+	text-align: left;
+	margin: 0 0 0 97px;
+	padding: 0;
+}
+
+#pe-mainnav li {
+	white-space: nowrap;
+	display: inline;
+	margin: 0; padding: 0;
+}
+
+/* Behinderte Selektoren im trac.css, die ueberschrieben werden muessen */
+/*#mainnav li, #mainav ul *,
+#mainnav *:link, #mainnav *:link:hover,
+#mainnav *:visited, #mainnav *:visited:hover,
+#mainnav .active *:link, #mainnav .active *:link:hover,
+#mainnav .active *:visited, #mainnav .active *:visited:hover {
+	background: transparent;
+	border: none;
+	display: inline;
+	margin: 0; padding: 0;
+	font-weight: normal;
+}
+*/
+
+/* Behinderte Selektoren im trac.css, die ueberschrieben werden muessen */
+/** html #mainnav a:link, * html #mainnav a:visited,
+#mainnav .active a:link, #mainnav .active a:visited,
+#mainnav .active a:link:hover, #mainnav .active a:visited:hover,
+#mainnav a:link, #mainnav a:visited, #mainnav a:hover,
+#mainnav a:link:hover, #mainnav a:visited:hover {*/
+#pe-mainnav a {
+	background-color: #D0E8FF;
+	background-image: url("/projekt/chrome/site/ilias-mm_back2.gif");
+	color: #003388;
+	font-size: 12.1px;
+	line-height: 26px;
+	margin: 1px 0 2px -1px;
+	padding: 0 16px 3px; /* was: 10px -> 16px */
+	display: inline-block;
+	border-right: 1px solid #A3C8FF;
+	border-left: 1px solid #A3C8FF; /* sic */
+	box-shadow: none; border-radius: 0; /* seit trac1 */
+}
+
+/* und trotzdem bleibt Trac-Bullshit der gekillt werden muss */
+#pe-mainnav a:link, #pe-mainnav a:visited {
+	border-bottom: none;
+}
+
+/*#mainnav a:link:hover, #mainnav a:visited:hover,
+#mainnav .active a:link, #mainnav .active a:visited,
+#mainnav .active a:link:hover, #mainnav .active a:visited:hover {*/
+#pe-mainnav a:hover, #pe-mainnav a:focus {
+	background-image: url("/projekt/chrome/site/ilias-mm_back3.gif");
+	color: #000;i
+}
+
+#main {
+	padding: 17px;
+	background-color: #F9F9F9;
+	/* gemaess ILIAs4.3 #mainspacekeeper */
+	box-shadow: 0 2px 2px #D0D0D0 inset;
+}
+
+/* content was framed */
+.nomoreframed  #content {
+	border: 1px solid #BCCAE5;
+	background-color: white;
+	padding: 6px 12px;
+	margin: 10px 0;
+	/* gemaess ILIAS4.3 div.ilTabContentOuter  */
+	box-shadow: 3px 3px 4px #D0D0D0;
+}
+
+/* unternav etwas groesser und besser sichtbar */
+#pagepath a, #ctxtnav li {
+	font-size: 11px;
+	opacity: .5;
+/*	position: relative;
+	top: -6px;*/
+}
+
+#ctxtnav.nav ul {
+	font-size: 11px;
+}
+
+/* Regulaeren Footer-ID ersetzt, um nicht wieder in CSS-Wahnsinn zu kommen. */
+#pe-footer hr {
+	display: none;
+}
+
+#pe-footer {
+	text-align: center;
+	opacity: .7;
+	padding-bottom: 20px;
+}
+
+#pe-footer .ending a:link, #pe-footer .ending a:visited {
+	color: inherit; border-bottom: none;
+}
+
+#pe-footer .ending a:hover, #pe-footer .ending a:focus {
+	border-bottom: 1px dotted #bbb;	
+}
+
+/* Sensitive Inhalte hervorheben */
+body.sensitive-ticket #main, body.sensitive-wiki #main {
+	background-color: #FFF1F0;
+	background-image: url("/projekt/chrome/site/pott-sensitive-bg.png");
+}
+
+/* Inhaltsstile, zum Aufgreifen in der Wiki: */
+
+/* small-query wrapper um ein Query-Macro in einer Wiki-Seite */
+.small-query h2, .small-query .paging { display: none; }
+.small-query table { clear: none; width: auto; margin: 0; }
+
+/* Unnoetige Absaetze verstecken */
+.hide-p p { display: none; }
+
+img.right {
+	float: right;
+	margin: 0 0 15px 15px;
+}
+
+/* Warnungen und Infomessages*/
+.alert {
+    background-color: #FCF8E3;
+    border: 1px solid #FBEED5;
+    border-radius: 4px 4px 4px 4px;
+    color: #C09853;
+    margin-bottom: 20px;
+    padding: 8px 35px 8px 14px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* Weihnachtsaktion POTT #459  - Bommelmuetze aufm Logo */
+/*#header .logo:after {
+	position: absolute;
+	left: -5px; top: -21px;
+	content: url("/local/logo_weihnachten_overlay.png");
+}
+
+#header h1 { padding-left: 132px; }
+#header h1 a:hover::after, #header h1 a:focus::after {
+	position-left: 132px;
+}*/
+/* Ende der Weihnachtskorrekturen */
+
+/* Bugfix: Ueberbreite Meilensteine, usw.-Eingabefelder begrenzen */
+fieldset#properties input, fieldset#properties select {
+	max-width: 13em;
+}
+fieldset#properties td.fullrow input {
+	/* Eingabefelder ueber ganze Textbreite*/
+	max-width: inherit;
+	/* HTML-Attribut size="70" sorgt aber fuer Ueberbreite. Wegen Padding
+	   leider ein empirischer Wert 100%-padding*2 */
+	width: 98%;
+}
+
+
+
+/* mobile enhancements */
+@media handheld, screen and (max-width: 850px) { /* max-width was: 480px */
+	.hide-mobile { display: none; }
+	#banner a.logo, #banner h1 { display: none; }
+	#banner .subtitle a { display: block; text-indent: -9000px; }
+	#banner .subtitle acronym {
+		display: block; text-indent: 0;
+		position: absolute; left: 0; top: 0;
+		width: 100%; text-align: center;
+		line-height: 31px;
+		font-weight: bold;
+		font-size: 110%;
+		border-bottom: 1px solid #BCCAE5;
+		background-color: rgba(255,255,255,.4);
+	}	
+
+	#banner { height: auto; background-size: 100% 100%; }
+	form#search { position: static; top: 0; left: 0; }
+	form#search input.text { width: 50%; }
+	form#search div { text-align: center; }
+	#metanav ul { padding: 0; text-align: auto; }
+	/* dirty: */
+	#metanav a[href*="TracGuide"], #metanav a[href*="about"] { display: none; }
+	
+
+	.nav li, #pe-mainnav li { white-space: inherit; }
+	#pe-mainnav {
+		height: auto;
+		background-size: 100% 100%;
+	}
+	#pe-mainnav ul { margin-left: 0; }
+
+	#pe-mainnav a:link, #pe-mainnav a:visited {	
+		margin-bottom: 0;
+	}
+
+	#content {
+		margin-left: -17px; margin-right: -17px;
+		border-left: none; border-right: none;	
+	}
+} /* End of mobile enhancments */
+
+/* End of CSS file */
