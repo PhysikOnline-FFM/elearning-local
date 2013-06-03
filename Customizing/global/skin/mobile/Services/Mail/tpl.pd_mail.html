@@ -1,0 +1,29 @@
+<div class="ui-body ui-body-c">
+	<!-- BEGIN pers_image -->
+	<img style="float:left; margin-right:5px;" src="{IMG_SENDER}" alt="{ALT_SENDER}" border="0" />
+	<!-- END pers_image -->
+	<!-- BEGIN fullname -->{FROM}<br /><!-- END fullname -->{MAIL_LOGIN}
+	<br />{DATE}
+</div>
+<div class="ui-body ui-body-c">
+	{TXT_TO} {TO}
+</div>
+<!-- BEGIN cc -->
+<div class="ui-body ui-body-c">
+	{TXT_CC} {CC}
+</div>
+<!-- END cc -->
+<div class="ui-body ui-body-c">
+	<strong class="wordwrap">{SUBJECT}</strong>
+</div>
+<!-- BEGIN attachment -->
+<div class="ui-body ui-body-c">
+  <!-- BEGIN a_row -->
+	  <p>{FILE_NAME} <a class="il_ContainerItemCommand" href="{HREF_DOWNLOAD}">{TXT_DOWNLOAD}</a></p>
+  <!-- END a_row -->
+</div>
+<!-- END attachment -->
+<div  class="ui-body ui-body-d wordwrap" >
+	{MAIL_MESSAGE}
+</div>
+

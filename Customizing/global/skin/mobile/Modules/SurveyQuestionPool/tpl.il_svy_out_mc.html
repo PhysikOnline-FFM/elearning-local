@@ -1,0 +1,40 @@
+<!-- BEGIN question_data -->
+<!-- BEGIN questiontitle -->
+<div class="questionTitle">{QUESTION_TITLE}</div>
+<!-- END questiontitle -->
+{ERROR_MESSAGE}
+<p>{QUESTIONTEXT}<span class="obligatory">{OBLIGATORY_TEXT}</span></p>
+<!-- BEGIN min_max_msg -->
+<div class="surveyhint">{MIN_MAX_MSG}</div>
+<!-- END min_max_msg -->
+<!-- BEGIN tableoutput_mc -->
+<!-- BEGIN outer_row -->
+<!-- BEGIN mc_row -->
+<input type="checkbox" name="{QUESTION_ID}_value[]" value="{VALUE_MC}" id="{QUESTION_ID}_{VALUE_MC}"{CHECKED_MC} />
+<label for="{QUESTION_ID}_{VALUE_MC}"><span class="wordwrap">{TEXT_MC}</span></label>
+<!-- END mc_row -->
+<!-- BEGIN other_row -->
+<input type="checkbox" name="{QUESTION_ID}_value[]" value="{VALUE_MC}" id="{QUESTION_ID}_{VALUE_MC}"{CHECKED_MC} />
+<label for="{QUESTION_ID}_{VALUE_MC}"><span class="wordwrap">{OTHER_LABEL}</span></label> <input type="text" size="80" name="{QUESTION_ID}_{VALUE_MC}_other" {OTHER_VALUE}/>
+<!-- END other_row -->
+<!-- END outer_row -->
+<!-- BEGIN mc_col -->
+<!-- BEGIN checkbox_col -->
+<input type="checkbox" name="{QUESTION_ID}_value[]" value="{VALUE_MC}" id="{QUESTION_ID}_{VALUE_MC}"{CHECKED_MC} />
+<!-- END checkbox_col -->
+<!-- BEGIN text_outer_col -->
+<!-- BEGIN text_col -->
+<label for="{QUESTION_ID}_{VALUE_MC}"><span class="wordwrap">{TEXT_MC}</span></label>
+<!-- END text_col -->
+<!-- BEGIN text_other_col -->
+<label for="{QUESTION_ID}_{VALUE_MC}"><span class="wordwrap">{OTHER_LABEL}</span></label> <input type="text" size="50" name="{QUESTION_ID}_{VALUE_MC}_other" {OTHER_VALUE}/>
+<!-- END text_other_col -->
+<!-- END text_outer_col -->
+<!-- END mc_col -->
+<!-- END tableoutput_mc -->
+<!-- BEGIN material -->
+<p>
+{TEXT_MATERIAL}
+</p>
+<!-- END material -->
+<!-- END question_data -->

@@ -1,0 +1,43 @@
+<!-- BEGIN item -->
+<div class="ui-body ui-body-c">
+	<!-- BEGIN context -->
+	<h3><img alt="{CONTEXT_TITLE}" border="0" src="{IMG_CONTEXT_TITLE}" />
+	<a rel="external" target="_top" href="{HREF_CONTEXT_TITLE}">{CONTEXT_TITLE}</a></h3>
+	<!-- END context -->
+</div>
+
+<div class="ui-body ui-body-d">
+	<h4>{VAL_TITLE}</h4>
+
+	<!-- BEGIN content -->
+	<p>{VAL_CONTENT}</p>
+	<!-- END content -->
+	<!-- BEGIN long -->
+	<div>{VAL_LONG_CONTENT}</div>
+	<!-- END long -->
+	<!-- BEGIN player -->
+	<p>{PLAYER}</p>
+	<!-- END player -->
+	<!-- BEGIN download -->
+	<p style="text-align:right;">
+		<a rel="external" href="{HREF_DOWNLOAD}">{TXT_DOWNLOAD}</a>
+	</p>
+	<!-- END download -->
+
+	<p style="text-align:right;">
+		<!-- BEGIN ni_creation -->
+		<br />{TXT_CREATED}: {VAL_CREATION_DATE}
+		<!-- END ni_creation -->
+		<!-- BEGIN ni_update -->
+		<br />{TXT_LAST_UPDATE}: {VAL_LAST_UPDATE}
+		<!-- END ni_update -->
+		<!-- BEGIN access -->
+		<br />{TXT_ACCESS}: {VAL_ACCESS}
+		<!-- END access -->
+		<!-- BEGIN user_info -->
+		<br />{TXT_AUTHOR}: {VAL_AUTHOR}
+		<!-- END user_info -->
+	</p>
+
+</div>
+<!-- END item -->

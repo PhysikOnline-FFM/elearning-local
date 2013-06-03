@@ -1,0 +1,19 @@
+/*
+ * Overlay-Weihnachtsmuetze fuer Logo waehrend Adventszeit 2012
+ * POTT #459
+ * -- Sven, 01.12.2012
+ *
+ */
+
+/* Pure-CSS-Einbindung hat den Vorteil, dass alte Browser aussen vor sind */
+#po-logo:after {
+	position: absolute;
+	left: 14px;
+	top: -16px;
+	content: url("/local/logo_weihnachten_overlay.png");
+}
+
+div.ilTopTitle {
+	/* Dem Bommel aus dem Weg gehen */
+	padding-left: 127px;
+}

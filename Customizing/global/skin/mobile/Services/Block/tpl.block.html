@@ -1,0 +1,114 @@
+<div class="mobileBlock" id="{BTID}" <!-- BEGIN hclass -->type="small"<!-- END hclass --> <!-- BEGIN hclassb -->type="big"<!-- END hclassb --> >
+	<!-- BEGIN move -->
+	<!-- BEGIN move_link --><!-- END move_link -->
+	<!-- END move -->
+	<!-- BEGIN hitem -->
+	<!-- BEGIN header_title -->
+	<!-- BEGIN block_img --><!-- END block_img -->
+
+	<h3>{BLOCK_TITLE}</h3>
+
+	<!-- BEGIN block_subtitle --><div class="mobileBlockSubTitle">{BLOCK_SUBTITLE}</div><!-- END block_subtitle -->
+	<!-- END header_title -->
+
+	<!-- BEGIN header_commands -->
+	<div data-role="controlgroup" class="mobileBlockHeaderCommands" data-inset="true">
+		<!-- BEGIN header_command -->
+
+		<!-- END header_command -->
+		<!-- BEGIN header_config -->
+		<!-- <a href="{HREF_CONFIG}" ><img border="0" alt="{ALT_CONFIG}" src="{IMG_CONFIG}" /></a> -->
+		<!-- BEGIN oncclick --><!-- END oncclick -->
+		<!-- END header_config -->
+	</div>
+	<!-- BEGIN header_close -->
+	<a class="mobileBlockCloseButton" data-role="button" data-theme="a" rel="external"  href="{HREF_CLOSE}">{ALT_CLOSE}</a>
+	<!-- END header_close -->
+	<!-- END header_commands -->
+	<!-- END hitem -->
+
+	<!-- BEGIN header_links -->
+	<div data-role="controlgroup" class="mobileBlockHeaderLinks">
+		<!-- BEGIN head_item -->
+		<!-- BEGIN head_delim --><!-- END head_delim -->
+		<!-- BEGIN head_text --><a data-role="button" data-theme="a" data-rel="back" data-icon="check" data-iconpos="left">{HTEXT}</a><!-- END head_text -->
+		<!-- BEGIN head_link --><a data-role="button" data-theme="a" rel="external" href="{HHREF}">{HLINK}</a><!-- BEGIN head_onclick --><!-- END head_onclick --><!-- END head_link -->
+		<!-- END head_item -->
+	</div>
+	<!-- END header_links -->
+
+	<!-- BEGIN top_row -->
+	<div class="mobileBlockTopNumInfo">
+		
+	</div>
+	<div data-role="controlgroup" class="mobileBlockTopLinks">
+		<p>{NUMINFO}</p>
+		<!-- BEGIN top_item -->
+		<!-- BEGIN top_delim --><!-- END top_delim -->
+		<!-- BEGIN top_text --><a data-role="button" data-theme="a" data-rel="back" data-icon="back" data-iconpos="left">{FTEXT}</a><!-- END top_text -->
+		
+		<!-- BEGIN top_link --><a data-role="button" data-theme="a" rel="external" href="{FHREF}"
+		<!-- BEGIN top_onclick -->onclick="$('#{OC_BLOCK_ID}').load('{OC_HREF}'); return false;"<!-- END top_onclick -->
+		>{FLINK}</a><!-- END top_link -->
+		<!-- END top_item -->
+
+	</div>
+	<!-- END top_row -->
+
+	<div class="mobileBlockTable">
+		{BLOCK_ROW}
+	</div>
+
+	<!-- BEGIN data_section -->
+	<div class="mobileBlockData">{DATA}</div>
+	<!-- END data_section -->
+
+	<!-- BEGIN detail_setting -->
+	<div data-role="controlgroup" class="mobileBlockDetailsLinks" title="{TXT_DETAILS}">
+		<!-- BEGIN det_item -->
+		<!-- BEGIN det_delim --><!-- END det_delim -->
+		<!-- BEGIN det_text --><a class="mobileBlockDetailsLink" data-role="button" data-theme="a" data-rel="back" data-icon="check" data-iconpos="left">{ALT_NO_LINK}</a><!-- END det_text -->
+		<!-- BEGIN det_link --><a class="mobileBlockDetailsLink" data-role="button" data-theme="a" rel="external" href="{DHREF}">{ALT_LINK}</a><!-- BEGIN onclick --><!-- END onclick --><!-- END det_link -->
+		<!-- END det_item -->
+	</div>
+	<!-- BEGIN det_info -->
+	<div class="mobileBlockDetailsInfo">
+		{INFO_TEXT}
+	</div>
+	<!-- END det_info -->
+	<!-- END detail_setting -->
+
+	<!-- BEGIN foot_row -->
+	<div class="mobileBlockFootNumInfo">{NUMINFO}</div>
+	<div data-role="controlgroup" class="mobileBlockFootLinks">
+		<!-- BEGIN foot_item -->
+		<!-- BEGIN foot_delim --><!-- END foot_delim -->
+		<!-- BEGIN foot_text --><a data-role="button" data-theme="a" data-rel="back" data-icon="check" data-iconpos="left">{FTEXT}</a><!-- END foot_text -->
+		<!-- BEGIN foot_link --><a data-role="button" data-theme="a" rel="external" href="{FHREF}"
+		<!-- BEGIN foot_onclick -->onclick="$('#{OC_BLOCK_ID}').load('{OC_HREF}'); return false;"<!-- END foot_onclick -->
+		>{FLINK}</a><!-- END foot_link -->
+		<!-- END foot_item -->
+	</div>
+	<!-- END foot_row -->
+
+	<!-- BEGIN footer_information -->	
+	<div class="mobileBlockFootInfo">{FOOTER_INFO}</div>
+	<!-- END footer_information -->
+
+	<!-- BEGIN block_commands -->
+	<div class="mobileBlockFootCommands">
+		<!-- BEGIN block_check --><input type="checkbox" name="id[]" value="{BL_REF_ID}" /><!-- END block_check -->
+		<!-- BEGIN block_command -->
+		<a {BC_CLASS} rel="external" href="{CMD_HREF}" <!-- BEGIN bc_target -->target="{CMD_TARGET}"<!-- END bc_target --> ><!-- BEGIN bc_image --><img src="{SRC_BC}" border="0" title="{ALT_BC}" alt="{ALT_BC}" /><!-- END bc_image -->{CMD_TEXT}</a>
+		<!-- END block_command -->
+	</div>
+	<!-- END block_commands -->
+
+	<!-- 
+		Thispplies the jquery mobile processing for asynchronously delivered blocks. 
+		It will 
+	-->
+	<script type='text/javascript'>
+		$('#{BTID}_content').page();
+	</script>
+</div>

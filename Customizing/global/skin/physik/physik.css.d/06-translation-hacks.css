@@ -1,0 +1,15 @@
+/* In Translationstrings eingebaute Nachrichten */
+
+#PE-DE-profile_incomplete { }
+
+#PE-DE-profile_incomplete h2, #PE-DE-profile_incomplete b {
+	color: green;
+	font-weight: bold;
+}
+
+/* PO 2.1 */
+.po-no_access_item_public:before {
+	content: url("/local/nuvola/16x16/status/dialog-warning.png");
+	vertical-align: center;
+	padding-right: 3px;
+}

@@ -1,0 +1,55 @@
+<ul data-role="listview" data-inset="true">
+	<!-- BEGIN item -->
+	<!-- BEGIN context -->
+	<li data-role="list-divider">
+		<h3>	
+			{CONTEXT_TITLE}
+		</h3>
+	</li>
+	<!-- END context -->
+	<!-- BEGIN content -->
+	<li>
+		
+		<a rel="external" target="_top" href="{HREF_CONTEXT_TITLE}">
+			<p class="ui-li-aside ui-li-desc">
+				<!-- BEGIN ni_creation -->
+				<br />{TXT_CREATED}: {VAL_CREATION_DATE}
+				<!-- END ni_creation -->
+				<!-- BEGIN ni_update -->
+				<br />{TXT_LAST_UPDATE}: {VAL_LAST_UPDATE}
+				<!-- END ni_update -->
+				<!-- BEGIN access -->
+				<br />{TXT_ACCESS}: {VAL_ACCESS}
+				<!-- END access -->
+				<!-- BEGIN user_info -->
+				<br />{TXT_AUTHOR}: {VAL_AUTHOR}
+				<!-- END user_info -->
+				
+			</p>
+			<!--<img alt="{CONTEXT_TITLE}" border="0" src="{IMG_CONTEXT_TITLE}" class="ui-li-icon ui-li-thumb"/>-->
+			
+			
+			<p>{VAL_CONTENT}</p>
+			
+			<!-- BEGIN long -->
+			<div>{VAL_LONG_CONTENT}</div>
+			<!-- END long -->
+			
+			<!-- BEGIN player -->
+			<p>{PLAYER}</p>
+			<!-- END player -->
+		
+			<!-- BEGIN download -->
+			<p class="ui-li-desc">
+				<a rel="external" href="{HREF_DOWNLOAD}">{TXT_DOWNLOAD}</a>
+			</p>
+			<!-- END download -->
+	
+		</a>
+		
+	
+	
+	</li>
+	<!-- END content -->
+	<!-- END item -->
+</ul>

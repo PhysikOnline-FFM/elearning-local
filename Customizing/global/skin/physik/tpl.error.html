@@ -1,0 +1,40 @@
+<!--
+ Template wird hauptsaechlich bei WebAccessChecker verwendet, siehe POTT #303 und #530.
+-->
+
+<div class="ilFrame">
+	<div class="ilStartupFrame" id="po-startupframe">
+		<div id="il_startup_logo">
+			<!--<img src="./templates/default/images/HeaderIcon.png" alt="Logo" />-->
+			<div class="po-head">
+				<a id="po-logo" href="/" title="Zur Physik Online Startseite"><img src="./Customizing/global/skin/physik/src/logo_small-new.png" alt="Physik eLearning" /></a>
+				<div class="ilTopTitle">
+					<a href="/" title="Zur Startseite des Lernportals">PhysikOnline</a>
+					<div class="po-subtitle">Das eLearning-Portal des Fachbereichs Physik</div>
+				</div>
+			</div>
+		</div>
+		<div id="il_startup_content">
+			<h2>Fehler</h2>
+			<p>Es ist ein Fehler aufgetreten. Bitte beachten Sie die Fehlerbeschreibung.
+			Bei Fragen oder Problemen steht das eLearning-Team zur Verfügung, für
+			<a href="/go/impressum">Kontaktdaten siehe Impressum</a>.</p>
+			
+			<p>&nbsp;</p><!-- poor mans vspace -->
+		
+			<div class="ilMessageBox">
+				<img class="ilFailureMessage" alt="{ALT_IMAGE}" title="{ALT_IMAGE}" src="{SRC_IMAGE}" />
+				<div class="ilFailureMessage">
+					<h5 class="ilAccHeadingHidden"><a id="il_message_focus" name="il_message_focus">{MESSAGE_HEADING}</a></h5>
+					{ERROR_MESSAGE}
+				</div>
+			</div>
+			<!-- BEGIN ErrorLink -->
+			<!-- additional link e.g. by WebAccessChecker -->
+			<p>
+			<a class="il_ContainerItemCommand" href="{LINK}">{TXT_LINK}</a>
+			</p>
+			<!-- END ErrorLink -->
+		</div>
+	</div>
+</div>

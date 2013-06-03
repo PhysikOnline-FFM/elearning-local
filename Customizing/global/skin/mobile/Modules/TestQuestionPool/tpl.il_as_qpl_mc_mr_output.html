@@ -1,0 +1,25 @@
+	{QUESTIONTEXT}
+<!-- BEGIN answer_row -->	
+				<input type="checkbox" name="multiple_choice_result_{ANSWER_ID}" value="{ANSWER_ID}" id="{ANSWER_ID}"{CHECKED_ANSWER} />
+				<label for="{ANSWER_ID}">
+<!-- BEGIN preview -->
+					<table class="ilc_media_cont_MediaContainer">
+						<tr>
+							<td class="ilc_Mob"><img border="0" src="{ANSWER_IMAGE_URL}" alt="{ANSWER_IMAGE_ALT}" title="{ANSWER_IMAGE_TITLE}" /></td>
+						</tr>
+						<tr>
+							<td>
+								<div class="ilc_media_caption_MediaCaption"><a target="_blank" href="{URL_PREVIEW}" title="{TEXT_PREVIEW}"><img border="0" align="right" src="{IMG_PREVIEW}"/></a></div>
+							</td>
+						</tr>
+					</table>
+<!-- END preview -->
+<!-- BEGIN answer_image -->
+					<img src="{ANSWER_IMAGE_URL}" alt="{ANSWER_IMAGE_ALT}" title="{ANSWER_IMAGE_TITLE}" />
+<!-- END answer_image -->
+					<div class="wordwrap">{ANSWER_TEXT}</div>
+				</label>
+<!-- BEGIN feedback -->
+				<div>{FEEDBACK}</div>
+<!-- END feedback -->
+<!-- END answer_row -->	

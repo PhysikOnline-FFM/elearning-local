@@ -1,0 +1,49 @@
+<div class="mobileInfoScreen">
+
+<!-- BEGIN formtop -->
+<form name="formInfoScreen" method="post" action="{FORMACTION}" data-ajax="false"> 
+<!-- END formtop -->
+{TOP_BUTTONS}
+{TOP_FORMBUTTONS}
+<!-- BEGIN row -->
+<div class="ilInfoScreenSec" id="infoscreen_section_{SECTION_ID}"{SECTION_HIDDEN}>
+    <h3>{TXT_SECTION}</h3>
+    <ul data-role="listview" data-split-icon="gear" data-split-theme="a">
+
+    <!-- BEGIN header_row -->
+    <li data-role="list-divider">
+    <p class="il_InfoScreenSection">{TXT_SECTION}</p>
+    </li>
+    <!-- END header_row -->
+    <!-- BEGIN property_row -->
+    <li class="mobilePropertyRow">
+    {TXT_PROPERTY}
+    <!-- BEGIN pv --><span>{TXT_PROPERTY_VALUE}</span><!-- END pv -->
+    <!-- BEGIN lpv --><span><a href="{LINK_PROPERTY_VALUE}">{TXT_PROPERTY_LVALUE}</a></span><!-- END lpv -->
+    </li>
+    <!-- END property_row -->
+    <!-- BEGIN property_full_row -->
+    <li><span>{TXT_PROPERTY_FULL_VALUE}</span></li>
+    <!-- END property_full_row -->
+
+    </ul>
+</div>
+
+<!-- END row -->
+<!-- BEGIN hidden_element -->
+<input type="hidden" name="{HIDDEN_NAME}" value="{HIDDEN_VALUE}" />
+<!-- END hidden_element -->
+<!-- BEGIN formbottom -->
+</form>
+<!-- END formbottom -->
+<!-- BEGIN learning_progress -->
+<br />
+{LP_TABLE}
+<!-- END learning_progress -->
+<!-- BEGIN notes -->
+<br />
+{NOTES}
+<!-- END notes -->
+<!-- BEGIN hidden_js -->
+<!-- END hidden_js -->
+</div>

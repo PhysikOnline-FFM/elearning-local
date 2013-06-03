@@ -1,0 +1,175 @@
+!!!!!!!!!!!!!!!!!!
+
+<div id="mobileTestOutput">
+<!-- BEGIN kiosk_message -->{MESSAGE}<!-- END kiosk_message -->
+<!-- BEGIN kiosk_options -->
+{KIOSK_HEAD}
+<!-- END kiosk_options -->
+
+<form data-ajax="false" id="taForm" name="test_output" method="post" style="clear: both;" {ENCTYPE} action="{FORMACTION}"<!-- BEGIN onsubmit --> onsubmit="{ON_SUBMIT}"<!-- END onsubmit -->>
+
+<!-- BEGIN enableprocessingtime -->
+<div id="workingtime">
+<p><span id="userworkingtime">{USER_WORKING_TIME}</span></p>
+<p><strong><span id="timeleft">{USER_REMAINING_TIME}</span></strong></p>
+</div>
+<!-- END enableprocessingtime -->
+<input type="hidden" name="formtimestamp" value="{FORM_TIMESTAMP}" />
+
+<!-- BEGIN view_sidelist -->
+<!-- END view_sidelist -->
+
+
+<fieldset id="mobileTestTopNav" data-role="controlgroup" data-type="horizontal">
+<!-- BEGIN prev -->
+	<input type="submit" data-theme="a" data-icon="arrow-l" data-iconpos="left" name="cmd[previous]" value="{BTN_PREV}" title="{BTN_PREV}" id="prevbutton" />
+<!-- END prev -->
+<!-- BEGIN next -->
+	<input type="submit" data-theme="a" data-icon="arrow-r" data-iconpos="right" name="cmd[next]" value="{BTN_NEXT}" title="{BTN_NEXT}" id="nextbutton" />
+<!-- END next -->
+&nbsp; <img id="mobileTestMarkImage" src="" />
+</fieldset>
+
+
+<div data-role="collapsible" data-collapsed="false" data-theme="a">
+<h3>...</h3>
+<fieldset id="mobileTestTopFunctions" data-role="controlgroup">
+<!-- BEGIN question_status -->
+<!-- BEGIN ismarked -->
+	<input id="mobileTestResetMark" type="submit" name="cmd[resetmarked][mark]" src="{IMAGE_SET}" value="{TEXT_SET}" />
+<!-- END ismarked -->
+<!-- BEGIN isnotmarked -->
+	<input id="mobileTestSetMark" type="submit" name="cmd[setmarked][mark]" value="{TEXT_UNSET}" />
+<!-- END isnotmarked -->
+<!-- END question_status -->
+<!-- BEGIN summary -->
+		<input type="submit" class="submit" name="cmd[summary]" value="{BTN_SUMMARY}" id="summarybutton" />
+<!-- END summary -->
+<!-- BEGIN postpone -->
+	<input type="submit" class="submit" name="cmd[postpone]" value="{BTN_POSTPONE}" id="postponebutton" />
+<!-- END postpone -->
+
+<!-- BEGIN cancel_test -->
+	<a rel="external" data-role="button" data-theme="a" data-icon="delete" href="{HREF_CANCELTEXT}">{TEXT_CANCELTEST}</a>
+<!-- END cancel_test -->
+</fieldset>
+</div>
+
+<!-- BEGIN closeform --></form><!-- END closeform -->
+	
+<div id="javascript_switch" style="display: none;">
+<a data-ajax="false" href="{JAVASCRIPT_URL}">{JAVASCRIPT_IMAGE_ALT}</a>
+</div>
+		
+<div class="ui-body ui-body-c" id="mobileQuestionOutput">
+{QUESTION_OUTPUT}
+</div>
+
+<!-- BEGIN direct_feedback -->
+<input type="submit" data-theme="a" class="submit" name="cmd[directfeedback]" id="directfeedback" value="{TEXT_DIRECT_FEEDBACK}" />
+<!-- END direct_feedback -->
+
+<!-- BEGIN answer_feedback -->
+<p><strong>{ANSWER_FEEDBACK}</strong></p>
+<!-- END answer_feedback -->
+
+<!-- BEGIN solution_output -->
+<!-- BEGIN solution_output_details -->
+<div class="ui-body ui-body-e" id="mobileSolutionOutput">
+<p><strong>{CORRECT_SOLUTION}:</strong></p>
+{QUESTION_FEEDBACK}
+</div>
+<!-- END solution_output_details -->
+<p><strong>{RECEIVED_POINTS_INFORMATION}</strong></p>
+<!-- END solution_output -->
+
+<!-- BEGIN reopenform --><form data-ajax="false" name="test_output_bottom" method="post" action="{FORMACTION_REOPENFORM}"><!-- END reopenform -->
+
+<!-- BEGIN navigation_bottom -->
+<fieldset id="mobileTestBottomNav" data-role="controlgroup" data-type="horizontal">
+<!-- BEGIN prev_bottom -->
+			<input type="submit" data-theme="a" data-icon="arrow-l" data-iconpos="left" class="submit" name="cmd[previous]" value="{BTN_PREV}" id="bottomprevbutton" />
+<!-- END prev_bottom -->
+<!-- BEGIN next_bottom -->
+			<input type="submit" data-theme="a" data-icon="arrow-r" data-iconpos="right" class="submit" name="cmd[next]" value="{BTN_NEXT}" id="bottomnextbutton" />
+<!-- END next_bottom -->
+</fieldset>
+
+<fieldset id="mobileTestBottomFunctions" data-role="controlgroup">
+<!-- BEGIN summary_bottom  -->
+			<input type="submit" class="submit" name="cmd[summary]" value="{BTN_SUMMARY}" id="bottomsummarybutton" />
+<!-- END summary_bottom -->
+<!-- BEGIN postpone_bottom -->
+			<input type="submit" class="submit" name="cmd[postpone]" value="{BTN_POSTPONE}" id="bottompostponebutton" />
+<!-- END postpone_bottom -->
+</fieldset>
+<!-- END navigation_bottom -->
+
+
+
+<input type="hidden" name="formtimestamp" value="{FORM_TIMESTAMP}" />
+
+<!-- BEGIN js_initialize -->
+{JS_INITIALIZE}
+<!-- END js_initialize -->
+<!-- BEGIN jsswitch -->
+<script type="text/javascript" charset="utf-8">
+	var jsswitch = document.getElementById("javascript_switch");
+	if (jsswitch != null)
+	{
+		jsswitch.style.display = "block";
+	}
+</script>
+<!-- END jsswitch -->
+<script type="text/javascript" charset="utf-8">
+	function saveformOnTimeReached()
+	{
+		if(typeof saveOrder == 'function') 
+		{
+			saveOrder('orderlist');
+		}
+		autosave('{AUTOSAVE_URL}');
+	}
+	function saveTextarea(editor)
+	{
+		document.forms["taForm"].submit();
+	}
+	function charCounter(e)
+	{
+		if(e.type == 'keyup')
+		{
+			content = tinyMCE.selectedInstance.getDoc().body.innerHTML;
+			content = content.replace(/&lt;/ig, "<");
+			content = content.replace(/&gt;/ig, ">");
+			stripped = content.replace(/(<([^>]+)>)/ig,"");
+			counterblock = YAHOO.util.Dom.get("charcounter");
+			if (counterblock != null)
+			{
+				counterblock.style.visibility = 'visible';
+				counter = YAHOO.util.Dom.get("myCounter");
+				if (maxL > 0) counter.value = maxL - stripped.length;
+			}
+			
+		}
+	}
+	
+	function initCharCounter()
+	{
+		content = YAHOO.util.Dom.get("TEXT").innerHTML;
+		content = content.replace(/&lt;/ig, "<");
+		content = content.replace(/&gt;/ig, ">");
+		stripped = content.replace(/(<([^>]+)>)/ig,"");
+		counterblock = YAHOO.util.Dom.get("charcounter");
+		if (counterblock != null)
+		{
+			counterblock.style.visibility = 'visible';
+			counter = YAHOO.util.Dom.get("myCounter");
+			if (maxL > 0) counter.value = maxL - stripped.length;
+		}
+	}
+	
+	YAHOO.util.Event.onDOMReady(initCharCounter);
+</script>
+<div id="autosavemessage" style="font-style: italic; border: 1px #666 solid; background-color: #ffffe0; position: fixed; right: 0; top: 0;"></div>
+</form>
+</div>

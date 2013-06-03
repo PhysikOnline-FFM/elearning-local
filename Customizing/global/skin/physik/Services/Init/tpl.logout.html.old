@@ -1,0 +1,57 @@
+<div id="PE-login" class="ilFrame" style="margin-top:5px; width:700px; margin-left:auto; margin-right:auto;"><div class="ilFrameH"><div class="ilFrameTL"><div class="ilFrameTR">
+
+<div class="PE-head">
+	<a id="PE-logo" href="/" title="Zur Physik Online Startseite"><img src="./Customizing/global/skin/physik/src/logo_small-new.png" alt="Physik eLearning" /></a>
+	<div class="ilTopTitle">Physik Online</div>
+</div>
+
+<div class="ilFrameBL"><div class="ilFrameBR" style="min-height: 450px;">
+<div style="padding:35px 10px;">
+<div align="center" style="padding-top: 25px">
+<div class="il_Header"><h1>{TXT_PAGEHEADLINE}</h1></div>
+<p>{TXT_LOGOUT_TEXT}</p>
+<p><a class="il_ContainerItemCommand" href="./login.php{CLIENT_ID}">{TXT_LOGIN}</a>&nbsp;
+<!-- BEGIN homelink -->
+<a class="il_ContainerItemCommand" href="./index.php{CLIENT_ID}">{TXT_HOME}</a>
+<!-- END homelink -->
+<!-- BEGIN client_list -->
+<a class="il_ContainerItemCommand" href="{CMD_CLIENT_LIST}">{TXT_CLIENT_LIST}</a>
+<!-- END client_list -->
+
+
+<!-- Jobangebot, temporary -->
+<!--
+        <div class="no-js" style="margin-top: 4em; padding: 20px; border-width: 1px; width: 460px; font-size: 90%; border-style: solid; border-color: 1px solid green; background-color: #efe;">
+          <div style="font-size: 111%; border-bottom: 1px solid green; border-color: green; padding-bottom: 2px; margin-bottom: 5px;">
+            <b>Jobangebot</b>
+          </div>  
+          <div style="margin-top: 5px;line-height: 133%;">
+            Hast du Lust Videos über physikalische Themen für das eLearning-Portal zu drehen und damit neben dem Studium Geld zu verdienen? 
+            <a href="http://th.physik.uni-frankfurt.de/elearning/job/index.htm">Weitere Informationen und Bewerbung hier</a>. 
+          </div>
+        </div> 
+-->
+
+<!-- joangebot, dynamisch -->
+    <!-- javascript-enhanced jobangebot -->
+<!--
+<div class="PE-bewerbung-ad js-only logout-page">
+<div class="slider">
+     	<img src="/local/bewerbung/aktion/banner1.jpg">
+	<img src="/local/bewerbung/aktion/banner2.jpg">
+	<div><img src="/local/bewerbung/aktion/banner3.jpg">
+		<div class="button"><a href="http://th.physik.uni-frankfurt.de/elearning/job/">Jetzt bewerben!</a></div></div>
+	</div>
+	<div class="button external"><a href="http://th.physik.uni-frankfurt.de/elearning/job/">Jetzt bewerben!</a></div>
+</div>
+
+<script type="text/javascript" src="/Customizing/global/skin/physik/js/jquery.min.js"></script>
+<script type="text/javascript" src="/Customizing/global/skin/physik/js/jquery.cycle.js"></script>
+<script type="text/javascript" src="/Customizing/global/skin/physik/js/videowerbung-nov2011.js"></script>
+
+</div>
+</div>
+-->
+<!-- ende jobangebot -->
+
+</div></div></div></div></div></div>

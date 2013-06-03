@@ -1,0 +1,16 @@
+<!-- {SPACER} -->
+<!-- {ANCHOR} -->
+
+<form data-ajax="false" id="mobileCensorshipPostForm" action="{FORM_ACTION}" method="post">
+
+<p class="warning">{TXT_CENS}</p>	
+
+<label for="{TXT_CENS_MESSAGE}">{TXT_CENS_COMMENT}</label>
+<textarea id="{TXT_CENS_MESSAGE}" name="formData[cens_message]">{CENS_MESSAGE}</textarea>
+
+<fieldset class="ui-grid-a"> 
+<div class="ui-block-a"><input class="submit" type="submit" name="confirm" value="{CONFIRM_BUTTON}" /></div>
+<div class="ui-block-b"><input class="submit" type="submit" name="cancel" value="{CANCEL_BUTTON}" /></div>
+</fieldset>
+
+</form>

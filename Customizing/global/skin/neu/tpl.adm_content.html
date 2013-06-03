@@ -1,0 +1,103 @@
+<div class="ilFrame"><div class="ilFrameH"><div class="ilFrameTL"><div class="ilFrameTR">
+{MAINMENU}<!-- BEGIN sr_focus -->
+<script type="text/javascript">ilAddOnLoad(ilScreenReaderFocus); var il_sr_opt = true;</script>
+<!-- END sr_focus -->
+</div></div></div>
+<div class="ilFrameBL"><div class="ilFrameBR">
+		<!-- BEGIN tree_mode -->
+		<a {TREE_ACC_KEY} class="ilTreeView{RIGHT}" href="{LINK_MODE}" target="{TARGET_TREE}" id="imgtree"><img src="{IMG_TREE}" alt="{ALT_TREE}" title="{ALT_TREE}" border="0" /></a>
+		<!-- END tree_mode -->
+<div style="padding-left:2px;">{STATUSLINE}</div>
+<div class="il_HeaderOuter">
+<div class="il_Header">
+	<div class="il_HeaderInner">
+	<!-- BEGIN headerbl --><h1 class="ilHeader"><!-- BEGIN header_image --><span style="position: absolute; margin: 1px 0px 0px 5px; left: 25px;"><img style="vertical-align:middle" alt="{IMAGE_ALT}" <!-- BEGIN header_image_desc -->title="{IMAGE_DESC}"<!-- END header_image_desc --> border="0" src="{IMG_HEADER}" id="headerimage" /></span><!-- END header_image --><a class="ilAccAnchor" id="il_mhead_t_focus" name="il_mhead_t_focus">{HEADER}</a></h1><!-- END headerbl -->
+	<!-- BEGIN header_desc --><div class="ilHeaderDesc">{H_DESCRIPTION}</div><!-- END header_desc -->
+	</div>
+	<!-- BEGIN tree_icons -->
+	<div class="il_TreeIcons" style="float:right;">
+		<!-- BEGIN top -->
+		<a style="display:none;" class="{CLASS_TOP}" href="{LINK_TOP}" <!-- BEGIN target_top -->target="{TARGET_TOP}"<!-- END target_top -->
+			id="imgtop"><img src="{IMG_TOP}" border="0" <!-- BEGIN alt_top --> alt="{ALT_TOP}" title="{ALT_TOP}" <!-- END alt_top --> /></a>
+		<!-- END top -->
+		<!-- BEGIN mount_webfolder -->
+		<!-- always show actions on item level -->
+		<!-- <a class="{CLASS_MOUNT_WEBFOLDER}" href="{LINK_MOUNT_WEBFOLDER}" folder="{FOLDER_MOUNT_WEBFOLDER}" target="{TARGET_MOUNT_WEBFOLDER}"><img src="{IMG_MOUNT_WEBFOLDER}" title="{ALT_MOUNT_WEBFOLDER}" alt="{ALT_MOUNT_WEBFOLDER}" border="0"></a> -->
+		<!-- END mount_webfolder -->
+	</div>
+	<!-- END tree_icons -->
+	<div style="clear:both;"><!-- BEGIN stop_floating -->&nbsp;<!-- END stop_floating --></div>
+{TABS}
+</div>
+</div>
+<!-- BEGIN tabs_outer_start --><table class="ilTabContentOuter"><tr><td><!-- END tabs_outer_start -->
+<div style="clear:both;">{SUB_TABS}</div><span class="ilAccHidden"><a id="after_sub_tabs" name="after_sub_tabs"></a></span>
+<!-- BEGIN tabs_inner_start --><div class="ilTabContentInner"><!-- END tabs_inner_start -->
+<!-- BEGIN page_form_start --><form id="main_page_form" action="{PAGE_FORM_ACTION}" method="post"><!-- END page_form_start -->
+<table class="il_ColumnLayout{COL_LAY_SKIN}" style="clear:both;"><tr>
+<!-- BEGIN left_columnt -->
+<td></td>
+<!-- END left_columnt -->
+<td>{MESSAGE}
+	<!-- BEGIN add_commands -->
+	<div style="text-align: right; padding-right:19px; margin-bottom: 5px;">{SELECT_OBJTYPE_REPOS}</div>
+	<!-- END add_commands -->
+	<!-- BEGIN adm_view_components -->
+	<div style="margin: 10px 0px 20px 0px;">{ADM_PANEL1}</div>
+	<!-- END adm_view_components -->
+</td>
+<!-- BEGIN right_columnt -->
+<td></td>
+<!-- END right_columnt -->
+</tr><tr>
+<!-- BEGIN left_column -->
+<td class="il_LeftColumn" id="il_left_col_td"><div id="il_left_col">{LEFT_CONTENT}</div></td>
+<!-- END left_column -->
+<td class="il_CenterColumn" id="il_CenterColumn">
+<!-- BEGIN adv_layout_init -->
+<div id="il_adv_center_col" style="width:800px; height:450px;"></div>
+<style type="text/css">
+<!--
+.yui-skin-sam .yui-layout .yui-layout-unit div.yui-layout-bd {
+    border: 1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+-->
+</style>
+<script type="text/javascript">
+//Element Based Layout
+ilAddOnLoad(function() {
+var ltd = document.getElementById('il_left_col_td');
+ltd.style.width = 0;
+var layoutEl = new YAHOO.widget.Layout('il_adv_center_col', { units: [
+		{ position: 'right', width: 200, scroll: false }, //Width required here
+        { position: 'left', width: 300, body: 'il_left_col', scroll: true }, //Width required here
+        { position: 'center', body: 'il_center_col', scroll: true }
+    ]
+});
+layoutEl.render();
+});
+</script>
+<!-- END adv_layout_init -->
+<div id="il_center_col">
+{BUTTONS}
+{RTE_SWITCH}
+{ADM_CONTENT}
+{OBJECTS}
+{SYSTEMSETTINGS}
+	<!-- BEGIN adm_view_components2 -->
+	<div style="margin-bottom:10px;">{ADM_PANEL2}</div>
+	<!-- END adm_view_components2 -->
+</div>
+</td>
+<!-- BEGIN right_column -->
+<td class="il_RightColumn">{RIGHT_CONTENT}</td>
+<!-- END right_column -->
+</tr></table>
+<!-- BEGIN print_content --><div style="padding-left: 15px; padding-right: 15px;">{PRINT_CONTENT}</div><!-- END print_content -->
+<!-- BEGIN page_form_end --></form><!-- END page_form_end -->
+<!-- BEGIN tabs_inner_end --></div><!-- END tabs_inner_end -->
+<!-- BEGIN tabs_outer_end --></td></tr></table><!-- END tabs_outer_end -->
+<div class="ilPermaLink">{PRMLINK}</div>
+{FOOTER}
+</div></div></div>

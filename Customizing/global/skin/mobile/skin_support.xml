@@ -1,0 +1,159 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!-- Definition file for the SkinTransformer plugin
+	
+	This file defines the ILIAS Urls which are supported by the skin.
+	
+	The support can be checked for any link with the xspath expression
+	php:function('ilSkinTransformer::isUrlSupported', string('url'), string('mode'))	 
+
+	The criteria are defined by <allow> and <deny> sub elements.
+	These are checked in definition order and the last matching
+	criterion determines if a url is supported.
+	Therefore is is good to specify the general criteria first
+	and the more specific afterwards.
+	
+	If no matching criterion is found, the "default" attribute
+	of <support> defines whether a url is allowed.
+	
+	A criterion is checked by comparing the url parameters with
+	the attributes of an <allow> or <deny> element.
+	The comparison is done case insensitive for names and values.
+	All existing attributes must match for a criterion to fit.
+
+	Typical parameters to be checked will be:
+	* baseClass:	the base GUI class called
+	* cmdClass:		the command class called
+	* cmd:			the command	
+	
+	Patterns:
+	An attribute with empty value specifies that the url parameter
+	should not exist or be empty.
+	An attribute with value "?" specifies that the url parameter
+	should have any non-empty value.
+	An attribute with value "*" specifies that the url parameter
+	does not matter. This is equal to omitting the attribute.
+
+	Some attributes have a special meaning:
+	* _script:	checks the script, e.g. 'repository.php'
+	* _type:	checks the object type of url params 'ref_id' or 'target'
+	* _mode:	checks the optional mode of the function call
+
+	Patterns are not recognized for the special attributes,
+	with one exception:
+	
+	If the function is called with a 'mode' parameter, a 'check_mode'
+	must be equal to this mode or be "*" for the criterion to match.
+	if the function is called without 'mode' parameter, 
+	a 'check_mode' must not exist, be "" or "*" for the criterion to match.
+-->
+
+<!--
+	Mobile Skin:
+	
+	The URLs are curently checked for:
+	* Main menu
+	* Tabs and Subtabs
+	* Object action menus
+	* Toolbar on info screen
+	
+	Unsupported Links/Buttons are not displayed.
+-->
+
+<support default="deny">
+
+	<!-- Personal desktop -->
+	<allow baseclass="ilpersonaldesktopgui" cmdclass="" /> 
+	<allow cmdclass="ilpersonaldesktopgui" />
+	<allow cmdclass="illplistofprogressgui" />  
+	<allow cmd="removeFromDesk" /> 
+	<allow cmd="addToDesk" /> 
+	<allow cmd="join" /><!-- FSX -->
+	<allow cmd="setLPStatusCompleted" /><!-- FSX -->
+	<allow cmd="leave" /><!-- FSX -->	
+	
+	
+	<!-- News 
+	<allow cmdclass="ilpdnewsblockgui" /> 
+	<allow cmd="showNews" />-->
+	
+	<!-- Init -->
+	<allow cmdclass="ilaccountregistrationgui" /> 
+	<allow cmd="post" />
+	 
+
+	<!-- Info screens -->
+	<allow cmd="infoScreen" />
+	<allow cmdclass="ilinfoscreengui" />
+
+	<!-- Category -->
+	<allow _type="cat" cmdclass="" cmd="" />
+	<allow _type="cat" cmd="frameset" />
+	<allow cmdclass="ilobjcategorygui" cmd="" />
+	
+	<!-- Course -->
+	<allow _type="crs" cmdclass="" cmd="" />
+	<allow _type="crs" cmdclass="*" cmd="frameset" />
+	<allow cmdclass="ilobjcoursegui" cmd="" />
+	<allow cmdclass="ilcourseregistrationgui" cmd="" />
+	<allow cmdclass="ilcourseregistrationgui" cmd="post" />
+	<allow fallbackCmd="join" />
+	
+	<!-- File -->
+	<allow _type="file" cmdclass="" cmd="" />
+	<allow _type="file" cmdclass="*" cmd="sendfile" />
+	<allow cmdclass="ilobjfilegui" cmd="" />
+	<allow cmdclass="ilobjfilegui" cmd="sendfile" />
+
+	<!-- Folder -->
+	<allow _type="fold" cmdclass="" cmd="" />
+	<allow _type="fold" cmdclass="*" cmd="frameset" />
+	<allow cmdclass="ilobjfoldergui" cmd="" />
+
+	<!-- Group -->
+	<allow _type="grp" cmdclass="" cmd="" />
+	<allow _type="grp" cmdclass="*"  cmd="frameset" />
+	<allow cmdclass="ilobjgroupgui" cmd="" />
+	<allow cmdclass="ilgroupregistrationgui" cmd="" />
+			
+	<!-- Forum -->
+	<allow _type="frm" cmdclass="" cmd="" />
+	<allow _type="frm" cmdclass="*"  cmd="showThreads" />
+	<allow _type="frm" cmdclass="*"  cmd="showThreadFrameset" />
+	<allow _type="frm" cmdclass="*"  cmd="viewThread" />
+	<allow cmdclass="ilobjforumgui" cmd="" />
+	
+	<!-- Root folder -->
+	<allow _type="root" cmdclass="" cmd="" />
+	<allow _type="root" cmdclass="*"  cmd="frameset" />
+	<allow cmdclass="ilObjrootfoldergui"  cmd="" />
+	
+	<!-- Session -->
+	<allow _type="sess" cmdclass="" cmd="" />
+	<allow _type="sess" cmdclass="*"  cmd="frameset" />
+	<allow cmdclass="ilobjsessiongui" cmd="" />
+
+	<!-- Survey -->
+	<allow _type="svy" cmdclass="" cmd="" />
+	<allow cmdclass="ilobjsurveygui" cmd="" />
+	
+	<!-- Test -->
+	<allow _type="tst" cmdclass="" cmd="" />
+	<allow cmdclass="ilobjtestgui" cmd="" />
+	<allow cmdclass="ilinfoscreengui" cmd="showSummary" />
+	<allow baseclass="ilobjtestgui" cmd="" />
+	
+	<!-- Wiki -->
+	<allow _type="wiki" cmdclass="" cmd="" />
+	<allow baseclass="ilwikihandlergui" cmdclass="">
+	<allow cmdclass="ilwikipagegui" /> 
+	<allow cmd="preview" />
+	
+	<!-- Learning Module -->
+	<allow _type="lm" cmdclass="" cmd="" />
+	<allow _type="lm" cmdclass="*" cmd="layout" />
+	<allow _type="lm" cmdclass="*" cmd="showTableOfContents" />
+	<allow cmdclass="illmpresentationgui" cmd="" />
+	<deny baseclass="illmeditorgui" cmd="" />
+
+</support>	

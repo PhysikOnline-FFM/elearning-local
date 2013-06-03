@@ -1,0 +1,8 @@
+.svn*
+.DS_Store
+*~
+*.lock
+*.swp
+
+latex/blahtex/cache
+dokuwiki-includes

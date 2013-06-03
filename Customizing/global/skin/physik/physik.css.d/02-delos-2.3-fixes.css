@@ -1,0 +1,18 @@
+/* Wegen zu krassem CSS Reset werden Listenbullets nicht mehr angezeigt */
+
+/*
+ * WHAA!! Diese Bullets sind absolut notwendig, um im Rich-Text-Editor
+ * arbeiten zu Koennen, aber zerschiessen Materialien etwa vom Doerner!
+ */
+
+
+/*
+.ilc_page_cont_PageContainer ul,
+.ilc_page_cont_PageContainer ol {
+	margin-left: 20px;
+}
+
+.ilc_page_cont_PageContainer ul li { list-style-type: disc; }
+.ilc_page_cont_PageContainer ol li { list-style-type: decimal; }
+
+*/

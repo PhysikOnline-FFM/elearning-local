@@ -1,0 +1,55 @@
+<div class="mobileInfoScreen">
+<!-- BEGIN formtop -->
+<form name="formInfoScreen" method="post" action="{FORMACTION}" data-ajax="false" <!-- BEGIN formtarg --> target="{FORMTARGET}" <!-- END formtarg --> >
+<!-- END formtop -->
+{TOP_BUTTONS}
+{TOP_FORMBUTTONS}
+<ul data-role="listview" data-split-icon="gear" data-split-theme="a">
+<!-- BEGIN row -->
+	<li data-role="list-divider" {SECTION_HIDDEN}>
+		<p class="il_InfoScreenSection">{TXT_SECTION}</p>
+	</li>
+<!-- BEGIN property_row -->
+	<li class="mobilePropertyRow">
+		{TXT_PROPERTY}
+		<!-- BEGIN pv --><span>{TXT_PROPERTY_VALUE}</span><!-- END pv -->
+		<!-- BEGIN lpv --><a href="{LINK_PROPERTY_VALUE}">{TXT_PROPERTY_LVALUE}</a><!-- END lpv -->
+	</li>
+<!-- END property_row -->
+<!-- BEGIN property_full_row -->
+	<li><span>{TXT_PROPERTY_FULL_VALUE}</span></li>
+<!-- END property_full_row -->
+<!-- END row -->
+</ul>
+<!-- BEGIN hidden_element -->
+<input type="hidden" name="{HIDDEN_NAME}" value="{HIDDEN_VALUE}" />
+<!-- END hidden_element -->
+<!-- BEGIN formbottom -->
+</form>
+<!-- END formbottom -->
+<!-- BEGIN learning_progress -->
+<!-- END learning_progress -->
+<!-- BEGIN notes -->
+<!-- END notes -->
+<!-- BEGIN hidden_js -->
+<script language="JavaScript" type="text/javascript">
+function toggleSections()
+{
+	obj=document.getElementsByTagName('div');
+	for (var i=0;i<obj.length;i++)
+	{
+		if(/infoscreen_section_hidable_/.test(obj[i].id))
+		{
+			if(obj[i].style.display == 'none')
+			{
+				obj[i].style.display = '';
+			}
+			else
+			{
+				obj[i].style.display = 'none';
+			}
+		}
+	}
+}
+</script>
+<!-- END hidden_js -->

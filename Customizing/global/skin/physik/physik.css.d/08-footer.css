@@ -1,0 +1,12 @@
+/* some footer styles */
+.il_Footer a {
+/*	padding-right: 1em; */
+}
+
+.il_Footer .txt a:link, .il_Footer .txt a:visited {
+	color: inherit; text-decoration: none;
+}
+
+.il_Footer .txt a:focus, .il_Footer .txt a:hover {
+	color: #000; text-decoration: underline; 
+}

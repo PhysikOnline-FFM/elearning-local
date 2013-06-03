@@ -1,0 +1,22 @@
+<!-- fim: [layout] own header -->
+<!-- BEGIN languages -->
+<!-- END languages -->
+<a class="ilAccAnchor" id="il_mhead_t_focus" name="il_mhead_t_focus">{TXT_PAGEHEADLINE}</a>
+<div class="ilTabContentSpecial">
+<!-- fim. -->
+<final>
+<p>{TXT_USR_AGREEMENT_NONMOBILE}</p>
+
+<a rel="external" data-theme="f" data-role="button" data-icon="arrow-l" href="./logout.php">{BACK_NONMOBILE}</a></li>
+
+<!-- BEGIN get_acceptance -->
+<!-- END get_acceptance -->
+
+<!-- BEGIN back -->
+<!-- END back -->
+</final>
+</div>
+
+<!-- fim: [layout] added footer -->
+<!-- fim. -->
+

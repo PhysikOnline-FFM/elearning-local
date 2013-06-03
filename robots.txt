@@ -1,0 +1,3 @@
+# DERZEIT noch fuer den neuen ILIAS-Server um Bots fernzuhalten
+User-Agent: *
+Disallow: /ilias

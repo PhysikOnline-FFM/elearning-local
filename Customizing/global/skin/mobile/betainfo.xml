@@ -1,0 +1,89 @@
+<BetaInfos>
+	<Info><br/>ILIAS mobile wird weiterentwickelt von der studer + raimann ag und basiert auf dem SkinTranformer-Plugin der Uni Erlangen (<a href="mailto:fred.neumann@fim.uni-erlangen.de">Kontakt</a>).</Info>
+	<Info>Bei Fragen und Anregungen wenden Sie sich an Fabian Schmid (<a href="mailto:fs@studer-raimann.ch">Kontakt</a>).</Info>
+	<Info>Die aktuellste Version von ILIAS mobile kann getestet werden unter <a target="_blank" href="http://test.learnonline.ch/mobile">http://test.learnonline.ch/mobile</a>.</Info>
+	
+	<Info>Im Folgenden werden die z.Z. unterstützten Features aufgelistet:</Info>
+	<Beta>
+		<version>1.0.1</version>
+		<date>2012-10-09</date>
+		<features>
+			Bugfixes
+			<p></p>
+			<p>- Gruppen- und Kurseinschreibung benötigt keine ILIAS-Anpassung mehr</p>
+			<p>- Ausgeklappte Sitzungen werden versteckt.</p>
+			<p>- Framesets</p>
+		</features>
+	</Beta>
+	<Beta>
+		<version>1.0.0</version>
+		<date>2012-08-07</date>
+		<features>
+			Bugfixes
+			<p></p>
+			<p>- Doppelte Blocks auf persönlichem Schreibtisch entfernt</p>
+			<p>- ILIAS-Icon für Retina-Displays</p>
+		</features>
+	</Beta>
+	<Beta>
+		<version>0.0.9</version>
+		<date>2012-08-04</date>
+		<features>
+			Bugfixes
+			<p></p>
+			<p>- Nicht unterstützte Module bieten Style-Switch an</p>
+			<p>- Fixed Back-Button</p>
+			<p>- Verbesserte Startseite für Test</p>
+		</features>
+	</Beta>
+	<Beta>
+		<version>0.0.4</version>
+		<date>2012-07-31</date>
+		<features>Umfrage (herzlichen Dank an Qualitus)</features>
+		<features>Bugfix Logout-Button</features>
+		<features>Bugfix Main-Menu mit jQuery 1.1.1</features>
+		<features2>Bugfix Persönlicher Schreibtisch: Doppelte Einträge</features2>
+		<features>Bugfix Lucene-Suche</features>
+		<features2>Sitzungen</features2>
+	</Beta>
+	<Beta>
+		<version>0.0.3</version>
+		<date>2012-07-26</date>
+		<features>jQuery Mobile 1.1.1</features>
+	</Beta>
+	<Beta> 
+		<version>0.0.2</version>
+		<date>2012-07-20</date>
+		<features>Notifications</features>
+		<features>
+			Test
+			<p></p>
+			<p>- Starten von Tests</p>
+			<p>- Infoseite</p>
+			<p>- Beta von Fragetypen</p>
+		</features>
+		<features>
+			Wiki
+			<p></p>
+			<p>- Anzeigen von WikiSeiten</p>
+			<p>- WikiSuche</p>
+			<p>- Inhaltsverzeichnis</p>
+		</features>
+		<features>Mobile Selbstregistrierung</features>
+		<features>Login von öffentlichem Bereich</features>
+	</Beta>	
+	<Beta> 
+		<version>0.0.1</version>
+		<date>2012-04-20</date>
+		<features>Erster Release von ILIAS mobile. Benötigt das angepasste SkinTranformer-Plugin. Folgende Features werden z.T. unterstützt:</features>
+		<features>Personlicher Schreibtisch: Meine Kurse; Mail; Notizen; Aktive Benutzer; Bookmarks; News</features>
+		<features>Magazin: Darstellung von Inhalten; Navigation; AktionenMenu</features>
+		<features>Suche: Normale und Lucene-Suche; Suchresultate</features>
+		<features>Zuletzt Besucht; BreadCrumb</features>
+		<features>Kurse und Gruppe: Einschreiben/Abmelden; Inhalte Darstellen; AktionenMenu für Inhalte</features>
+		<features>Dateien herunterladen</features>
+		<features>Wiki: Nur Startseite und Verlinkte Seiten, keine Navigation</features>
+		<features>Persönlicher Lernfortschritt (nicht verlinkt)</features>
+		<features>Öffentlicher Bereich mit vereinfachtem Menu</features>
+	</Beta>
+</BetaInfos>

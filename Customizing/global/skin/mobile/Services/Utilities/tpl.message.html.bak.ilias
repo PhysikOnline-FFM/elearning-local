@@ -1,0 +1,15 @@
+<div class="mobileMessages">
+<!-- BEGIN info_message -->
+<img class="ilInfoMessage" alt="{ALT_IMAGE}" title="{ALT_IMAGE}" src="{SRC_IMAGE}" />
+<p class="ilInfoMessage">{TEXT}</p>
+<!-- END info_message --><!-- BEGIN success_message -->
+<img class="ilSuccessMessage" alt="{ALT_IMAGE}" title="{ALT_IMAGE}" src="{SRC_IMAGE}" />
+<p class="ilSuccessMessage">{TEXT}</p>
+<!-- END success_message --><!-- BEGIN failure_message -->
+<img class="ilFailureMessage" alt="{ALT_IMAGE}" title="{ALT_IMAGE}" src="{SRC_IMAGE}" />
+<p class="ilFailureMessage">{TEXT}</p>
+<!-- END failure_message --><!-- BEGIN question_message -->
+<img class="ilQuestionMessage" alt="{ALT_IMAGE}" title="{ALT_IMAGE}" src="{SRC_IMAGE}" />
+<p class="ilQuestionMessage">{TEXT}</p>
+<!-- END question_message -->
+</div>

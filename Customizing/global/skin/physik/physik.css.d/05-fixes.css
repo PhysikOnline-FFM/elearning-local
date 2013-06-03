@@ -1,0 +1,31 @@
+/* simple fixes des delos default css */
+
+div.ilMainMenu, div.ilTopTitle {
+	padding-left: 97px;
+}
+
+div.ilMainMenuHeadSection { height: 57px; }
+div.ilTopTitle { padding-top: 14px; }
+
+div.ilTopTitle a:link, div.ilTopTitle a:visited {
+	/* inherit from div.ilTopTitle */
+	color: #335599;
+}
+
+div.ilTopTitle a:hover, div.ilTopTitle a:focus {
+	/* auch standard */
+	color: #000;
+}
+
+div.ilTopTitle .po-subtitle {
+	font-size: 70%;
+	opacity: .8; /* TODO: Umrechnen in Schriftfarbe */
+}
+
+#po-logo {
+	position: absolute;
+	top: 0; left: 0;
+	padding: 5px 0 5px 19px;
+}
+
+#po-logo img { border: none; }

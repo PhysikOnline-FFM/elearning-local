@@ -1,0 +1,27 @@
+<div class="mobileMessages">
+<!-- BEGIN info_message -->
+<script>
+	alert("{TEXT}");
+	lo = "{ALT_IMAGE}{ALT_IMAGE}{SRC_IMAGE}";
+</script>
+<!-- END info_message -->
+
+<!-- BEGIN success_message -->
+<script>
+	alert("{TEXT}");
+	lo = "{ALT_IMAGE}{ALT_IMAGE}{SRC_IMAGE}";
+</script>
+<!-- END success_message -->
+<!-- BEGIN failure_message -->
+<script>
+	alert("{TEXT}");
+	lo = "{ALT_IMAGE}{ALT_IMAGE}{SRC_IMAGE}";
+</script>
+<!-- END failure_message -->
+<!-- BEGIN question_message -->
+<script>
+	alert("{TEXT}");
+	lo = "{ALT_IMAGE}{ALT_IMAGE}{SRC_IMAGE}";
+</script>
+<!-- END question_message -->
+</div>

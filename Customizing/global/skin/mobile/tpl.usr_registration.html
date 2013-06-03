@@ -1,0 +1,18 @@
+<div id="mobileRegistration">
+	<br />
+	<form id="MobileRegistrationLngForm" action="{FORMACTION}" {TARGET} method="post">
+		<input type="hidden" name="cmd" value="">
+		<select name="change_lang_to" onChange="this.form.submit()">
+			<option value="">{TXT_CHOOSE_LANGUAGE}</option>
+			<!-- BEGIN languages -->
+			<option value="{LANG_ICON}" {SELECTED_LANG}>{LANG_NAME}</option>
+			<!-- END languages -->
+		</select>
+		<input class="submit" type="submit" value="{TXT_OK}"/>
+	</form>
+	<br />
+	
+	<h1>{TXT_WELCOME}</h1>
+		{MESSAGE}
+		{FORM}
+</div>

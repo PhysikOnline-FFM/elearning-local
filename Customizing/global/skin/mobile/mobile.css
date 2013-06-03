@@ -1,0 +1,172 @@
+/* Styles for the mobile skin */
+
+h1 { font-size: 1.5em;}
+h2 { font-size: 1.4em;}
+h3 { font-size: 1.3em;}
+h4 { font-size: 1.2em;}
+h5 { font-size: 1.1em;}
+h6 { font-size: 1.0em;}
+
+li span {font-weight:normal;}
+
+span.obligatory {
+	font-weight:bold;
+	color:red;
+}
+
+p.warning {
+	color:red;
+}
+
+/* Messages */
+p.ilInfoMessage {
+	background-color: #ecf0f9;
+	margin: 0px 0px 30px 10px;
+	padding: 5px 30px;
+	min-height: 20px;
+	vertical-align: middle;
+	font-size: 90%;
+	clear:both;
+}
+
+p.ilFailureMessage {
+	background-color: #fceaea;
+	margin: 0px 0px 30px 10px;
+	padding: 5px 30px;
+	min-height: 20px;
+	vertical-align: middle;
+	font-size: 90%;
+	clear:both;
+}
+
+p.ilSuccessMessage {
+	background-color: #f0fdf0;
+	margin: 0px 0px 30px 10px;
+	padding: 5px 30px;
+	min-height: 20px;
+	vertical-align: middle;
+	font-size: 90%;
+	clear:both;
+}
+
+p.ilQuestionMessage {
+	background-color: #fffcee;
+	margin: 0px 0px 30px 10px;
+	padding: 5px 30px;
+	min-height: 20px;
+	vertical-align: middle;
+	font-size: 90%;
+	clear:both;
+}
+
+img.ilInfoMessage, img.ilFailureMessage, img.ilSuccessMessage, img.ilQuestionMessage {
+	position: absolute;
+}
+
+/* workaround, see http://perishablepress.com/press/2010/06/01/wrapping-content */
+.wordwrap {
+	white-space: normal;
+	word-wrap: break-word;
+}
+
+/* workaround, see http://perishablepress.com/press/2010/06/01/wrapping-content */
+.wordwrap-pre {
+ 	white-space: pre;           /* CSS 2.0 */
+	white-space: pre-wrap;      /* CSS 2.1 */
+	white-space: pre-line;      /* CSS 3.0 */
+	white-space: -pre-wrap;     /* Opera 4-6 */
+	white-space: -o-pre-wrap;   /* Opera 7 */
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -hp-pre-wrap;  /* HP Printers */
+	word-wrap: break-word;      /* IE 5+ */
+}
+
+.FSXlists, .FSXlists2 {
+	margin-bottom: 15px;
+}
+.mobileContainerItemTitle {
+	white-space: normal !important;
+}
+li.FSXlistHeader {
+	display: none;
+}
+
+.noaccess {
+	
+	color: #b8b8b8;
+	
+}
+
+.mobileMessages {
+	display: none;
+}
+
+p.FSXusername {
+	text-align: right;
+	margin-left: 0px;
+	margin-bottom: -6px;
+	margin-right: 0px;
+	margin-top: -14px;
+}
+
+div.FSXIcon {
+	margin-top: -25px;
+	top: 0px;
+	float: right;
+}
+
+#noaccess {
+	display: none;
+}
+
+body {
+	background-color: black;
+}
+
+div.FSXIconLPview {
+	margin-right: 20px;
+}
+
+element {
+}
+
+div.FSXIconLP {
+	margin-right: -40px;
+	margin-top: -24px;
+	float: right;
+}
+
+a.small {
+	font-size: 14px;
+}
+
+div.mobileForumPosting {
+	white-space: normal !important;
+	font-size: 0.9em;
+}
+
+
+/* Quotes in Forum */
+blockquote.ilForumQuote {
+	font-style: italic;
+}
+
+div.ilForumQuoteHead {
+	font-weight: bold;
+}
+
+div.ui-dialog-contain, div.ui-dialog, div.ui-dialog-contain div.ui-header {
+	margin: 0px !important;
+	width: 100% !important;
+	max-width: none !important;
+	top: 0px !important;
+	position: absolute !important;
+}
+
+.xlvo_pin {
+	font-size: 50px !important;
+	padding: 2px;
+	text-align: center;
+}
+
+

@@ -1,0 +1,21 @@
+div.ui-fixed-overlay {
+	margin-top: 12px !important;
+	position: absolute !important;
+	bottom: -6px !important;
+}
+
+div.ui-content {
+	margin-bottom: 20px !important;
+}
+
+.FSXlists {
+	margin-bottom: 40px !important;
+}
+
+.FSXlists2 {
+	margin-bottom: 10px !important;
+}
+
+p.FSXusername {
+	margin-top: -30px;
+}

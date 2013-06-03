@@ -1,0 +1,83 @@
+{RELOAD}
+<!-- <p class="small">{ILIAS_RELEASE}</p> -->
+<final>
+	<!-- BEGIN warning -->
+	<img class="ilFailureMessage" alt="{ALT_IMAGE}" title="{ALT_IMAGE}" src="{SRC_IMAGE}" />
+	<p class="ilFailureMessage">{TXT_MSG_LOGIN_FAILED}</p>
+	<!-- END warning -->
+	<!-- BEGIN success -->
+	<img class="ilSuccessMessage" alt="{ALT_IMAGE}" title="{ALT_IMAGE}" src="{SRC_IMAGE}" />
+	<p class="ilSuccessMessage">{TXT_MSG_LOGIN_SUCCESS}</p>
+	<!-- END success -->
+</final>
+<!-- BEGIN login_page_editor -->
+<final>
+{LPE}
+</final>
+<!-- END login_page_editor -->
+
+<!-- BEGIN cookies_howto -->
+<final>
+<div class="FSXlists">
+	<ul data-role="listview">
+		<li data-theme="a" data-icon="forward"  >
+			<a data-theme="a" rel="external" href="{LINK_NO_COOKIES}" data-inline="true" target="_blank">{COOKIES_HOWTO}</a>
+		</li>
+	</ul>
+</div>
+</final>
+<!-- END cookies_howto -->
+
+<!-- BEGIN shib_login_form -->
+<final>
+{SHIB_LOGIN_FORM}
+</final>
+<!-- END shib_login_form -->
+
+<!-- BEGIN cas_login -->
+<final>
+{CAS_LOGIN_FORM}
+</final>
+<!-- END cas_login -->
+
+<!-- BEGIN ilias_login -->
+<div class="mobileLoginForm">
+{LOGIN_FORM}
+</div>
+<!-- END ilias_login -->
+
+<!-- BEGIN openid_login -->
+<div class="mobileLoginForm">
+{OID_LOGIN_FORM}
+</div>
+<!-- END openid_login -->
+
+<final>
+
+<!-- BEGIN login_information -->
+<final>
+<p>{TXT_LOGIN_INFORMATION}</p>
+</final>
+<!-- END login_information -->
+
+<div data-role="controlgroup">
+	<!-- BEGIN reg_links -->{REG_PWD_CLIENT_LINKS}<!-- END reg_links -->
+	{USER_AGREEMENT}
+</div>
+</final>
+
+<!-- BEGIN lang_sel -->
+<final>
+	{LANG_SELECTION}
+</final>
+<!-- END lang_sel -->
+
+<script language="JavaScript">
+<!--
+if (document.formlogin.username && document.formlogin.password)
+{
+	if(document.formlogin.username.value!="") document.formlogin.password.focus();
+	else document.formlogin.username.focus();
+}
+//-->
+</script>

@@ -1,0 +1,80 @@
+<div id="mobileSurveyOutput">
+	<form data-ajax="false" name="surveyOutput" method="post" action="{FORM_ACTION}">
+<div class="ui-grid-c">
+
+<div class="ui-block-a" style="width:28%">
+<!-- BEGIN top_prev -->
+		<input type="submit" data-theme="a" data-inline="false" data-icon="back" data-iconpos="left" id="prevButton" class="submit" name="cmd[previous]" value="{BTN_PREV}" />
+<!-- END top_prev -->
+</div>
+<!-- BEGIN percentage -->
+<div align="middle" class="ui-block-b" style="width:44%">
+<table style="margin:0.75em auto" border="0" cellpadding="0" cellspacing="0" >
+	<tr>
+		<td>
+			<img src="{PERCENT_BAR_START}" alt="{PERCENTAGE_ALT}" title="{PERCENTAGE_VALUE}%" width="2" height="16">
+		</td>
+		<td>
+			<img src="{PERCENT_BAR_FILLED}" alt="{PERCENTAGE_ALT}" title="{PERCENTAGE_VALUE}%" width="{PERCENTAGE_VALUE}" height="16">
+		</td>
+		<td>
+			<img src="{PERCENT_BAR_EMPTY}" alt="{PERCENTAGE_ALT}" title="{PERCENTAGE_VALUE}%" width="{PERCENTAGE_UNFINISHED}" height="16">
+		</td>
+		<td>
+			<img src="{PERCENT_BAR_END}" alt="{PERCENTAGE_ALT}" title="{PERCENTAGE_VALUE}%" width="2" height="16">
+		</td>
+		<td style="font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #00208C">&nbsp;{PERCENTAGE_VALUE}%</td>
+	</tr>
+</table>
+</div>
+<!-- END percentage -->
+<div class="ui-block-c" style="width:28%">
+<!-- BEGIN top_next -->
+		<input type="submit"data-btn-text="false" data-inline="false" data-theme="a" data-icon="forward" data-iconpos="right" id="nextButton" class="submit" name="cmd[next]" value="{BTN_NEXT}" />
+<!-- END top_next -->
+</div>
+</div>
+
+<!-- BEGIN questionblock_title -->
+<h3 class="questionblockTitle">{TEXT_QUESTIONBLOCK_TITLE}</h3>
+<!-- END questionblock_title -->
+
+<!-- BEGIN survey_content -->
+<div class="ui-body ui-body-c">
+
+<!-- BEGIN heading -->
+<h3 class="questionheading">{QUESTION_HEADING}</h3>
+<!-- END heading -->
+{QUESTION_OUTPUT}
+</div>
+<!-- END survey_content -->
+
+{SYSTEMSETTINGS}
+
+<!-- BEGIN required -->
+<br />
+<div class="required"><span class="obligatory">*</span><span class="small">{TEXT_REQUIRED}</span></div>
+<!-- END required -->
+
+<!-- BEGIN bottom_navigation -->
+<div class="ui-grid-c">
+	<div class="ui-block-a" style="width:30%">
+	<!-- BEGIN bottom_prev -->
+		<input type="submit"  data-theme="a" data-inline="false" data-icon="back" data-iconpos="left" id="prevButtonBottom" class="submit" name="cmd[previous]" value="{BTN_PREV}" />
+	<!-- END bottom_prev -->
+	</div>
+	<div  class="ui-block-b" style="width:40%">
+		<!-- BEGIN suspend_survey -->
+		<a  id="suspendbtn" data-role="button" data-theme="c" data-inline="false" data-icon="delete" rel="external" href="{HREF_SUSPEND}">{TEXT_SUSPEND}</a>
+		<!-- END suspend_survey -->
+	</div>
+	<div class="ui-block-c" style="width:30%">
+	<!-- BEGIN bottom_next -->
+		<input type="submit" data-theme="a" data-inline="false" data-icon="forward" data-iconpos="right" id="nextButtonBottom" class="submit" name="cmd[next]" value="{BTN_NEXT}" />
+	<!-- END bottom_next -->
+	</div>
+</div>
+<!-- END bottom_navigation -->
+
+</form>
+</div>

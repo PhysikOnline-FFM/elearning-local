@@ -1,0 +1,48 @@
+<div class="ilMainHeader">
+<div class="ilMainMenuHeadSection">
+	<!-- BEGIN osd_enabled --><script type="text/javascript">var OSDNotifier; $(function() { OSDNotifier = OSDNotifications({initialNotifications: {INITIAL_NOTIFICATIONS}, pollingIntervall: {OSD_POLLING_INTERVALL}, playSound: {OSD_PLAY_SOUND}})});</script><!-- END osd_enabled -->
+	<!-- BEGIN osd_container -->
+        <div class="osdNotificationContainer">
+
+        </div>
+	<!-- END osd_container -->
+	<a href="./goto.php?target=root_1" title="Zur Physik Online Startseite" id="PE-logo"><img src="./Customizing/global/skin/physik/src/logo_small-new.png" alt="Physik eLearning" /></a>
+	<!-- BEGIN header_top_title -->
+	<div class="ilTopTitle">
+		{TXT_HEADER_TITLE}
+	</div><!-- END header_top_title -->
+
+	<!-- BEGIN userisanonymous -->
+	<div class="ilLogin" >
+		<span class="il_menu">
+		{TXT_NOT_LOGGED_IN}.&nbsp;&nbsp;
+		<a href="{LINK_LOGIN}" class="ilLogin" target="_top">{TXT_LOGIN}</a>
+		<!-- BEGIN registration_link -->&nbsp;&nbsp;<a href="{LINK_REGISTER}" class="ilLogin" target="_top">{TXT_REGISTER}</a><!-- END registration_link -->
+		&nbsp;&nbsp;{LANG_SELECT}</span>
+	</div>
+	<!-- END userisanonymous -->
+	<!-- BEGIN userisloggedin -->
+	<div class="ilLogin">
+		{USERNAME} » <a class="ilLogin" href="{LINK_LOGOUT2}" target="_top">{TXT_LOGOUT2}</a>
+	</div>
+	<!-- END userisloggedin -->
+	<!-- BEGIN status_box -->
+	<div class="xsmall" style="font-size: 85%; float:right; margin: 22px 10px 0px 0px;">
+		<!-- BEGIN status_item --><a href="{STATUS_HREF}"><img style="position:relative; top:-2px;" src="{STATUS_IMG}"/><span class="ilMMStatus">{STATUS_TXT}</span><span class="small" style="visibility:hidden;">{STATUS_TXT}</span></a><!-- END status_item -->
+	</div>
+	<!-- END status_box -->
+
+</div>
+<div class="ilMainMenuSection" style="clear:both;">
+	<div class="ilMainMenu" style="clear:both; float:left;">
+		<h1 class="ilAccHeadingHidden">{TXT_MAIN_MENU}</h1>
+		{MAIN_MENU_LIST_ENTRIES}
+	</div>
+	<!-- BEGIN search_box -->
+	<div style="float:right;">{SEARCHBOX}</div>
+	<!-- END search_box -->
+	<!-- BEGIN top_section -->
+	<!-- END top_section -->
+<div style="clear:both;"></div>
+</div>
+</div>

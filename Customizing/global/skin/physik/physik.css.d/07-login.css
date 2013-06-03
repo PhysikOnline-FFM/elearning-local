@@ -1,0 +1,63 @@
+/* login mask, tpl.login.html at Services/Init  */
+/* PO2.1: startup_screen in general */
+/* PO 07.03.13: Wird auch bei error.tpl genutzt  */
+
+#po-startupframe .po-head {
+	position: relative;
+	min-height: 93px;
+}
+
+#po-startupframe .po-head #po-logo img {
+	margin: 0;
+	margin-top: 3px;
+}
+
+#po-startupframe .po-head:after {
+	/* clearfix */
+	content: "."; visibility: hidden; height: 0; display: block; clear: both;
+}
+
+#po-startupframe div.ilTopTitle {
+	padding-top: 22px;
+	font-size: 134%;
+}
+
+#po-startupframe div.ilTopTitle .po-subtitle {
+	font-size: 87%;
+}
+
+#po-iliasMsgBox {
+	border: 1px solid red;
+	background-color: #fee;
+	font-size: 90%;
+	margin: .5em auto;
+	padding: 20px;
+	width: 460px;
+}
+
+/* Loginbox unter formular */
+#po-startupframe .po-login-info {
+	background-color: #efe;
+	border: 1px solid green;
+	font-size: 90%;
+	margin: 2em auto;
+	padding: 20px;
+	width: 460px;
+}
+
+#po-startupframe .po-login-info img {
+	float: right;
+	margin-left: 2em;
+}
+
+#po-startupframe .po-login-info h2 {
+	font-size: 111%;
+	font-weight: bold;
+	margin: 0;
+	text-align: left;
+}
+
+#po-startupframe .po-login-info p {
+	text-align: justify;
+	line-height: 133%;
+}

@@ -1,0 +1,29 @@
+<!-- BEGIN cookies_howto -->
+<final>
+<div id="iosLoginCookiesHowTo">
+<a href="{LINK_NO_COOKIES}">{COOKIES_HOWTO}</a>
+</div>
+</final>
+<!-- END cookies_howto -->
+
+<form id="localLoginForm" method="post" action="{FORMACTION}" name="formlogin">
+<input type="hidden" name="sendLogin" value="1" />
+<input type="hidden" name="keepSession" value="1" />
+{LOGIN_FORM}
+</form>
+
+<final>
+<ul data-role="listview" data-inset="true">
+<!-- BEGIN password_assistance -->
+<!--<li><a href="{CMD_FORGOT_PASSWORD}">{FORGOT_PASSWORD}</a></li>-->
+<!--<li><a href="{CMD_FORGOT_USERNAME}">{FORGOT_USERNAME}</a></li>-->
+<!-- END password_assistance -->
+<!-- BEGIN new_registration -->
+<!--<li><a href="{CMD_REGISTER}">{REGISTER}</a></li>-->
+<!-- END new_registration -->
+<li><a href="{LINK_USER_AGREEMENT}">{USER_AGREEMENT}</a></li>
+</ul>
+</final>
+
+
+

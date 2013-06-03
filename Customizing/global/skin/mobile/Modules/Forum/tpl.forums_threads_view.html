@@ -1,0 +1,108 @@
+<!--{COUNT_POST}-->
+<div class="mobileForumPostsToolbar">
+{THREAD_TOOLBAR}
+</div>
+
+<div id="mobileForumPosts">
+
+<!-- BEGIN posttable -->
+
+<!-- {TXT_AUTHOR} {TXT_POST} -->
+
+
+<ul data-role="listview" data-dividertheme="d" data-theme="c">
+<!-- BEGIN posts_row -->
+<li data-role="list-divider" class="mobile-post-header" >
+	<!-- a unique first element is needed for the nested lists to work -->
+	<p style="display:none;">{POST_ANKER}</p>
+	<br><p><strong>{SUBJECT}</strong></p>
+	<!-- BEGIN usr_image -->
+	<img src="{USR_IMAGE}" />
+	<!-- END usr_image -->
+
+	<p>
+	<strong>{USR_NAME}</strong>
+	<!-- BEGIN usr_name -->
+	<span class="mobileForumPostAuthor">{AUTHOR}</span>
+	<!-- END usr_name -->
+	<!-- BEGIN role -->
+	({ROLE})
+	<!-- END role -->
+	<!-- BEGIN pseudonym -->
+	({PSEUDONYM})
+	<!-- END pseudonym -->
+	</p>
+
+	<p>
+		<!--{TXT_CREATE_DATE}-->{POST_DATE}
+		<!-- BEGIN post_update --><br /><span class="mobileForumPostUpdated">{POST_UPDATE}<span><!-- END post_update -->
+		<!-- BEGIN post_not_activated_yet --><br />{POST_NOT_ACTIVATED_YET}<!-- END post_not_activated_yet -->
+	</p>
+</li>
+<li>
+	<!-- BEGIN censorship_advice -->
+	<div class="mobileForumCensorshipAdvice"><p><em>{TXT_CENSORSHIP_ADVICE}:</em></p></div>
+	<!-- END censorship_advice -->	
+	<div class="mobileForumPosting">{POST}</div>
+
+	<!-- reply anchor: {REPLY_ANKER} -->
+	<div class="mobileForumPostForm">{FORM}</div>
+	
+	<!-- BEGIN registered --><!-- {TXT_REGISTERED} {REGISTERED_SINCE} --><!-- END registered -->
+	<!-- BEGIN num_posts --><!--{TXT_NUM_POSTS} {NUM_POSTS} --><!-- END num_posts -->
+
+	<ul data-role="listview" data-inset="false" data-dividertheme="a" data-theme="a">
+	
+		<!-- CSS hack: Don't show the blue header from the neasted list -->
+		<style type="text/css">
+			.ui-bar-b {display: none;}
+		</style>
+	
+		<div data-role="header" data-theme="a"> 
+			<div id="fsxLogo"></div>
+		</div> 
+
+		<!-- BEGIN commands_block -->
+		<li data-role="list-divider" class="mobileForumPostActionsTitle">
+		</li>
+		<!-- BEGIN commands -->
+		<li>
+			<a rel="external" class="mobileForumPostAction" href="{COMMANDS_COMMAND}">{COMMANDS_TXT}</a>
+		</li>
+		<!-- END commands -->			
+		<!-- END commands_block -->
+		<!-- BEGIN attachments -->
+		<li data-role="list-divider">
+			<!-- <img src="{DOWNLOAD_IMG}" alt="{TXT_DOWNLOAD_ATTACHMENT}" title="{TXT_DOWNLOAD_ATTACHMENT}" /> -->
+			{TXT_ATTACHMENTS_DOWNLOAD}
+		</li>
+		<!-- BEGIN attachment_download_row -->
+		<li>
+			<a rel="external" class="mobileForumPostAction" href="{HREF_DOWNLOAD}">{TXT_FILENAME}</a>
+		</li>
+		<!-- END attachment_download_row -->
+		<!-- END attachments -->
+	</ul>
+</li>
+
+
+<!-- anchor: {POST_ANKER} -->
+<!-- posting image: {IMG_POSTING} -->
+<!-- BEGIN mark_icon --><!-- mark icoon: {TXT_MARK_ICON} {IMG_MARK_ICON} --><!-- END mark_icon -->
+
+
+	
+
+
+<!-- END posts_row -->
+</ul>
+<!-- BEGIN posts_no -->
+{TXT_MSG_NO_POSTS_AVAILABLE}
+<!-- END posts_no -->
+
+<!-- END posttable -->
+
+</div>
+
+<!-- BEGIN javascript_block -->
+<!-- END javascript_block -->

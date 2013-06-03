@@ -1,0 +1,13 @@
+div.iosStyleSwitch
+{
+	padding:40px;
+	text-align:center;
+}
+
+div.iosStyleSwitch a.submit
+{
+	font-size: large;
+	line-height:1em; 
+	padding:15px;
+}
+

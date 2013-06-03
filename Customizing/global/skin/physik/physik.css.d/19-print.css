@@ -1,0 +1,37 @@
+/**
+ * PO SS 13: Anpassung des Drucklayouts [Ticket#473]
+ **/
+ @media print {
+	html, body{
+		background-image:none!important;
+	}
+	body {
+		/*font: 11pt/160% Verdana, Arial, sans-serif;*/
+		background-color:white!important;
+	}
+	
+	/*a:link:after, a:visited:after {
+		content: " ("attr(href)")";
+		font-size: 0.8em;
+		color: grey;
+	}*/
+  
+	frame#tree, a#imgtree, div.ilMainMenuSection,	div.ilLogin, div#il_status_box, div.il_HeaderInner div#il_head_action, 
+	div.il_Tab, div.ilClearFloat div.il_SubTab, div#il_left_col, div#il_right_col, 
+	div.ilAdminRow, div.ilCommandRow, div.ilPermaLink {
+		display:none;
+	}
+	div#mainspacekeeper div  {
+		width: 100%!important;
+		float: none!important;
+		margin-top: 0!important;
+		margin-bottom: 0!important;
+	}
+	div.ilLocator { padding-left: 85px;}
+	div#mainspacekeeper img  {
+		max-width: 380px!important; 
+	}
+	/* Anpassung PO-Hauptseite */
+	div#po-hauptseite > div {margin: 0 5px!important;}
+	div#po-hauptseite a {display: inline!important; height: auto!important; margin: 0!important; background: none!important;}
+ }

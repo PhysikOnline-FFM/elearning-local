@@ -1,0 +1,16 @@
+/* Angepasste Styles fuer das automatische Verzeichnislisting */
+
+table {
+	width: 100%;
+	font-family: "Inconsolata", Consolas, "deja vu sans mono", monaco, "andale mono", monospace;
+	font-size: 15px;
+	background: white; border: 1px solid #999999; margin: 2em 0; padding: 1em;
+}
+
+address { font-style: normal; font-size: 80%; text-align: center; opacity: .4; margin: 0; }
+
+.readme {
+	background: white;
+	border: 1px solid #990000;
+	margin: 2em 0; padding: 1em;
+}

@@ -1,0 +1,52 @@
+<!-- fim: [layout] own header -->
+<div class="ilFrame"><div class="ilFrameH"><div class="ilFrameTL"><div class="ilFrameTR">
+{ADDED_MAINMENU}
+<div class="ilFrameBL"><div class="ilFrameBR">
+<div class="il_HeaderOuter">
+<div class="il_Header">
+	<div class="il_HeaderInner">
+
+            <!-- BEGIN languages -->
+            <!-- END languages -->
+ 
+        <h1 class="ilHeader">
+            <a class="ilAccAnchor" id="il_mhead_t_focus" name="il_mhead_t_focus">{TXT_PAGEHEADLINE}</a>
+       </h1>	
+	</div>
+</div>
+</div>
+<div class="ilTabContentSpecial">
+<!-- fim. -->
+
+{MESSAGE}
+
+<final>
+<h1>{TXT_AGREEMENT}</h1>
+
+{TXT_USR_AGREEMENT}
+
+<!-- BEGIN get_acceptance -->
+<form action="{FORM_ACTION}" method="post" data-rel="external" data-ajax="false">
+<ul data-role="listview" data-inset="true">
+	<li data-role="fieldcontain"> 
+		<label for="status">{ACCEPT_AGREEMENT}</label>
+		{ACCEPT_CHECKBOX}
+	<li>
+	<li data-role="fieldcontain"> 
+		<input type="submit" class="submit" name="cmd[getAcceptance]" value="{TXT_SUBMIT}" />
+	</li>
+</ul>
+</form>
+<!-- END get_acceptance -->
+
+<!-- BEGIN back -->
+<a rel="external" data-role="button" data-icon="arrow-l" href="{LINK_BACK}">{BACK}</a></li>
+<!-- END back -->
+</final>
+
+</div>
+
+<!-- fim: [layout] added footer -->
+{FOOTER}
+<!-- fim. -->
+</div></div></div></div></div></div>

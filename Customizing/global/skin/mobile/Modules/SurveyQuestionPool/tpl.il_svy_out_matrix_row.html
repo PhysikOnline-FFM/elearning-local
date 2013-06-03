@@ -1,0 +1,46 @@
+<div class="mobileSurveyMatrixRow">
+<h5>{TEXT_ROW}</h5>
+<div class="mobileSurveyMatrixBipolarStart">
+<!-- BEGIN bipolar_start -->
+<p class="mobileSurveyMatrixBipolarStart">{TEXT_BIPOLAR_START}</p>
+<!-- END bipolar_start -->
+</div>
+<div class="mobileSurveyMatrixAnswers">
+<!-- BEGIN answer -->
+<div class="mobileSurveyMatrixAnswer">
+<!-- BEGIN radiobutton -->
+	<label for="matrix_{QUESTION_ID}_{ROW}_{VALUE}"></label>
+	<input type="radio" id="matrix_{QUESTION_ID}_{ROW}_{VALUE}" name="matrix_{QUESTION_ID}_{ROW}" value="{VALUE}"{CHECKED_RADIOBUTTON} />
+<!-- END radiobutton -->
+<!-- BEGIN checkbox -->
+	<label for="matrix_{QUESTION_ID}_{ROW}_{VALUE}"></label>
+	<input type="checkbox" id="matrix_{QUESTION_ID}_{ROW}_{VALUE}" name="matrix_{QUESTION_ID}_{ROW}[]" value="{VALUE}"{CHECKED_CHECKBOX} />
+<!-- END checkbox -->
+</div>
+<!-- END answer -->
+</div>
+<div class="mobileSurveyMatrixBipolarEnd">
+<!-- BEGIN bipolar_end -->
+<p class="mobileSurveyMatrixBipolarEnd">{TEXT_BIPOLAR_END}</p>
+<!-- END bipolar_end -->
+</div>
+<!-- BEGIN neutral_answer -->
+<div class="mobileSurveyMatrixNeutralAnswer">
+<!-- BEGIN neutral_radiobutton -->
+	<label for="matrix_{QUESTION_ID}_{ROW}_{VALUE}"></label>
+	<input type="radio" id="matrix_{QUESTION_ID}_{ROW}_{VALUE}" name="matrix_{QUESTION_ID}_{ROW}" value="{VALUE}"{CHECKED_RADIOBUTTON} />
+<!-- END neutral_radiobutton -->
+<!-- BEGIN neutral_checkbox -->
+	<label for="matrix_{QUESTION_ID}_{ROW}_{VALUE}"></label>
+	<input type="checkbox" id="matrix_{QUESTION_ID}_{ROW}_{VALUE}" name="matrix_{QUESTION_ID}_{ROW}[]" value="{VALUE}"{CHECKED_CHECKBOX} />
+<!-- END neutral_checkbox -->
+</div>
+<!-- END neutral_answer -->
+<!-- BEGIN row_other -->
+<div class="mobileSurveyMatrixOther">
+	<label for="matrix_other_{QUESTION_ID}_{ROW}"></label>
+	<input type="text" class="matrixother" name="matrix_other_{QUESTION_ID}_{ROW}" value="{VALUE_OTHER}" />
+</div>
+<!-- END row_other -->
+</div>
+
