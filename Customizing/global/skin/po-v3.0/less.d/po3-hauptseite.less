@@ -1,0 +1,48 @@
+div#po3-hauptseite-top {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	
+	div#po3-hauptseite-willkommen, div#po3-hauptseite-login {
+		.bordered;
+		margin-bottom: (@margin*3);
+		display: inline-bock;
+		background-color: @content-bg;
+	}
+	
+	div#po3-hauptseite-willkommen {
+		float: left;
+		padding: 0 (@padding);
+		width: 640px;
+		font-size: 0.7em;
+		color: @highlight1;
+		text-align: center;
+		
+		h1 {
+			color: @main-color;
+			font-size: 1.35em;
+		}
+	}
+	
+	div#po3-hauptseite-login {
+		float: right;
+		padding: @padding;
+		
+		input {
+			padding: (@padding/2);
+			margin: (@margin/2) (@margin/3);
+		}
+		input#username, input#password {
+			background-color: @body-bg;
+			.bordered(@body-bg);
+			
+			&:hover, &:focus, &:active {.bordered(@main-color);}
+		}
+		input#username {width: 250px;}
+		input#password {width: 150px;}
+		input.submit {
+			width: 96px;
+			.bordered(@main-color);
+		}
+	}
+}

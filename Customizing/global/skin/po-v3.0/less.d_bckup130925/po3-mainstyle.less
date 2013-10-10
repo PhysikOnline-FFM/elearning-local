@@ -1,0 +1,821 @@
+/*
+ * Page Style / Layout
+ * Aug./Sept. 2013 - Philip
+ */
+
+* {margin:0; padding:0;}
+html, body {width:100%; height:100%}
+body {
+	color: darken(@second-color, 30%);
+	background-color: @body-bg;
+	
+	.ilClearFloat {clear: both;}
+	.ilFloatLeft {float: left;}
+	.ilFloatRight {float: right;}
+	.ilOverlay, .yui-overlay {
+		.content-box; 
+		position: absolute;
+		text-align: left;
+		.box-shadow;
+	}
+	.ilOverlay > *, .yui-overlay > * {min-width: 100px;}
+	
+	.ilAccHeadingHidden, .ilAccHidden, .po-hidden {display: none;}
+	.ilGroupedListLE {
+		display: block;
+		padding: @padding/2 @padding;
+		fontsize: 0.9em;
+	}
+	.ilGroupedListLE:hover, a.ilGroupedListLE:hover, .ilGroupedListLE-hover {
+		color: white !important;
+		background-color: @main-color !important;
+	}
+	.ilGroupedListSep {
+		padding-bottom: @padding/4;
+		border-bottom: 1px solid @highlight1;
+		margin: 0px 10px 3px;
+	}
+	.ilGroupedListH {
+		padding: @padding/4 @padding*2;
+		background-color: @highlight3;
+		font-size: 0.8em;
+		color: white;
+	}
+
+	.il_ItemAlertProperty {
+		//.btn-active;
+		.bordered(@red);
+		color: @red;
+		background-color: white;
+		font-size: 0.65em;
+		padding: 1px;
+		margin-top: (2*@margin);
+	}
+	div.ilMessageBox {
+		div.ilSuccessMessage {
+			.green-box;
+		}
+		div.ilFailureMessage{
+			.red-box;
+		}
+	}
+	label, input[type="checkbox"], input[type="radio"], select {
+		cursor: pointer;
+	}
+	input[type="text"], input[type="input"], input[type="file"], input[type="password"], textarea {
+		.input-normal;
+	}
+	input, textarea {
+		font: inherit;
+	}
+	input:not([type="image"]):hover, textarea:hover, input:not([type="image"]):focus, textarea:focus {
+		.input-normal-hover;
+	}
+	input.submit, a.submit {
+		.btn-active;
+	}
+	input.submit:hover, input.submit:focus, a.submit:hover, a.submit:focus {
+		.btn-active-hover;
+	}
+	input[type="button"], button, .btn {
+		.btn-normal
+	}
+	input#btn_cal_start_reg, input#btn_cal_start_reg:hover, input#btn_cal_start_reg:focus,
+	input#btn_cal_end_reg, input#btn_cal_end_reg:hover, input#btn_cal_end_reg:focus {
+		border:none; padding:none;
+	}
+	
+	div.ilForm {
+		border-spacing: 0px;
+		border-collapse: collapse;
+		border: 1px solid @border-color;
+		display: table;
+
+		div.ilFormRow {
+			display: table-row;
+			
+			div.ilFormHeader, div.ilFormFooter {
+				background-color: @highlight3;
+				padding: (@padding/2) @padding;
+				font-size: 0.9em;
+				color: @highlight1;
+				display: table-cell;
+				text-align: left;
+				
+				h1,h2,h3 {
+					font-weight: bold;
+					margin: 0px;
+					padding: 0px;
+					font-size: 0.85em;
+					display: inline;
+				}
+			}
+			div.ilFormOption, div.ilFormValue, div.ilFormSubOption, div.ilFormSubValue {
+				padding: @padding;
+				vertical-align: top;
+				font-size: 0.9em;
+				display: table-cell;
+			}
+			div.ilFormOption {
+				text-align: right;
+				width: 200px;
+				font-weight: normal;
+				color: @second-color;
+				
+			}
+			div.ilFormValue {
+				text-align: left;
+				margin-left: 215px;
+				border-left: 1px solid @border-color;
+			}
+			div.ilFormCommands {
+				text-align: right;
+				input { font-size: 0.8em; }
+			}
+			
+			div.ilSubForm {
+				padding: @padding;
+				
+				div.ilFormSubOption, div.ilFormSubValue {
+					padding: (@padding/2);
+				}
+				div.ilFormSubValue {
+					text-align: left;
+					margin-left: 60px;
+					border-left: 1px solid @border-color;
+				}
+				div.ilFormFooter {
+					background-color: transparent;
+					border-left: 1px solid @border-color;
+				}
+			}
+			
+			div.ilFormInfo {
+				font-size: 0.9em;
+				font-style: italic;
+				color: @highlight1;
+				margin: (@margin/2);
+				
+			}
+		}
+	}
+
+	a {
+		.transition;
+		color: @main-color;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	a:hover,a:focus,a:active {
+		.transition;
+		color: @lighter2;
+	}
+	/*a:visited {
+		.transition;
+		color: @purpel;
+	}*/
+	a.il_ContainerItemCommand2:link, 
+	a.il_ContainerItemCommand2:visited, 
+	a.il_ContainerItemCommand:link, 
+	a.il_ContainerItemCommand:visited {
+		font-size: 0.8em;
+		text-decoration: none;
+		margin: 0px 3px 0px 0px;
+		white-space: nowrap;
+		font-weight: normal;
+	}
+	
+	/* Content block (regular frame) */
+	div.po3-contentBlock {
+		width: @content-width;
+		margin: 0 auto;
+		
+		div.ilMainHeader {
+			margin-top: 10px;
+			
+			div.ilMainMenuHeadSection {
+				@height-header: 60px;
+				height: @height-header;
+				border-bottom: 3px solid @main-color;
+				
+				div.ilTopTitle {
+					margin: @margin;
+					position: relative;
+					
+					h1 a, h2 a {
+						/* SEO: im HTML ist Text, der versteckt wird */
+						text-indent: -2000px;
+						display: inline-block;
+					}
+					
+					#il_main_logo {
+						float: left;
+						display: inline-block;
+						margin-left: 0px;
+						margin-right: 20px;
+						margin-bottom: 0px;
+						
+						width: 55px;
+						height: (@height-header + 1px);
+						
+						background-image: url("@{skin-url}src/logo_header.png");
+						background-position: center center;
+						background-repeat: no-repeat;
+					}
+					#po3-headerTitle {
+						float: left;
+						display: inline-block;
+						margin-top: 9px;
+						margin-right: 100px;
+						
+						width: 440px;
+						height: (@height-header - 20px);
+						
+						background-image: url("@{skin-url}src/HeaderTitle.png");
+						//background-size: contain;
+						background-position: center left;
+						background-repeat: no-repeat;
+					}
+					div#po3-skyline {
+						/* Absolut positioniert... */
+						// float: left;
+						display: inline-block;
+						img {height: (@height-header);}
+						
+						position: absolute;
+						right: 30px;
+						top: 0;
+					}
+				}
+				
+				div#il_status_box {
+					margin: 35px 0 0 0;
+					
+					span.ilMMStatus, span.ilHActProp {
+						background-color: @red;
+						color: white;
+						padding: 0 4px;
+						margin-left: -8px;
+					}
+				}
+			}
+			
+			div.ilMainMenuSection {
+				
+				div.po3-MainMenuContainer {
+					float: right;
+				
+					div.ilMainMenu {display: inline-block;}
+					
+					ul.ilMainMenu {
+						margin: 0px;
+						padding: 0px;
+						list-style: none;
+						white-space: nowrap;
+						display: inline-block;
+						
+						li.ilMainMenu {
+							display: inline;
+							float: left;
+							//height: @height-btn;
+							font-size: 0.9em;
+							.btn-normal;
+							padding: 0;
+							
+							> a, > span > a, .ilMainMenuSearch {
+								display: inline-block;
+								padding: @padding/2;
+								height: @height-btn;
+							}
+							
+							a {
+								color: @main-color;
+								text-decoration: none;
+
+							}
+							
+							div.ilMainMenuSearch {
+								form { 
+									margin: 0; 
+									padding: 0;
+									display: inline-block;
+									.placeholder-color;
+									
+									div#myAutoComplete {margin-top:-2px;}
+									
+									a { 
+										float: right;
+										padding-left: (@padding / 4);
+									}
+									
+									input {
+										display: inline;
+										background: none;
+										border: none;
+										box-shadow: none;
+										width: 100px;
+										padding: 0;
+									}
+									
+									#mm_search_menu_head {
+										background-color: @content-bg;
+										padding: @padding;
+										font-size: 0.8em;
+										a {
+											float: none;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		div.il_adv_sel {
+			//.bordered;
+			.box-shadow;
+			font-size: 0.8em;
+			//padding: (@padding/2);
+			
+			table.il_adv_sel {
+				tr {
+					.transition;
+					background-color: @content-bg;
+				}
+				tr:hover, tr:active, tr:focus{
+					.transition;
+					background-color: @highlight4;
+				}
+				td.il_adv_sel {
+					padding: (@padding/2) @padding;
+					border-bottom: 1px solid @highlight4;
+					text-align: left;
+					white-space: nowrap;
+					cursor: pointer;
+					font-weight: normal;
+				}
+			}
+		}
+	
+		div#mainspacekeeper div#mainscrolldiv, div#il_startup_content{
+			.ilClearFloat;
+			
+			a#imgtree.ilTreeView {
+				position: fixed;
+				top: 10px;
+				left: 0px;
+			}
+			
+			div.il_HeaderOuter {
+				//margin-top: @margin;
+			}
+			
+			div.ilLocator div.po3-breadcrumb{
+				font-size: 1.2em;
+
+				div#po3-breadcrumb-home {
+					display: inline-block;
+					float: left;
+					margin-right: @margin/2;
+					
+					img { width: 18px; }
+				}
+				
+				ul {
+					padding: (@padding/4) 0;
+					margin: 0px;
+					list-style: none;
+					list-style-position: inside;
+					
+					li {
+						display:inline;
+						white-space:nowrap;
+						margin-left: @margin/2;
+						
+						a {
+							color: @second-color;
+							text-decoration: none;
+							white-space:nowrap;
+							
+							&:hover {
+								/*color: @body-bg;
+								background-color: @second-color;*/
+								//background-color: @content-bg;
+								border-bottom: 2px solid @second-color;
+								padding: 3px;
+								margin: -3px;
+							}
+						}
+					}
+					li#po3-breadcrumb-home{}
+				}
+			}
+		
+			div.il_HeaderInner {
+				padding: (2 * @padding) 0;
+				
+				div.ilHeadAction {
+					float: right;
+					margin: @margin;
+				}
+				
+				h1.ilHeader {
+					margin: 0px;
+					border-bottom: 1px solid @border-color;
+				}
+				h1.ilHeaderHasIcon {margin-left: 50px;}
+				div.ilHeaderDesc {
+					padding: (@padding/2) (@padding/4);
+					font-size: 0.8em;
+					color: @highlight2;
+				}
+				div.ilHeaderDesc.ilHeaderHasIcon {margin-left: 50px;}
+			}
+			
+			div.il_Tab ul.il_Tab{
+				margin: 0px;
+				padding: 0px;
+				list-style: none;
+				position: relative;
+				top: 1px;
+				
+				li {
+					float: left;
+					margin: 0 @margin 0 0;
+					padding: (@padding / 2) @padding;
+					font-size: 0.9em;
+					white-space: nowrap;
+					
+					&.tabinactive, &nontabbed {
+						border-bottom: 1px solid @content-bg;
+						background-color: @body-bg;
+						color: lighten(@second-color, 15%);
+					}
+					&.tabactive {
+						.content-box;
+						border-bottom: 1px solid @content-bg;
+						color: @second-color;
+						
+						a {
+							color: @second-color;
+							text-decoration: none;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+
+			div.il_SubTab {
+				float: left;
+				width: 100%;
+				margin: 0px;
+				padding-left: (@padding/2);
+				
+				ul.il_SubTab {
+					font-size: 0.8em;
+					margin: 0;
+					padding: 0 (@padding/2);
+					list-style: square;
+					list-style-position:inside;
+					
+					li {
+						float: left;
+						margin: 0px (@margin*2) 0 0;
+						padding: 0;
+						color: @main-color;
+						
+						a {
+							color: lighten(@second-color, 15%);
+							text-decoration: none;
+							cursor: pointer;
+						
+							&.subtabactive {
+								color: @second-color;
+								font-style: italic;
+							}
+						}
+						
+						&.subtabactive, &.subtabinactive, &.nontabbed {
+						}
+					}
+					
+				}
+			}
+			
+			div.ilTable {
+				.content-box;
+				display: table;
+				min-height: 340px;
+				padding: (2 * @padding);
+				width: (@content-width - (4*@padding) - 2px);
+				
+				div.ilTableRow {
+					display: table-row;
+					
+					div.ilTabContentOuter {
+						clear: both;
+						width: 100%;
+						min-height: 100%;
+						float: left;
+						margin-bottom: 10px;
+					}
+					
+					div.ilTabContentInner {
+					    clear: both;
+						margin: 15px 0;
+						min-height: 300px;
+						padding: 0;
+						width: 100%;
+						
+						.il_ColumnLayout {
+						    min-height: 100%;
+							width: 100%;
+						}
+						
+						.fullwidth {
+							width: 100%;
+						}
+						
+						div.ilToolbar {
+							clear: both;
+							padding: @padding/4;
+							margin: @margin/2 0;
+							font-size: 0.8em;
+							//input {fonz-size: 0.9em;}
+							background-color: ligthen(@highlight4, 15%);
+						}
+						form#ilToolbar > div.ilToolbar {
+							float: right; // Test (möglicherweise nicht auf allen Seiten gut)
+						}
+						
+						div.ilAdminRow{}
+						div.ilCommandRow {
+							float: right;
+							display: inline-block;
+							margin-top: -(6*@margin);
+							font-size: 0.85em;
+							
+							img {height: 0.8em;}
+							
+							div.il_adv_sel{font-size: 1.1em}
+							
+							#ilAdvSelListTable_item_creation {
+								.ilOverlay;
+								table {margin: @margin/2 0;}
+								td {padding: @padding/4 @padding/2;}
+							}
+						}
+						
+						div.ilInfoScreenSec {
+							padding: 10px;
+						}
+						div.ilInfoScreenSec > h3 {
+							border-bottom: 1px solid @border-color;
+							color: @second-color;
+							font-size: 1.2em;
+							font-weight: normal;
+							margin: (2*@margin) 0 (3*@margin);
+						}
+						
+						table.il_InfoScreen {
+							border-collapse: collapse;
+							border-spacing: 0;
+							width: 100%;
+							
+							td {
+								vertical-align: top;
+								padding: (2*@padding) @padding;
+							}
+							td.il_InfoScreenProperty {
+								border-right: 1px solid @highlight1;
+								color: @highlight1;
+								text-align: right;
+								vertical-align: top;
+								width: 200px;
+							}
+							td.il_InfoScreenPropertyValue {
+								padding: (2*@padding) @padding;
+								vertical-align: top;
+							}
+						}
+						
+						div.il_Block, table.il_Block {
+							.bordered;
+							width: 100%;
+							border-spacing: 0px;
+							border-collapse: collapse;
+							clear: both;
+							margin-bottom: (3 * @margin);
+							
+							div.ilBlockHeader, div.ilBlockHeaderBig, 
+							td.ilBlockHeader, td.ilBlockHeaderBig {
+								.gradient-overlay ("center top", 0.05);
+								border-bottom: 1px solid @border-color;
+								font-size: 0.8em;
+								font-weight: bold;
+								padding: (@padding/2);
+								text-align: left;
+								vertical-align: middle;
+								
+								h1,h2,h3 {
+									font-size: 1em;
+									font-weight: bold;
+									color: @highlight2;
+									margin: 0;
+								}
+							}
+							
+							div.ilBlockInfo {
+								color: @highlight3;
+								font-size: 0.7em;
+								padding: (@padding/4) (@padding/2);
+								text-align: right;
+							}
+							
+							.ilBlockRow1, .ilBlockRow2, .tblrow1 {
+								padding: (@padding/2);
+								border-bottom: 1px solid @border-color;
+							}
+							div.submit {
+								padding: @padding;
+							}
+						}
+					}
+					
+					div.ilTableCell {
+						display: table-cell;
+					}
+				}
+			
+				table.ilContainerBlock, div.il_Block{
+					.bordered;
+					width: 100%;
+					border-spacing: 0px;
+					border-collapse: collapse;
+					clear: both;
+					margin: (2 * @margin) 0;
+					
+					th.ilContainerBlockHeader, div.ilBlockHeader {
+						.gradient-overlay(top, 0.05);
+						font-weight: bold;
+						font-size: 0.8em;
+						padding: (@padding/2);
+						text-align: left;
+						vertical-align: middle;
+						border-bottom: 1px solid @border-color;
+						
+						h1,h2,h3 {
+							font-size: 1em;
+							color: @highlight2;
+							margin: 0;
+						}
+					}
+					
+					div.ilContainerListItemOuter, div.ilContainerListItemOuterHighlight {
+						padding: (2 * @padding);
+						
+						div.il_ContainerListItem {
+							margin: 0;
+							padding-left: @padding;
+							
+							.il_ContainerItemTitle {
+								padding: 0px;
+								margin: 0px;
+								display: inline;
+							}
+							
+							div.po3-itemHeader {
+								border-bottom: 1px solid @highlight2;
+								min-height: 21px;
+								
+								input {
+									padding: 0px;
+									font-size: 0.75em;
+									margin: 0 !important;
+									width: 25px;
+									text-align: center;
+								}
+								
+							}
+							div.il_Description, div.il_ItemProperties {
+								padding-top: 0px;
+								font-size: 0.72em;
+								color: @highlight1;
+
+								.il_ItemAlertProperty {
+									font-size: 1em;
+								}
+							}
+						}
+					}
+					
+					tr.tblfooter {
+						border-top: 1px solid @border-color;
+						td {padding: @padding/2;}
+					}
+				}
+			}
+		
+			div.il_Footer {
+				font-size: 0.75em;
+				margin: (5*@margin) 0;
+				padding: (@padding/2);
+				border-top: 3px solid @main-color;
+			}
+		}
+		
+		div#il_startup_content {
+			.content-box;
+			margin-top: (2*@margin);
+			
+			div.po3-startupContent {
+				width: 60%;
+				margin: (4*@margin) auto;
+				
+				div.ilStartupSection {
+					text-align: center;
+					
+					form {
+						.po-box;
+						div.ilForm {
+							margin: auto;
+						}
+					}
+					
+					div.po-login-info {
+						.green-box;
+						font-size: 0.80em;
+						img {
+							float: right;
+							margin-left: 2em;
+						}
+						p {
+							text-align: justify;
+							line-height: 120%;
+						}
+					}
+					
+					p.ilStartupSection {
+						text-align: center;
+						font-size: 0.75em;
+						padding-top: (3*@padding);
+						padding-bottom: (@padding);
+					}
+				}
+			}
+		}
+	}
+	
+	/* Explorer block (side frame) */
+	div.ilExplorerFrame {
+		table.ilExplorer {
+			width: 100%;
+			background-color: @body-bg;
+			
+			div.ilExpH {
+				padding-top: 48px;
+				min-height: 35px;
+				
+				h1.ilExplorerHead {
+					color: @second-color;
+					margin: 0px;
+					padding: 10px 5px 10px 28px;
+					vertical-align: top;
+					text-align: left;
+					font-weight: bold;
+				}
+			}
+			td.ilExpBody {
+				border-top: 1px solid @border-color;
+				div.il_Explorer {
+					margin: 0px;
+					min-height: 420px;
+					padding: 10px 5px 15px;
+					ul.il_ExplorerNoIndent {
+						margin: 0px;
+						padding: 0px;
+						list-style: none;
+						li.il_Explorer {
+							margin: 0px;
+							padding: 0px;
+							padding-left: @padding;
+							white-space: nowrap;
+							list-style: none;
+							
+							div.il_ExplorerItemDescription {
+								margin-left: 40px;
+							}
+							a.il_HighlightedNode, .ilHighlighted {
+								border: 1px solid rgb(255, 221, 119);
+								background-color: rgb(255, 255, 153);
+								padding: 0px 5px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

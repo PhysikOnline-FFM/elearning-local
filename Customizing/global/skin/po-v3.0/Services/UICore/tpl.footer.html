@@ -1,0 +1,52 @@
+<div class="il_Footer">
+	<div class="ilFloatLeft">
+		<a href="/go/impressum" title="Kontaktadressen">Impressum</a> &middot;
+		<a href="/go/nutzungsvereinbarung" target="_blank">Nutzungsbedingungen</a> &middot;
+		<a href="/go/datenschutz">Datenschutzerkl&auml;rung</a> &middot;
+		<a href="/projekt" title="Zum PhysikOnline-Projektbereich (Teambereich und Organisation)">Projekt</a>
+	</div>
+	<div class="ilFloatRight">Physik Online ist ein Projekt des 
+		<a href="http://www.physik.uni-frankfurt.de">Fachbereichs Physik</a> der 
+		<a href="http://www.uni-frankfurt.de" title="Goethe-Universit&auml;t Frankfurt am Main">Uni Frankfurt</a>
+	</div>
+
+	<!-- powered by ILIAS (v{ILIAS_VERSION}) | -->
+	<!-- BEGIN items -->
+	<a class="po-hidden" href="{URL_ITEM}"<!-- BEGIN blank --> target="_blank"<!-- END blank -->>{TXT_ITEM}</a>
+	<!-- BEGIN item_separator --> <!-- nicht anzeigen da dahinter nichts kommt: | --> <!-- END item_separator -->
+	<!-- END items -->
+
+	{TRANSLATION_LINK}
+	{MEMORY_USAGE}
+	{SESS_INFO}
+	<!-- BEGIN call_history -->
+	<center><table border="0"><tr><td colspan="2">
+	<i>Controller History:</i></td></tr>
+	<!-- BEGIN c_entry --><tr><td class="small">- {C_ENTRY}</td><td class="small">{C_FILE}</td></tr><!-- END c_entry -->
+	</table></center>
+	<!-- END call_history -->
+	<!-- BEGIN included_files -->
+	<center><table border="0"><tr><td colspan="2">
+	<i>Included Files:</i></td></tr>
+	<!-- BEGIN i_entry --><tr><td class="small">- {I_ENTRY}</td><td class="small">{I_FILE}</td></tr><!-- END i_entry -->
+	</table></center>
+	<!-- END included_files -->
+	<!-- BEGIN xhtml_validation -->
+	<table class="fullwidth_invisible"><tr><td class="ilInvisibleBorder">
+	{VALIDATION}
+	</td></tr></table>
+	<!-- END xhtml_validation -->
+</div>
+
+<!-- piwik standard tracking -->
+<script type="text/javascript">
+var pkBaseURL = "https://elearning.physik.uni-frankfurt.de/logs/piwik/";
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://elearning.physik.uni-frankfurt.de/logs/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+<!-- end of piwik standard tracking. todo: async tracking -->

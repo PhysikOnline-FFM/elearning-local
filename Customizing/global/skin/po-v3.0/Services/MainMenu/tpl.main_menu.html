@@ -1,0 +1,98 @@
+<div class="ilMainHeader">
+	<div class="ilMainMenuHeadSection">
+		<!-- BEGIN osd_enabled --><script type="text/javascript">var OSDNotifier; $(function() { OSDNotifier = OSDNotifications({initialNotifications: {INITIAL_NOTIFICATIONS}, pollingIntervall: {OSD_POLLING_INTERVALL}, playSound: {OSD_PLAY_SOUND}})});</script><!-- END osd_enabled -->
+		<!-- BEGIN osd_container -->
+			<div class="osdNotificationContainer">
+
+			</div>
+		<!-- END osd_container -->
+
+		<!-- BEGIN header_top_title -->
+		<div class="ilTopTitle">
+			<h1>
+				<a id="il_main_logo" href="/goto_FB13-PhysikOnline_root_1.html" title="Zur Physik Online Startseite">
+					PhysikOnline
+				</a>
+			</h1>
+			<h2>
+				<a id="po3-headerTitle" href="/goto_FB13-PhysikOnline_root_1.html" title="Zur Physik Online Startseite">
+					Das eLearning-Portal des Fachbereichs Physik
+					<!-- {TXT_HEADER_TITLE} -->
+				</a>
+			</h2>
+			<div id="po3-skyline">
+				<a href="#" title="#">
+					<img src="/Customizing/global/skin/po-v3.0/src/skyline.png" alt="" />
+				</a>
+			</div>
+		</div><!-- END header_top_title -->		
+			
+		<!-- BEGIN status_box -->
+		<div id="il_status_box">
+			<!-- BEGIN status_item -->
+			<a class="il_ItemProperty" target="_top" href="{STATUS_HREF}">
+				<img src="{STATUS_IMG}"/>
+				<!-- BEGIN status_text -->
+				<span class="ilMMStatus">{STATUS_TXT}</span>
+				<span class="small ilMMHidStatus">{STATUS_TXT}</span>
+				<!-- END status_text -->
+			</a>
+			<!-- END status_item -->
+		</div>
+		<!-- END status_box -->
+	</div>
+	<div class="ilMainMenuSection">
+		<div class="po3-MainMenuContainer">
+			<h1 class="ilAccHeadingHidden">{TXT_MAIN_MENU}</h1>
+			{MAIN_MENU_LIST_ENTRIES}
+			<ul class="ilMainMenu ilMainMenuSide">
+				<!-- BEGIN help_icon -->
+				<li class="ilMainMenu">
+					<a class="MMInactive" id="help_tr" href="#" onclick="return il.Help.listHelp(event, false);">
+						<img src="{IMG_HELP}" />
+					</a>
+				</li>
+				<!-- END help_icon -->
+				<!-- BEGIN help_tt_icon -->
+				<li class="ilMainMenu">
+					<a class="MMInactive" id="help_tt" href="#" onclick="return il.Help.switchTooltips(event);">
+						<img src="{IMG_TT_ON}" id="help_tt_switch_on" />
+						<img class="ilNoDisplay" src="{IMG_TT_OFF}" id="help_tt_switch_off" />
+					</a>
+				</li>
+				<!-- END help_tt_icon -->
+				<!-- BEGIN search_box -->
+				<li class="ilMainMenu">{SEARCHBOX}</li>
+				<!-- END search_box -->
+				<!-- BEGIN userisanonymous -->
+				<li class="ilMainMenu ilLogin">
+					<span class="il_menu">
+						<!--{TXT_NOT_LOGGED_IN}-->
+						<a href="{LINK_LOGIN}" class="ilLogin" id="po3-anonymous-user" target="_top">{TXT_LOGIN}</a>
+						<!-- BEGIN registration_link -->
+						<a href="{LINK_REGISTER}" class="ilLogin" target="_top">{TXT_REGISTER}</a>
+						<!-- END registration_link -->
+					</span>
+				</li>
+				<li class="ilMainMenu">
+					{LANG_SELECT}
+				</li>
+				<!-- END userisanonymous -->
+				<!-- BEGIN userisloggedin -->
+				<li class="ilMainMenu ilLogin">
+					<a id="po3-mm_user_tr" class="MMInactive" target="_top" href="#">{USERNAME} <img border="0" src="./templates/default/images/mm_down_arrow.png" alt=""></a>
+					<div id="po3-mm_user_ov" class="ilOverlay ilNoDisplay yui-module yui-overlay yui-overlay-hidden" style="z-index: 2; visibility: hidden; display: block; overflow: auto;">
+						<a class="ilLogin ilGroupedListLE" href="{LINK_LOGOUT2}" target="_top">{TXT_LOGOUT2}</a>
+					</div>
+				</li>
+				<!-- END userisloggedin -->
+			</ul>
+			<!-- BEGIN screen_id -->
+			<div id="il_screen_id" class="ilHighlighted small">Screen-ID: {SCREEN_ID}</div>
+			<!-- END screen_id -->
+			<!-- BEGIN top_section -->
+			<!-- END top_section -->
+		</div>
+		<div class="ilClearFloat"></div>
+	</div>
+</div>

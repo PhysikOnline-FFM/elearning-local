@@ -1,0 +1,5 @@
+/*
+*	Alle Anfragen auf diese Datei werden per .htaccess auf physik.css.php umgeleitet.
+*	Das PHP-Skript liefert dann den kompilierten LESS-Inhalt.
+*	Auf diese Weise wird ein dynamisches Arbeiten mit LESS bei gleichzeitiger Nutzung von CSS-Caching moeglich.
+*/

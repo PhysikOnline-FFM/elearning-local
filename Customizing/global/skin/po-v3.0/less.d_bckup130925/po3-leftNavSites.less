@@ -1,0 +1,35 @@
+/*
+ *	FIX Layout von ilLMPresentationGUI 
+ *	Ticket #660
+**/
+
+body.std div.po3-contentBlock div.ilFrame { 
+	div#left_nav, div.ilLeftNav {
+		
+		float:left;
+		top:85px;
+		position: fixed;
+		max-width: 23%;
+		width: 23%;
+		margin-top: 4px;
+		overflow: auto;
+		background-color: transparent;
+		
+		div.il_ExplorerTree {
+			li.il_Explorer {
+				white-space: normal;
+			}
+		}
+	}
+	div#mainspacekeeper div#fixed_content {
+		position: relative;
+		top: 0 !important;
+		left: 28%;
+		width: 72%;
+		margin-top: 12px;
+	}
+
+	div#ilLMPageContent {
+		padding: 0;
+	}
+}

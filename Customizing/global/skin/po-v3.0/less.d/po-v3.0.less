@@ -1,0 +1,48 @@
+/*   
+*	PhysikOnline Redesign SS 2013
+*	PO-Version: 3.0
+*	Juni 2013
+*/
+
+/*   Variables   */
+@skin-url: "/Customizing/global/skin/po-v3.0/";
+@content-width: 960px;
+@padding: 8px;
+@margin: 6px;
+@height-btn: 20px;
+
+@body-bg: #f1f1f1;
+@content-bg: #ffffff;
+
+@main-color: #0163aa;
+@lighter1: lighten(spin(@main-color, 5), 10%);
+@lighter2: lighten(spin(@main-color, 10), 20%);
+@darker1: darken(spin(@main-color, -5), 10%);
+@darker2: darken(spin(@main-color, -10), 20%);
+
+@second-color: #393939;
+@highlight1: lighten(@second-color, 25%);
+@highlight2: lighten(@second-color, 35%);
+@highlight3: lighten(@second-color, 50%);
+@highlight4: lighten(@second-color, 65%);
+
+@green: #01aa48;
+@red: #aa010f;
+@purpel: #aa0163;
+
+@border-color: @highlight3; //@highlight1; // EXP: Aufhellen der Rahmen
+
+/*   Imports   */
+@import "@{skin-url}css.d/00_3rd-normalize.css";
+@import "@{skin-url}css.d/00_il-delos_for_PO3.0.css";
+@import "@{skin-url}css.d/19-print.css";
+@import "@{skin-url}css.d/20-po-styles.css";
+
+@import "po3-hauptseite.less";
+@import "po3-introduction.less";
+@import "po3-classes.less";
+@import "po3-mixins.less";
+@import "po3-mainstyle.less";
+@import "po3-leftNavSites.less";
+@import "ilias-entschlackung.less";
+@import "feedback.css";

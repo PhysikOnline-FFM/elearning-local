@@ -1,0 +1,4 @@
+Dieser Ordner ist eine Kopie der less-files vom 25.09.2013 - 16.30Uhr.
+
+Nach dem heutigen Meeting sollen noch einige Änderungen durchgeführt werden.
+Darunter unter anderem experimenteller Art.

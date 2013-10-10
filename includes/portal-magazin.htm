@@ -1,53 +1,82 @@
-<!-- Diese Datei wird seit PhysikOnline 2.1 automatisch als STARTSEITE
-     (Magazin) geladen! Sie befindet sich unter /local/includes/portal-magazin.txt
+<!-- Diese Datei wird seit PhysikOnline 2.1 (neu seit 3.0) automatisch als STARTSEITE
+     (Magazin) geladen! Sie befindet sich unter /local/includes/portal-magazin.htm
 -->
 <div class="po-content" id="po-hauptseite">
-
-<div style="float:left; width: 350px; margin-right: 10px;">
-	<div class="po-box po-framed">
-		<h2>Podcast-Wiki</h2>
-		<p>Videos zu Arbeitsgruppen, Experimenten, Instituten, Vorlesungsinhalten - von Studenten. <a href="http://podcast-wiki.physik.uni-frankfurt.de">Schau rein!</a></p>
-
-		<a href="http://podcast-wiki.physik.uni-frankfurt.de" style="display: block; background: url(/local/stock-images/podcast-small-pics.jpg); margin: 20px -20px -20px -20px; height: 200px;"></a>
-	</div>
+	<div id="po3-hauptseite-top">
+		<div class="po3-introduction startseite">
+		  <img src="https://elearning.physik.uni-frankfurt.de/local/files/construction.jpg" alt="Under Construction">
+		  <div class="alert">
+				<h2>Willkommen zu <b>PhysikOnline&nbsp;3.0</b></h2>
+				<p class="subtitle">PhysikOnline ist funktionaler geworden, damit
+				mehr Zeit für die Physik bleibt.</p>
+		  </div>
+		  <p style="clear:left">Im September 2013 arbeiten wir noch an vielen Detailverbesserungen.
+		  Bitte <a href="/go/impressum">schreiben Sie uns eine E-Mail oder rufen Sie an</a>, falls Fehler
+		  auftreten oder etwas nicht (mehr) geht. Auch Feedback können Sie an uns
+		  richten.
+		  <p>
+		  <p>Offizieller Launch ist Semesterbeginn WS 2013/14.</p>
+		</div>
 	
-	<div style="margin: 20px 0;">
-		<img src="/local/stock-images/physikgebaeude-klein.jpg" alt="Unser hübsches Physik-Gebäude" title="Das Physik-Gebäude der Uni Frankfurt">
+	<!--
+		<div class="" id="po3-hauptseite-willkommen">
+			<h1>Willkommen bei PhysikOnline</h1>
+			<p>PhysikOnline ist das eLearning-Portal des <a href="http://www.physik.uni-frankfurt.de/">Fachbereichs Physik</a> der <a href="http://www.uni-frankfurt.de/">Uni Frankfurt</a>.<br />
+			Hier finden sie multimedial unterstützte Vorlesungen, Aufgaben, Kompedien, Repetitorien, Java-Applets, Maple-Arbeitsblätter, Skripte und vieles mehr.</p>
+			
+			<p>Nach dem Login können Sie PhysikOnline personalisieren (persönlicher Schreibtisch, automatische Benachrichtigungen, eigene Lerngruppen, WebDAV-Zugriff und vieles mehr).<br />
+			Seit Wintersemester 07/08 verzeichnet PhysikOnline über 1400 registrierte Benutzer.</p>
+		</div>
+	-->
+		<div class="" id="po3-hauptseite-login">
+			<form id="form_po3_login" method="post" action="ilias.php?lang=de&client_id=FB13-PhysikOnline&cmd=post&cmdClass=ilstartupgui&cmdNode=di&baseClass=ilStartUpGUI&rtoken=" name="formlogin">
+				<table>
+					<tr>
+						<td colspan="2"><input id="username" type="text" name="username" maxlength="200" placeholder="Benutzername oder HRZ-Name" /></td>
+					</tr>
+					<tr>
+						<td><input id="password" type="password" name="password" placeholder="Passwort" /></td>
+						<td><input class="submit" type="submit" value="Anmelden" name="cmd[showLogin]" /></td>
+					</tr>
+				</table>
+			</form>
+		</div>
 	</div>
-</div><!-- linke spalte -->
-
-<div style="margin-left: 370px;">
-<div style="float:left; width:100%;"><!-- workaround for clear:both statements -->
-
-<div class="po-clearafter" style="border: 3px solid #A5D0E3; padding: 2em; margin-bottom: 20px; background: url(./Customizing/global/skin/physik/src/FramedBack.gif) repeat-x;">
-	<img src="/local/logo_big.jpg" class="po-right" style="width: 136px;" alt="Logo von PhysikOnline">
-	<div style="font-size: 200%;">
-		Willkommen bei <span class="po-highlight">PhysikOnline</span>
-	</div>
-
-<p>PhysikOnline ist das eLearning-Portal des <a href="http://www.physik.uni-frankfurt.de/">Fachbereichs Physik</a> der <a href="http://www.uni-frankfurt.de/">Uni Frankfurt</a>.
-<p>Hier finden sie multimedial unterstützte Vorlesungen, Aufgaben, Kompedien, Repetitorien, Java-Applets, Maple-Arbeitsblätter, Skripte und vieles mehr.
-
-<p>Nach dem Login können Sie PhysikOnline personalisieren (persönlicher Schreibtisch, automatische Benachrichtigungen, eigene Lerngruppen, WebDAV-Zugriff und vieles mehr).
-
-<p>Seit Wintersemester 07/08 verzeichnet PhysikOnline über 1400 registrierte Benutzer.
-
-<!--
-<p>Seit dem <b>Wintersemester 2011/2012</b> ist dies das neue eLearning-System für den Physik-Fachbereich der Goethe-Universität.</p><div style="margin:.9em 0 .1em;font-size: 150%; color: #666">Was gibt es Neues?</div><p>» Alle Features des <a href="http://th.physik.uni-frankfurt.de/elearning">bisherigen eLearning</a>
-» Frischere Oberfläche
-» Neue Inhalte und Videos
-» Neue Foren für studentische Kollaboration
-» <a href="https://elearning.physik.uni-frankfurt.de/goto_FB13-PhysikOnline_pg_65_1378.html">Login mit HRZ-Account</a>
-» <a href="https://elearning.physik.uni-frankfurt.de/goto_FB13-PhysikOnline_pg_63_1378.html">... und vieles mehr!</a></p>
--->
+	[list-cat]
 </div>
-
-[list-cat]
-
-</div>
-</div><!-- rechte spalte -->
-
-
-
-<div class="po-clear"></div>
-</div>
+<script>
+$( document ).ready(function() {
+	block = $("#po3-hauptseite-top").detach();
+	rows = "#item_row_1361, #item_row_90, #item_row_1393, #item_row_75, #item_row_76";
+	
+	// Füge PodcastWiki Zeile ein
+	$("#po-hauptseite table.ilContainerBlock").append("<tr id='item_row_podcastwiki' class='ilCLIRow2'><td class='ilCLI'><div id='po3-podcastwiki' class='ilContainerListItemOuter'><div><a href='http://podcast-wiki.physik.uni-frankfurt.de/'><img width='22' src='/local/logos/podcast-goethe-klein.png' title='Symbol Kategorie' alt='' style='position: absolute;  padding: 0px;'></img></a></div><div style='margin: 0px 0px 0px 25px; padding: 0px;'><div class='il_ContainerListItem'><div class='po3-itemHeader'><div style='float:left;padding-bottom: 5px'><h4 class='il_ContainerItemTitle'><a class='il_ContainerItemTitle' href='http://podcast-wiki.physik.uni-frankfurt.de/'>  Podcast Wiki Physik</a></h4></div></div><div class='il_Description' style='clear:both; zoom:1;'>PodcastWiki ist ein studentisches Videoprojekt, das physikalische Experimente vorführt, Vorlesungsinhalte erklärt oder Arbeitsgruppen des Fachbereichs Physik der Goethe-Universität vorstellt.</div><div style='clear:both;'></div></div></div></div></td></tr>");
+	
+	if ($("#po3-anonymous-user").length !== 0){
+		// Wenn nicht angemeldet
+		$("#mainspacekeeper div.il_HeaderInner").append(block);
+		
+		// Blende obige Listenpunkte aus
+		$(rows).hide();
+		// Füge "Alle anzeigen" hinzu
+		$("<tr>")
+			.addClass("ilCLIRow2")
+			.attr("id", "po3-showAllRows")
+			.append(
+				$("<td>")
+					.css({"text-align": "center"})
+					.append(
+						$("<a>")
+							.css({"display": "block"})
+							.text("Alle anzeigen")
+							.click(function(){
+								$(rows).show();
+								$("#po3-showAllRows").hide();
+							})
+					)
+				)
+			.appendTo("#po-hauptseite table.ilContainerBlock");
+	}
+	
+});
+</script>
