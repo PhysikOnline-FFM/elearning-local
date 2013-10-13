@@ -18,6 +18,14 @@
 	-moz-border-radius: @topleft @topright @bottomright @bottomleft;
 	border-radius: @topleft @topright @bottomright @bottomleft;
 }
+
+.opacity-transition(@time: 600ms) {
+	-webkit-transition:opacity 600ms linear;
+	-moz-transition:opacity 600ms linear;
+	-o-transition:opacity 600ms linear;
+	transition:opacity 600ms linear;
+}
+
 .transition (@prop: "background-color, color", @time: 0.3s, @ease: linear) {
 	/*
 	-webkit-transition-property: @prop;

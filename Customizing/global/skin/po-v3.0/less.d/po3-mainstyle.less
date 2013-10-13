@@ -240,11 +240,27 @@ body {
 						/* Absolut positioniert... */
 						// float: left;
 						display: inline-block;
-						img {height: (@height-header);}
+						//img {height: (@height-header);}
 						
 						position: absolute;
 						right: 30px;
-						top: 0;
+						top: -5px;
+
+						canvas {
+							// Überlagert das PNG
+							position: absolute;
+							top: 0; left: 0;
+							// standardmaessig ausgeblendet
+							opacity: 0;
+							// Uebergang zu ein/ausgeblendet
+							.opacity-transition(@time: 600ms);
+						}
+
+						a.running canvas {
+							// Animation laeuft/aktiv: Anzeigen
+							opacity: 1;
+							.opacity-transition(@time: 600ms);
+						}
 					}
 				}
 				
@@ -267,6 +283,11 @@ body {
 				
 					div.ilMainMenu {display: inline-block;}
 					
+					ul.ilMainMenuSide {
+						// Bugfix POTT #701
+						float: none;
+					}
+
 					ul.ilMainMenu {
 						margin: 0px;
 						padding: 0px;
@@ -516,6 +537,7 @@ body {
 					//.gradient-overlay ("center top", 0.05); // EXP: Entfernt um Flächen zu erhalten
 					//border-bottom: 1px solid @border-color; // EXP: Entfernt
 					background-color: @highlight4; // EXP: NEW
+					background-image: none; // Delos-Defaulthintergrund nicht einblenden
 					font-size: 0.8em;
 					font-weight: bold;
 					padding: (@padding/2);
@@ -529,6 +551,8 @@ body {
 						margin: 0;
 					}
 				}
+				// Bugfix, weil das Ding rausgeschaut hat...
+				.ilContainerBlockHeader { padding: 0 4px; }
 
 				.ilCLIRow1, .ilCLIRow2 { // EXP: NEW
 					border: none; // EXP: Entfernen des Rahmens zwischen Elementen
@@ -710,10 +734,59 @@ body {
 			}
 		
 			div.il_Footer {
+				.clearfix();
+
+				position: relative; // fuer absolute positionierung von .ilFooterText
 				font-size: 0.75em;
 				margin: (5*@margin) 0;
 				padding: (@padding/2);
 				border-top: 3px solid @main-color;
+				text-align: left;
+
+				// Ab hier: Erweiterungen zum Footer, von Sven
+				// in Bezug auf POTT #689 geschrieben
+
+				.ilFooterText {
+					position: absolute;
+					top: (@padding/2);
+					right: (@padding/2);
+				}
+
+				.ilFloatLeft {
+					// Die "Boxen"
+					margin-right: 35px;
+				}
+
+				h3 {
+					font-size: 100%;
+					font-weight: bold;
+					margin: 0;
+
+					&, a { color: #74797e; }
+					a:hover { color: #1374FE; }
+				}
+
+				ul, li {
+					list-style: none;
+					padding: 0;
+				}
+
+				// Permalink in Footer
+				.ilPermaLink {
+					margin: 0;
+
+					div, label, .small, input#current_perma_link {
+						font-size: 100%;
+						padding: 0;
+						text-align: left !important;
+						display: inline;
+					}
+
+					// hover-Effekt
+					input#current_perma_link { display: none; }
+					:hover input#current_perma_link { display: inline; }
+
+				}
 			}
 		}
 		
