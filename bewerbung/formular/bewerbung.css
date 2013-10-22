@@ -1,0 +1,89 @@
+/* Zum alten physik.css von PO ergaenzende Styles fuer die Bewerbungsseiten */
+
+h1 { font-size: 2.2em; }
+div.positionen h1 { font-size: 1.9em; }
+h1 small { display: block; opacity: .8; font-size: 80%; }
+
+h2 { padding: 15px 0 5px 0; }
+
+
+div.positionen div.heading a {
+    background-color: #CCE3EF;
+    display: block;
+    font-size: 123%;
+    padding: 1em;
+    outline: none;
+}
+
+div.positionen div.heading.open a {
+	border-bottom: 1px solid #5FA6FC;
+}
+
+div.positionen  > div {
+	margin-bottom: 5px;
+}
+
+div.positionen div.heading.close a span.triangle {
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 7.5px 0 7.5px 7.5px;
+	border-color: transparent transparent transparent #007bff;
+}
+
+div.positionen div.heading.open a span.triangle {
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 7.5px 7.5px 0 7.5px;
+	border-color: #007bff transparent transparent transparent;
+}
+
+div.positionen div.content {
+	padding: 1em;
+	background-color: #EDF3F7;
+}
+
+
+/* Formular */
+
+#tbl_contact table {
+  border-style:none;
+  margin-top:10px 0px 0px 0px;
+  padding:0px;
+}
+
+input.txt_field {
+  font-size: 0.9em; 
+  font-family:Arial,Verdana,Helvetica,sans-serif;
+  width:300px;
+}
+
+input.txt_field_nmb {
+  font-size: 0.9em; 
+  font-family:Arial,Verdana,Helvetica,sans-serif;
+  width:50px;
+}
+
+textarea.txt_field {
+  font-size: 0.9em; 
+  font-family:Arial,Verdana,Helvetica,sans-serif;
+  width:500px;
+  height:300px;
+}
+
+td.left {
+  padding: 4px;
+  margin: 0px;
+  text-align:right;
+  vertical-align:top;
+  width: 200px;
+}
+
+td.right {
+  padding: 4px;
+  margin: 0px;
+  vertical-align:top;
+}
