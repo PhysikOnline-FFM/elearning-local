@@ -77,11 +77,16 @@
 	<xsl:copy-of select="title" />
 	<xsl:copy-of select="meta" />
 	<xsl:copy-of select="base" />
-	
-	<!-- <xsl:copy-of select="link" /> -->
-	<!-- <xsl:copy-of select="style" /> -->
+	 <!--<xsl:copy-of select="script" />-->
+	<!--<xsl:copy-of select="link" />-->
+	<!--<xsl:copy-of select="style" />-->
+
+	<xsl:copy-of select="link[@rel='stylesheet' and contains(@href, './data/')]" />
+	<xsl:copy-of select="link[@rel='stylesheet' and contains(@href, './Services/COPage/')]" />
+	<xsl:copy-of select="link[@rel='stylesheet' and contains(@href, './Services/MediaObjects/')]" />
+
 	<xsl:copy-of select="script" />
-	
+
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="./{$skinDirectory}/mobile.css" />
 	<link rel="stylesheet" href="./{$skinDirectory}/themes/{$themeString}/mob.css" />
@@ -89,12 +94,23 @@
 	<link rel="stylesheet" href="./{$skinDirectory}/themes/{$jquery}/jquery.mobile.structure.css" />	
 	<link rel="stylesheet" href="./{$skinDirectory}/themes/red_theme.css" />
 	<link rel="stylesheet" href="./{$skinDirectory}/themes/notification_theme.css" />	
-	<link rel="stylesheet" type="text/css" href="./{$skinDirectory}/themes/jquery.mobile.simpledialog.min.css" /> 
+	<link rel="stylesheet" type="text/css" href="./{$skinDirectory}/themes/jquery.mobile.simpledialog.min.css" />
+
+
+
+
+
 	
 	<script src="./{$skinDirectory}/themes/{$jquery}/jquery.min.js"></script> 
 	<script src="./{$skinDirectory}/themes/{$jquery}/jquery.mobile.js"></script>
 	<script type="text/javascript" src="./{$skinDirectory}/themes/jquery.mobile.simpledialog.min.js"></script>
-	
+
+
+
+	<script src="./{$skinDirectory}/themes/media/mediaelement-and-player.min.js"></script>
+	<link rel="stylesheet" href="./themes/media/{$skinDirectory}/mediaelementplayer.min.css" />
+
+
 	<xsl:if test="php:function('ilSkinTransformer::isWinMobile') = 'true'">
 		<link rel="stylesheet" href="./{$skinDirectory}/themes/winphone7.css" />
 	</xsl:if>
@@ -155,9 +171,10 @@
 			});
 		}
 
+
 	</script>
 	<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-	<meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=10.0,initial-scale=1.0;" />
+	<meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=10.0,initial-scale=1;" />
     <link rel="apple-touch-icon" href="./{$skinDirectory}/themes/{$themeString}/icon.png" />
     <link rel="apple-touch-startup-image" href="./{$skinDirectory}/themes/{$themeString}/startup.png" />
 	<xsl:apply-templates select="final" />
@@ -190,7 +207,7 @@
 					<a href="#" data-rel="back" data-theme="a" data-iconpos="notext" data-icon="arrow-l"></a>
 				</xsl:when>
 				<xsl:otherwise>
-					<a href="/" rel="external" data-theme="b" class="ui-btn-left" data-iconpos="notext" data-icon="home"></a>
+					<a href="./" rel="external" data-theme="b" class="ui-btn-left" data-iconpos="notext" data-icon="home"></a>
 				</xsl:otherwise>
 			</xsl:choose>
 
@@ -361,30 +378,30 @@
 		</div>
  	</div>
 
- 	<!-- 
-  		FSX Navigation Page
-  	-->
- 	<div id="navigation" data-role="page" data-fullscreen="false" data-theme="a">
- 		<div data-role="header" data-theme="a">
+	<!--
+		  FSX Navigation Page
+	  -->
+	<div id="navigation" data-role="page" data-fullscreen="false" data-theme="a">
+		<div data-role="header" data-theme="a">
 			<h1>
 				Menu
 			</h1>
 		</div>
 		<div data-role="content" data-theme="a">
-			<br/>
-			<br/>
+			<br />
+			<br />
 			<ul data-role="listview" data-theme="a" data-divider-theme="a">
 				<!-- breadcrumb -->
 				<xsl:apply-templates select="//div[@id='fsxbread']" mode="navigation" />
 				<!--<li data-role="list-divider" data-theme="b">Repository</li> -->
 				<xsl:apply-templates select="//div[@id='FSXmm_rep_ov']" mode="navigation" />
 			</ul>
-			
+
 			<!-- styleswitch -->
 			<p>
-				<br/>
+				<br />
 			</p>
-			
+
 			<div data-role="controlgroup" data-inline="true">
 				<!-- <a data-role="button" data-theme="a" href="{//div[@id='FSXdash']/a[3]/@href}" rel="external">
 					<xsl:value-of select="//div[@id='FSXdash']/a[3]" />
@@ -395,13 +412,18 @@
 						<xsl:value-of select="." />
 					</a>
 				</xsl:for-each>
+				<xsl:for-each select="//a[@class='mobile_footer_link']">
+					<!--<a data-role="button" data-theme="c" data-icon="arrow-r" data-iconpos="right" href="{concat('#', @id)}">-->
+					<xsl:copy-of select="." />
+					<!--</a>-->
+				</xsl:for-each>
 				<xsl:copy-of select="//div[@id='mobileLoginSection']/a[@class='FSXReg']" />
 				<xsl:copy-of select="//div[@id='mobileLoginSection']/a[@class='FSXLogout']" />
 				<xsl:copy-of select="//div[@id='mobileLoginSection']/a[@class='FSXLogin']" />
 			</div>
 		</div>
- 	</div>
-	</body>
+	</div>
+</body>
 </xsl:template>
 
 
@@ -413,7 +435,7 @@
 			<xsl:variable name="class" select="@class" />
 			<xsl:variable name="url" select="@href" />
 			<xsl:choose>
-				<xsl:when test="$class='ilGroupedListLE'" >
+				<xsl:when test="$class='ilGroupedListLE ilLVNavEnt'" >
 					<xsl:if test="position() &gt; 1 and position() &lt; 6">
 					<li><a rel="external">
 						<xsl:attribute name="href"><xsl:value-of select="$url" /></xsl:attribute>
@@ -421,21 +443,17 @@
 					</a></li>
 					</xsl:if>
 				</xsl:when>
-				<xsl:when test="$class='ilGroupedListH'" >
+				<xsl:when test="$class='ilGroupedListH ilLVNavEnt'" >
 					<li data-role="list-divider" data-theme="b">
 						<xsl:value-of select="." />
 					</li>
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:value-of select="." />
+					<!--<xsl:value-of select="." />-->
 				</xsl:otherwise>
 			</xsl:choose>
-		
 	</xsl:for-each>
 </xsl:template>
-
-
-
 
 <!-- 
 	Locator FSX
@@ -484,7 +502,7 @@
 		<!-- vars -->
 		<xsl:variable name="url" 		select="form/@action"/>
 		<xsl:variable name="term" 		select="//input[@id='term']/@value"/>
-		<xsl:variable name="submit" 	select="//input[@type='SUBMIT']/@value"/>
+		<xsl:variable name="submit" 	select="//input[@name='cmd[performSearch]']/@value"/>
 		<br/>
 		<form>
 			<xsl:attribute name="data-rel">external</xsl:attribute>
@@ -907,54 +925,52 @@
 <!--
 	Footer
  -->
- <xsl:template name="footer">
- 
- 	<xsl:variable name="search_title" select="php:function('ilSkinTransformer::getTxt', 'search')" />
-	<xsl:variable name="repository_title" select="php:function('ilSkinTransformer::getTxt', 'repository')" />
- 	<xsl:variable name="pd_title" select="php:function('ilSkinTransformer::getTxt', 'personal_desktop')" />
- 	<xsl:variable name="menu_mobile" select="php:function('ilSkinTransformer::getTxt', 'cont_glo_menu')" />
- 	
+	<xsl:template name="footer">
+		<xsl:variable name="search_title" select="php:function('ilSkinTransformer::getTxt', 'search')" />
+		<xsl:variable name="repository_title" select="php:function('ilSkinTransformer::getTxt', 'repository')" />
+		<xsl:variable name="pd_title" select="php:function('ilSkinTransformer::getTxt', 'personal_desktop')" />
+		<xsl:variable name="menu_mobile" select="php:function('ilSkinTransformer::getTxt', 'cont_glo_menu')" />
 
- 	<!-- Show Footer when online -->
- 	<xsl:if test="$fullscreen = 0">
- 	<xsl:if test="$loggedIn &gt; 0">
-		<div data-position="fixed" data-role="footer" data-theme="a">		
-			<div data-role="navbar">
-				<ul>
-					<xsl:if test="$loggedIn != 3">
-						<li>
-							<a href="./ilias.php?baseClass=ilPersonalDesktopGUI"  data-icon="home" data-role="button" rel="external">
-								<xsl:attribute name="class">
-									<xsl:value-of select="php:function('ilMobileSkin::getActive', 'ilPersonalDesktopGUI')" />
-								</xsl:attribute>
-								<xsl:value-of select="$pd_title" />
-							</a>
-						</li>
-					</xsl:if>
-					<li>
-						<a href="./goto.php?target=root_1"  data-icon="grid" rel="external">
-							<xsl:attribute name="class">
-								<xsl:value-of select="php:function('ilMobileSkin::getActive', '')" />
-							</xsl:attribute>
-							<xsl:value-of select="$repository_title" />
-						</a>
-					</li>
-					<li >
-						<a href="#search_page" data-fullscreen="true" data-transition="slideup" data-rel="dialog" data-icon="arrow-u">
-							<xsl:value-of select="$search_title" />
-						</a>
-					</li>
-					
-					<li >
-						<a href="#navigation" data-fullscreen="true" data-transition="slideup" data-rel="dialog" data-icon="arrow-u">
-							<!--<xsl:value-of select="$menu_mobile" />-->Menu
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</xsl:if>
-	</xsl:if>
- </xsl:template>
+		<!-- Show Footer when online -->
+		<xsl:if test="$fullscreen = 0">
+			<xsl:if test="$loggedIn &gt; 0">
+				<div data-position="fixed" data-role="footer" data-theme="a">
+					<div data-role="navbar">
+						<ul>
+							<xsl:if test="$loggedIn != 3">
+								<li>
+									<a href="./ilias.php?baseClass=ilPersonalDesktopGUI" data-icon="home" data-role="button" rel="external">
+										<xsl:attribute name="class">
+											<xsl:value-of select="php:function('ilMobileSkin::getActive', 'ilPersonalDesktopGUI')" />
+										</xsl:attribute>
+										<xsl:value-of select="$pd_title" />
+									</a>
+								</li>
+							</xsl:if>
+							<li>
+								<a href="./goto.php?target=root_1" data-icon="grid" rel="external">
+									<xsl:attribute name="class">
+										<xsl:value-of select="php:function('ilMobileSkin::getActive', '')" />
+									</xsl:attribute>
+									<xsl:value-of select="$repository_title" />
+								</a>
+							</li>
+							<li>
+								<a href="#search_page" data-fullscreen="true" data-transition="slideup" data-rel="dialog" data-icon="arrow-u">
+									<xsl:value-of select="$search_title" />
+								</a>
+							</li>
+
+							<li>
+								<a href="#navigation" data-fullscreen="true" data-transition="slideup" data-rel="dialog" data-icon="arrow-u">
+									<!--<xsl:value-of select="$menu_mobile" />-->Menu
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</xsl:if>
+		</xsl:if>
+	</xsl:template>
 
 </xsl:stylesheet>

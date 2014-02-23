@@ -1,5 +1,5 @@
 <theme>
 	<name>default</name>
-	<usebeta>1</usebeta>
-	<jquery>1.1.1</jquery>
+	<usebeta>0</usebeta>
+	<jquery>1.3.0</jquery>
 </theme>

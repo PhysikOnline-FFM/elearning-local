@@ -1,11 +1,32 @@
 <div class="il_Footer">
 	<div class="ilFloatLeft">
-		<a href="/go/impressum" title="Kontaktadressen">Impressum</a> &middot;
-		<a href="/go/nutzungsvereinbarung" target="_blank">Nutzungsbedingungen</a> &middot;
-		<a href="/go/datenschutz">Datenschutzerkl&auml;rung</a> &middot;
-		<a href="/projekt" title="Zum PhysikOnline-Projektbereich (Teambereich und Organisation)">Projekt</a>
+		<h3><a href="#load_physikonline_universe" class="po-universe footer">PhysikOnline</a></h3>
+		<ul>
+			<li><a href="/go/impressum" title="Kontaktadressen">Impressum</a></li>
+			<li><a href="/go/nutzungsvereinbarung" target="_blank">Nutzungsbedingungen</a></li>
+			<li><a href="/go/datenschutz">Datenschutzerkl&auml;rung</a></li>
+			<!--<a href="/projekt" title="Zum PhysikOnline-Projektbereich (Teambereich und Organisation)">Projekt</a>-->
+		</ul>
 	</div>
-	<div class="ilFloatRight">Physik Online ist ein Projekt des 
+	<div class="ilFloatLeft">
+		<h3><a href="#load_physikonline_universe" class="po-universe footer">Unterprojekte</a></h3>
+		<ul>
+			<li><a href="http://podcast-wiki.physik.uni-frankfurt.de" title="Schaue physikalische Videos auf Podcast-Wiki Physik">Podcast-Wiki Physik</a></li>
+			<li><a href="https://pokal.uni-frankfurt.de" title="Physik Onlines Kollaborative Arbeits- und Lernplattform">POKAL</a></li>
+			<li><a href="/projekt" title="Zum PhysikOnline-Projektbereich (Teambereich und Organisation)">Organisation</a></li>
+		</ul>
+	</div>
+	<div class="ilFloatLeft js-only werkzeuge">
+		<h3>Seitenwerkzeuge</h3>
+		<ul>
+			<!-- per Javascript eingebunden: -->
+			<!--<li><a href="#">Kurzlink</a></li>-->
+			<!--<li><a href="#">Mobilversion</a></li>-->
+			<!--<li><a href="#">Feedback</a></li>-->
+		</ul>
+	</div>
+	<div class="ilFooterText"><a href="#load_physikonline_universe" class="po-universe footer">Physik Online</a>
+		ist ein Projekt des 
 		<a href="http://www.physik.uni-frankfurt.de">Fachbereichs Physik</a> der 
 		<a href="http://www.uni-frankfurt.de" title="Goethe-Universit&auml;t Frankfurt am Main">Uni Frankfurt</a>
 	</div>
@@ -38,15 +59,19 @@
 	<!-- END xhtml_validation -->
 </div>
 
-<!-- piwik standard tracking -->
+<!-- piwik po3, siehe POTT #442 -->
 <script type="text/javascript">
-var pkBaseURL = "https://elearning.physik.uni-frankfurt.de/logs/piwik/";
-document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-</script><script type="text/javascript">
-try {
-var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
-piwikTracker.trackPageView();
-piwikTracker.enableLinkTracking();
-} catch( err ) {}
-</script><noscript><p><img src="http://elearning.physik.uni-frankfurt.de/logs/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
-<!-- end of piwik standard tracking. todo: async tracking -->
+  var _paq = _paq || [];
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+
+  (function() {
+    var u="/logs/piwik/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "2"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><img src="/logs/piwik/piwik.php?idsite=2&amp;rec=1" style="border:0" alt="" /></noscript>
+<!-- End Piwik Code -->

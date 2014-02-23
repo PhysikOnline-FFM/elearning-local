@@ -25,25 +25,23 @@
 				<!-- 
 					Pre-selection of blocks to show
 				-->
-				<xsl:copy-of select=".//div[@id='block_pditems_0_collapsible']" />
 				<xsl:copy-of select=".//div[@id='block_pdcontent_0_collapsible']" />
-				<xsl:copy-of select=".//div[@id='block_pdsysmess_0_collapsible']" />
-				<xsl:copy-of select=".//div[@id='block_pdnews_0_collapsible']" />
-		
-				<!-- 
+            <xsl:copy-of select=".//div[@id='block_pditems_0_collapsible']" />
+            <xsl:copy-of select=".//div[@id='block_pdnews_0_collapsible']" />
+            <xsl:copy-of select=".//div[@id='block_pdsysmess_0_collapsible']" />
+
 				<xsl:copy-of select=".//div[@id='block_pdmail_0_collapsible']" />
 				<xsl:copy-of select=".//div[@id='block_pdcal_0_collapsible']" />
 				<xsl:copy-of select=".//div[@id='block_pdnotes_0_collapsible']" />
 				<xsl:copy-of select=".//div[@id='block_pdbookm_0_collapsible']" />
 				<xsl:copy-of select=".//div[@id='block_pdusers_0_collapsible']" />
-				-->
-				
+
 				<!-- function pages are directly copied by main.xsl -->
-				<xsl:copy-of select=".//div[@id='block_pditems_0_functions']" />
-				<xsl:copy-of select=".//div[@id='block_pdcontent_0_functions']" />
-				<xsl:copy-of select=".//div[@id='block_pdsysmess_0_functions']" />
-				<xsl:copy-of select=".//div[@id='block_pdmail_0_functions']" />
-		 		<xsl:copy-of select=".//div[@id='block_pdnews_0_functions']" />
+				<!--<xsl:copy-of select=".//div[@id='block_pditems_0_functions']" />-->
+				<!--<xsl:copy-of select=".//div[@id='block_pdcontent_0_functions']" />-->
+				<!--<xsl:copy-of select=".//div[@id='block_pdsysmess_0_functions']" />-->
+				<!--<xsl:copy-of select=".//div[@id='block_pdmail_0_functions']" />-->
+		 		<!--<xsl:copy-of select=".//div[@id='block_pdnews_0_functions']" />-->
 		
 				<!-- 
 		 		<xsl:copy-of select=".//div[@id='block_pdcal_0_content']" />

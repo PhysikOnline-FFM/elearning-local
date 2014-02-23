@@ -193,8 +193,8 @@
 	<div data-role="navbar">
 		<ul>
 			<li>
-				<a rel="external" data-role="button" href="{//a[@data-icon='back']/@href}" >
-					<xsl:value-of select="//a[@data-icon='back']" />
+				<a rel="external" data-role="button" href="{//a[@class='backtab']/@href}" >
+					<xsl:value-of select="//a[@class='backtab']" />
 				</a>
 			</li>
 			<li>

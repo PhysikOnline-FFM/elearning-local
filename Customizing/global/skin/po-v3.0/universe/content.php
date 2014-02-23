@@ -8,7 +8,7 @@
 <div id="po-universe">
 <!-- BUttons, rechts -->
 <div class="buttons">
-	<button class="fourier"><img src="/projekt/chrome/wikiextras-icons-16/function.png"> Fourier?</button>
+	<a href="/go/skyline" target="_blank" title="War das eben eine Fouriertransformation?" class="btn fourier"><img src="/projekt/chrome/wikiextras-icons-16/function.png"> Fouriertransformation?</a>
 	<button class="close"><img src="/Customizing/global/skin/po-v3.0/images/close_dg.png"> Schließen</button>
 </div>
 

@@ -14,13 +14,28 @@ div#po3-hauptseite-top {
 		float: left;
 		padding: 0 (@padding);
 		width: 640px;
-		font-size: 0.7em;
+		min-height: 88px;
+		font-size: 0.9em;
 		color: @highlight1;
 		text-align: center;
 		
 		h1 {
+			margin-bottom: 2px;
 			color: @main-color;
-			font-size: 1.35em;
+			font-size: 1.65em;
+		}
+		p {margin: 0;}
+		div#more {
+			text-align: right;
+			a.more {
+				color: @highlight1;
+				font-size: 0.8em;
+				margin-right: 2px;
+			}
+		}
+		div.more {
+			text-align:justify;
+			padding: 0 62px;
 		}
 	}
 	
@@ -44,5 +59,111 @@ div#po3-hauptseite-top {
 			width: 96px;
 			.bordered(@main-color);
 		}
+	}
+}
+
+div#po3-hauptseite-tile {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	clear: both;
+	
+	// Kachel-Anordnung
+	.po3-tile-row, #po3-tile-veranstaltungen, #po3-tile-schalter{
+		display: block;
+		text-align: center;
+	}
+	.po3-tile {
+		opacity: 0.4;
+		.opacity-transition(300ms);
+		
+		.bordered;
+		height: 140px;
+		margin-top: 18px;
+		position: relative;
+		display: inline-block;
+		background-color: @content-bg;
+		background-repeat: no-repeat;
+		background-position: center center;
+		
+		.po3-tile-caption{
+			opacity: 0;
+			.opacity-transition(300ms);
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			position: absolute; bottom: 16px;
+			background-color: @content-bg;
+			background-color: rgba(255,255,255, 0.75);
+			
+			.po3-tile-caption-main {font-size: 1.6em}
+			.po3-tile-caption-sub {
+				font-size: 1.0em;
+				font-style: oblique;
+			}
+		}
+	}
+	.po3-tile:hover, .po3-tile:focus, .po3-tile:active {
+		opacity: 1;
+		.opacity-transition(400ms);
+		
+		.po3-tile-caption{
+			opacity: 1;
+			.opacity-transition(400ms);
+		}
+	}
+	a .po3-tile-caption-sub {color: @highlight1}
+	
+	#po3-tile-veranstaltungen{
+		height: 90px; 
+		margin-top: 0px;
+		.po3-tile-caption{bottom: 10px}
+	}	
+	#po3-tile-schalter{
+		height: 30px;
+		opacity: 1;
+		.po3-tile-caption{
+			bottom: 0;
+			opacity: 1;
+			height: 30px;
+			line-height: 30px;
+			.po3-tile-caption-main {font-size: 1.0em}
+		}
+	}
+	
+	#po3-tile-theo, #po3-tile-ebooks, #po3-tile-exp, #po3-tile-pwp {
+		width: (0.5 * (@content-width - 24px));
+	}
+	#po3-tile-theo, #po3-tile-ebooks {margin-right: 6px}
+	#po3-tile-exp, #po3-tile-pwp {margin-left: 7px}
+	
+	.po3-tile-2col {
+		span.po3-tile-caption-main, span.po3-tile-caption-sub {
+			display: inline-block;
+			padding-right:16px;
+			text-align: right;
+		}
+		
+		.po3-tile-caption span:first-child {
+			float: left;
+			padding-right: 0;
+			padding-left: 16px;
+			text-align: left;
+		}
+		span.po3-tile-caption-main{width: 260px}
+		span.po3-tile-caption-sub {width: 170px}
+	}
+	
+	// Hintergrundbilder
+	#po3-tile-veranstaltungen{background-image: url("@{skin-url}src/startseite/osz-hoersaal.jpg")}
+	#po3-tile-theo{background-image: url("@{skin-url}src/startseite/sterngerlach.jpg")}
+	#po3-tile-ebooks{background-image: url("@{skin-url}src/startseite/bib-ebooks-a.jpg")}
+	#po3-tile-exp{background-image: url("@{skin-url}src/startseite/cern-ddp.jpg")}
+	#po3-tile-pwp{background-image: url("@{skin-url}src/startseite/pwp-mitmachen.jpg")}
+	
+	// Graustufen-Effekt soweit unterstützt
+	#po3-tile-veranstaltungen, #po3-tile-theo, #po3-tile-ebooks, #po3-tile-exp, #po3-tile-pwp {
+		.grayscale-on;
+		&:hover {.grayscale-off}
 	}
 }

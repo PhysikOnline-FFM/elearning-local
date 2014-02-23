@@ -14,6 +14,7 @@ po.startup.modules = [
 	'feedback', // feedback depends on anpassungen
 	'hauptseite', // independent
 	'universe', // independent
+	//'werbung', //independent
 ];
 
 po.startup.setup = function() {

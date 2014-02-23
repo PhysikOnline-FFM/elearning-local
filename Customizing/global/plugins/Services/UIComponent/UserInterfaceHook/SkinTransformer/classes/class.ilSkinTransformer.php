@@ -70,7 +70,9 @@ class ilSkinTransformer
 		// (child classes may overwrite this behavior)
 		elseif(pathinfo($a_trans['with'], PATHINFO_EXTENSION) != 'xsl')
 		{
-			$html = @file_get_contents(self::$gui_object->getSkinDirectory()
+			// TODO try catch
+
+			$html = file_get_contents(self::$gui_object->getSkinDirectory()
 											.'/'.$a_trans['with']);			
 			if ($html !== false)
 			{
@@ -98,28 +100,28 @@ class ilSkinTransformer
 		// Use HTML loading for fault tolerance (doesn't need to be well-formed)
 		// Apply handling of utf-8 due to bugs in loadHTML()
 		// Note: <html> and <body> elements will automatically be added!
-		
+
 		$dom_doc = new DOMDocument('1.0', 'UTF-8');
-		if ($a_trans['utf8fix'] == 'entities')
-		{
-			@$dom_doc->loadHTML(mb_convert_encoding($a_code, 'HTML-ENTITIES', "UTF-8")); 
-			
-		}
-		elseif ($a_trans['utf8fix'] == 'prefix')
-		{
-			@$dom_doc->loadHTML('<?xml encoding="UTF-8"?'.'>'. $a_code); 
-			
-		}
-		else
-		{
+		if ($a_trans['utf8fix'] == 'entities') {
+			if (function_exists('mb_convert_encoding')) {
+				@$dom_doc->loadHTML(mb_convert_encoding($a_code, 'HTML-ENTITIES', "UTF-8")); // TODO Try catch to get rid of @
+			} else {
+				@$dom_doc->loadHTML($a_code); // TODO Try catch to get rid of @
+			}
+
+		} elseif ($a_trans['utf8fix'] == 'prefix') {
+			// TODO Try catch
+			@$dom_doc->loadHTML('<?xml encoding="UTF-8"?' . '>' . $a_code);
+
+		} else {
+			// TODO Try catch
 			@$dom_doc->loadHTML($a_code);
-	    }
-		        		
-		if ($a_trans['debug'] == 'dom')
-		{
+		}
+
+		if ($a_trans['debug'] == 'dom') {
 			return $dom_doc->saveHTML();
 		}
-		
+
 		// Process and supress warnings (e.g. due to '&' in links)
 		//echo "<pre>".print_r($dom_doc,1)."</pre>";
 		return $xslt->transformToXML($dom_doc);

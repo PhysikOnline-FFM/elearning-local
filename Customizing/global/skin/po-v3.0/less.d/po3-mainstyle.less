@@ -394,7 +394,9 @@ body {
 				//margin-top: @margin;
 			}
 			
-			div.ilLocator div.po3-breadcrumb{
+			div.ilLocator{margin-top: @margin}
+			
+			div.po3-breadcrumb{
 				font-size: 1.2em;
 
 				div#po3-breadcrumb-home {
@@ -408,6 +410,7 @@ body {
 				ul {
 					padding: (@padding/4) 0;
 					margin: 0px;
+					display: inline-block;
 					list-style: none;
 					list-style-position: inside;
 					
@@ -460,18 +463,17 @@ body {
 				margin: 0px;
 				padding: 0px;
 				list-style: none;
-				position: relative;
-				top: 1px;
+				position: static;
 				
 				li {
 					float: left;
-					margin: 0 @margin 0 0;
+					margin: 0 @margin -1px 0;
 					padding: (@padding / 2) @padding;
 					font-size: 0.9em;
 					white-space: nowrap;
 					
 					&.tabinactive, &nontabbed {
-						border-bottom: 1px solid @content-bg;
+						//border-bottom: 1px solid transparent;
 						background-color: @body-bg;
 						color: lighten(@second-color, 15%);
 					}

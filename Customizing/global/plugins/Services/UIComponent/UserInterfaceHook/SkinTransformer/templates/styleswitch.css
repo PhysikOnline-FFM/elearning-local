@@ -1,6 +1,7 @@
+/* abgeaendert, vgl. POTT #661. Dieses CSS ist aber sowas von unnoetig! - sven.  */
 div.iosStyleSwitch
 {
-	padding:40px;
+	padding: 3px;
 	text-align:center;
 }
 

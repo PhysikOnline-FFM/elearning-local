@@ -165,6 +165,7 @@
 		</xsl:when>
 		<xsl:when test="$blockId='block_pdsysmess_0' or 
 						$blockId='block_pdmail_0' or 
+						$blockId='block_pdbookm_0' or
 						$blockId='block_pdnews_0'" >
 			<ul data-role="listview" data-split-theme="c" data-inset="true">
 				<xsl:copy-of select="div[@class='mobileBlockTable']/*" />

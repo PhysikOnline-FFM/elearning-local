@@ -1,0 +1,100 @@
+<div class="mobileMessages">
+<div id="basicModalContent">
+</div>
+<!-- BEGIN info_message -->
+<script>
+	$(document).ready(function()
+	{ 
+		$("#basicModalContent").simpledialog(
+		{
+			'mode' : 'bool',
+			'prompt': 'INFO',
+			'subTitle': '{TEXT}',
+			'forceInput': false,
+			'buttons' :
+			{
+				'OK':
+				{
+					click: function () {},
+					icon: "",
+					theme: "a"
+				}
+			}
+		});
+    });
+	//lo = "{ALT_IMAGE}{ALT_IMAGE}{SRC_IMAGE}";
+</script>
+<!-- END info_message -->
+<!-- BEGIN success_message -->
+<script>
+	$(document).ready(function()
+	{ 
+		$("#basicModalContent").simpledialog(
+		{
+			'mode' : 'bool',
+			'prompt': '',
+			'subTitle': '{TEXT}',
+			'forceInput': false,
+			'buttons' :
+			{
+				'OK':
+				{
+					click: function () {},
+					icon: "",
+					theme: "g"
+				}
+			}
+		});
+    });
+	//lo = "{ALT_IMAGE}{ALT_IMAGE}{SRC_IMAGE}";
+</script>
+<!-- END success_message -->
+<!-- BEGIN failure_message -->
+<script>
+	$(document).ready(function()
+	{ 
+		$("#basicModalContent").simpledialog(
+		{
+			'mode' : 'bool',
+			'prompt': 'WARNING',
+			'subTitle': '{TEXT}',
+			'forceInput': false,
+			'buttons' :
+			{
+				'OK':
+				{
+					click: function () {},
+					icon: "",
+					theme: "f"
+				}
+			}
+		});
+    });
+	//lo = "{ALT_IMAGE}{ALT_IMAGE}{SRC_IMAGE}";
+</script>
+<!-- END failure_message -->
+<!-- BEGIN question_message -->
+<script>
+	$(document).ready(function()
+	{ 
+		$("#basicModalContent").simpledialog(
+		{
+			'mode' : 'bool',
+			'prompt': '?',
+			'subTitle': '{TEXT}',
+			'forceInput': false,
+			'buttons' :
+			{
+				'close':
+				{
+					click: function () {},
+					icon: "",
+					theme: "a"
+				}
+			}
+		});
+    });
+	//lo = "{ALT_IMAGE}{ALT_IMAGE}{SRC_IMAGE}";
+</script>
+<!-- END question_message -->
+</div>

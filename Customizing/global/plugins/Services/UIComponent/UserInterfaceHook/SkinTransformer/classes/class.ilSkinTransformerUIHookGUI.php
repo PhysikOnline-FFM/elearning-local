@@ -3,7 +3,7 @@
 /* Copyright (c) 1998-2011 ILIAS open source, Extended GPL, see docs/LICENSE */
 
 include_once("./Services/UIComponent/classes/class.ilUIHookPluginGUI.php");
-include_once("./Customizing/global/plugins/Services/UIComponent/UserInterfaceHook/SkinTransformer/classes/class.ilSkinTransformer.php");
+require_once('class.ilSkinTransformer.php');
 
 /**
 * Skin Transformer User Interface Hook
@@ -150,7 +150,7 @@ class ilSkinTransformerUIHookGUI extends ilUIHookPluginGUI
 				
 			case '/template_get':
 			case '/template_show':
-			if ($a_par['tpl_id'] == "tpl.footer.html")
+			if ($a_par['tpl_id'] == "Services/UICore/tpl.footer.html" || $a_par['tpl_id'] == "tpl.footer.html")
 			{
 				// add style switch to footer
 				$this->addStyleSwitchCSS();
@@ -601,6 +601,8 @@ class ilSkinTransformerUIHookGUI extends ilUIHookPluginGUI
 					*/
 					private function readSupport($a_xml_file)
 					{
+						// TODO try catch
+
 						$xml = @simplexml_load_file($a_xml_file);
 						if (!is_object($xml))
 						{
@@ -726,15 +728,15 @@ class ilSkinTransformerUIHookGUI extends ilUIHookPluginGUI
 							$_COOKIE["ilStyleSwitching"] = $_GET['style_switching'];
 						}
 						// FSX
-						elseif($_COOKIE[ilStyleSwitching]=="") 
+						elseif($_COOKIE['ilStyleSwitching']=="")
 						{
 							global $ilCtrl;
 							$_GET['style_switching'] = "on";
 							ilUtil::setCookie("ilStyleSwitching", $_GET['style_switching']);
 							if(ilSkinTransformer::detect_mobile())
 							{
-								$_GET[skin] = "mobile";
-								$_GET[style] = "mobile";
+								$_GET['skin'] = "mobile";
+								$_GET['style'] = "mobile";
 							}
 						}
 						// END FSX

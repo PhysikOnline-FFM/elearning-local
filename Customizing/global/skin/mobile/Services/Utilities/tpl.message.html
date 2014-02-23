@@ -1,100 +1,44 @@
 <div class="mobileMessages">
-<div id="basicModalContent">
-</div>
+<div class="FSXlists">
 <!-- BEGIN info_message -->
-<script>
-	$(document).ready(function()
-	{ 
-		$("#basicModalContent").simpledialog(
-		{
-			'mode' : 'bool',
-			'prompt': 'INFO',
-			'subTitle': '{TEXT}',
-			'forceInput': false,
-			'buttons' :
-			{
-				'OK':
-				{
-					click: function () {},
-					icon: "",
-					theme: "a"
-				}
-			}
-		});
-    });
-	//lo = "{ALT_IMAGE}{ALT_IMAGE}{SRC_IMAGE}";
-</script>
+<ul data-role="listview" data-theme="a">
+	<li>
+		<a>
+			<img  class="ui-li-icon ui-li-thumb" alt="{ALT_IMAGE}" title="{ALT_IMAGE}" src="{SRC_IMAGE}" />
+			<h2>{TEXT}</h2>
+		</a>
+	</li>
+</ul>
 <!-- END info_message -->
 <!-- BEGIN success_message -->
-<script>
-	$(document).ready(function()
-	{ 
-		$("#basicModalContent").simpledialog(
-		{
-			'mode' : 'bool',
-			'prompt': '',
-			'subTitle': '{TEXT}',
-			'forceInput': false,
-			'buttons' :
-			{
-				'OK':
-				{
-					click: function () {},
-					icon: "",
-					theme: "g"
-				}
-			}
-		});
-    });
-	//lo = "{ALT_IMAGE}{ALT_IMAGE}{SRC_IMAGE}";
-</script>
+<ul data-role="listview" data-theme="g">
+	<li>
+		<a>
+			<img  class="ui-li-icon ui-li-thumb" alt="{ALT_IMAGE}" title="{ALT_IMAGE}" src="{SRC_IMAGE}" />
+			<h2>{TEXT}</h2>
+		</a>
+	</li>
+</ul>
 <!-- END success_message -->
 <!-- BEGIN failure_message -->
-<script>
-	$(document).ready(function()
-	{ 
-		$("#basicModalContent").simpledialog(
-		{
-			'mode' : 'bool',
-			'prompt': 'WARNING',
-			'subTitle': '{TEXT}',
-			'forceInput': false,
-			'buttons' :
-			{
-				'OK':
-				{
-					click: function () {},
-					icon: "",
-					theme: "f"
-				}
-			}
-		});
-    });
-	//lo = "{ALT_IMAGE}{ALT_IMAGE}{SRC_IMAGE}";
-</script>
+<ul data-role="listview" data-theme="f">
+	<li>
+		<a>
+			<img  class="ui-li-icon ui-li-thumb" alt="{ALT_IMAGE}" title="{ALT_IMAGE}" src="{SRC_IMAGE}" />
+			<h2>{TEXT}</h2>
+		</a>
+	</li>
+</ul>
 <!-- END failure_message -->
 <!-- BEGIN question_message -->
-<script>
-	$(document).ready(function()
-	{ 
-		$("#basicModalContent").simpledialog(
-		{
-			'mode' : 'bool',
-			'prompt': '?',
-			'subTitle': '{TEXT}',
-			'forceInput': false,
-			'buttons' :
-			{
-				'close':
-				{
-					click: function () {},
-					icon: "",
-					theme: "a"
-				}
-			}
-		});
-    });
-	//lo = "{ALT_IMAGE}{ALT_IMAGE}{SRC_IMAGE}";
-</script>
+<ul data-role="listview" data-theme="a">
+	<li>
+		<a>
+			<img  class="ui-li-icon ui-li-thumb" alt="{ALT_IMAGE}" title="{ALT_IMAGE}" src="{SRC_IMAGE}" />
+			<h2>{TEXT}</h2>
+		</a>
+	</li>
+</ul>
 <!-- END question_message -->
+</div>
 </div>

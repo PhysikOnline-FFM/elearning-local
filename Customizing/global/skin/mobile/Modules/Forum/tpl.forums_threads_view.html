@@ -17,25 +17,20 @@
 	<p style="display:none;">{POST_ANKER}</p>
 	<br><p><strong>{SUBJECT}</strong></p>
 	<!-- BEGIN usr_image -->
-	<img src="{USR_IMAGE}" />
+	<!--<img src="{USR_IMAGE}" />-->
 	<!-- END usr_image -->
 
 	<p>
-	<strong>{USR_NAME}</strong>
-	<!-- BEGIN usr_name -->
-	<span class="mobileForumPostAuthor">{AUTHOR}</span>
-	<!-- END usr_name -->
-	<!-- BEGIN role -->
-	({ROLE})
-	<!-- END role -->
-	<!-- BEGIN pseudonym -->
-	({PSEUDONYM})
-	<!-- END pseudonym -->
-	</p>
+        <span class="mobileForumPostAuthor">
+            <!-- BEGIN usr_name -->{USR_NAME} | <!-- END usr_name -->{AUTHOR}
+            <!-- BEGIN role --> ({ROLE})<!-- END role -->
+            <!-- BEGIN pseudonym --> ({PSEUDONYM})<!-- END pseudonym -->
+            <!-- BEGIN post_not_activated_yet --><br /><span class="ilFrmPostActivationStatus">{POST_NOT_ACTIVATED_YET}</span><!-- END post_not_activated_yet -->
+        </span>
+    </p>
 
 	<p>
-		<!--{TXT_CREATE_DATE}-->{POST_DATE}
-		<!-- BEGIN post_update --><br /><span class="mobileForumPostUpdated">{POST_UPDATE}<span><!-- END post_update -->
+        <!-- BEGIN post_update -->{POST_UPDATE_TXT}  <!-- BEGIN update_usr_name -->{UPDATE_USR_NAME} | <!-- END update_usr_name -->{UPDATE_AUTHOR}<!-- END post_update -->
 		<!-- BEGIN post_not_activated_yet --><br />{POST_NOT_ACTIVATED_YET}<!-- END post_not_activated_yet -->
 	</p>
 </li>

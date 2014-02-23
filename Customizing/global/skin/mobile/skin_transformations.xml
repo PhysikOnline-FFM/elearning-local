@@ -102,59 +102,62 @@
 <transformations by="class.ilMobileSkin.php" keep="true" utf8fix="entities" debug="">
 	<!-- module/service specific transformations at final output -->
 	<!--  the 'next' cascade ends with the general transformations for the main output -->
-	
 	<!-- not yet supported Tools -->
-	<trans at="output" of="tpl.main.html" for="Modules/RootFolder" 			with="Modules/RootFolder/root.xsl" 			next="true" 	debug=""/>
-	<trans at="output" of="tpl.main.html" for="Modules/Forum" 				with="Modules/Forum/forum.xsl" 				next="true" 	debug=""/>
-	<trans at="output" of="tpl.main.html" for="Modules/Survey" 				with="Modules/Survey/survey.xsl"			next="true" 	debug=""/>
-	<trans at="output" of="tpl.main.html" for="Modules/Test" 				with="Modules/Test/test.xsl" 				next="true" 	debug=""/>
-	<trans at="output" of="tpl.main.html" for="Modules/Wiki" 				with="Modules/Wiki/wiki.xsl" 				next="true" 	debug=""/>
-	<trans at="output" of="tpl.main.html" for="Services/Init" 				with="Services/Init/init.xsl" 				next="true" 	debug=""/>
-	<trans at="output" of="tpl.main.html" for="Services/Tracking" 			with="Services/Tracking/track.xsl" 			next="true" 	debug=""/>
-	<trans at="output" of="tpl.main.html" for="Services/News" 				with="Services/News/news.xsl" 				next="true" 	debug=""/>
-	<trans at="output" of="tpl.main.html" for="Modules/Course" 				with="Services/Container/membership.xsl" 	next="true" 	debug=""/>
-	<trans at="output" of="tpl.main.html" for="Modules/Group" 				with="Services/Container/membership.xsl" 	next="true" 	debug=""/>
-	
-	<!-- not yet supported Tools -->
-	<trans at="output" of="tpl.main.html" for="Modules/Glossary" 			with="Modules/Common/switch.xsl" 			next="true" 	debug=""/>
-	<trans at="output" of="tpl.main.html" for="Modules/Blog" 				with="Modules/Common/switch.xsl" 			next="true" 	debug=""/>
-	<trans at="output" of="tpl.main.html" for="Modules/BookingManager" 		with="Modules/Common/switch.xsl" 			next="true" 	debug=""/>
+	<trans at="output" of="tpl.main.html" for="Modules/RootFolder" with="Modules/RootFolder/root.xsl" next="true" debug="" />
+	<trans at="output" of="tpl.main.html" for="Modules/Forum" with="Modules/Forum/forum.xsl" next="true" debug="" />
+	<trans at="output" of="tpl.main.html" for="Modules/Survey" with="Modules/Survey/survey.xsl" next="true" debug="" />
+	<trans at="output" of="tpl.main.html" for="Modules/Test" with="Modules/Test/test.xsl" next="true" debug="" />
+	<trans at="output" of="tpl.main.html" for="Modules/Wiki" with="Modules/Wiki/wiki.xsl" next="true" debug="" />
+	<trans at="output" of="tpl.main.html" for="Services/Init" with="Services/Init/init.xsl" next="true" debug="" />
+	<trans at="output" of="tpl.main.html" for="Services/Tracking" with="Services/Tracking/track.xsl" next="true" debug="" />
+	<trans at="output" of="tpl.main.html" for="Services/News" with="Services/News/news.xsl" next="true" debug="" />
+	<trans at="output" of="tpl.main.html" for="Modules/Course" with="Services/Container/membership.xsl" next="true" debug="" />
+	<trans at="output" of="tpl.main.html" for="Modules/Group" with="Services/Container/membership.xsl" next="true" debug="" />
+	<trans at="output" of="tpl.main.html" for="Modules/Glossary" with="Modules/Glossary/glossary.xsl" next="true" debug="" />
+	<trans at="output" of="Modules/Glossary/" for="Modules/Glossary" with="main.xsl" debug="" />
+
+	<trans at="output" of="tpl.main.html" for="Modules/MediaCast" with="Modules/MediaCast/mediacast.xsl" next="true" debug="" />
+	<trans at="output" of="Modules/MediaCast/" for="Modules/MediaCast" with="main.xsl" debug="" />
+
+	<trans at="output" of="tpl.main.html" for="Modules/Blog" with="Modules/Common/switch.xsl" next="true" debug="" />
+	<trans at="output" of="tpl.main.html" for="Modules/BookingManager" with="Modules/Common/switch.xsl" next="true" debug="" />
 	<!-- <trans at="output" of="tpl.main.html" for="Modules/Chatroom" 			with="Modules/Common/switch.xsl" 			next="true" 	debug=""/>-->
-	<trans at="output" of="tpl.main.html" for="Modules/Exercise" 			with="Modules/Common/switch.xsl" 			next="true" 	debug=""/>
-	<trans at="output" of="tpl.main.html" for="Modules/Glossary" 			with="Modules/Common/switch.xsl" 			next="true" 	debug=""/>
-	<trans at="output" of="tpl.main.html" for="Modules/MediaCast" 			with="Modules/Common/switch.xsl" 			next="true" 	debug=""/>
-	<trans at="output" of="tpl.main.html" for="Modules/MediaPool" 			with="Modules/Common/switch.xsl" 			next="true" 	debug=""/>
-	
+	<trans at="output" of="tpl.main.html" for="Modules/Exercise" with="Modules/Common/switch.xsl" next="true" debug="" />
+	<trans at="output" of="tpl.main.html" for="Modules/MediaPool" with="Modules/Common/switch.xsl" next="true" debug="" />
+	<trans at="output" of="tpl.main.html" for="Modules/DataCollection" with="Modules/Common/switch.xsl" next="true" debug="" />
+
 	<!-- Plugins -->
-	<trans at="output" of="tpl.main.html" for="Customizing/global/plugins/Services/Repository/RepositoryObject/LearnLoc" 
-																			with="Plugins/LearnLoc/xlel.xsl" 			next="true" 	debug=""/>
-	<trans at="output" of="tpl.main.html" for="Customizing/global/plugins/Services/Repository/RepositoryObject/LiveVoting" 
-																			with="Plugins/LiveVoting/xlvo.xsl" 			next="true" 	debug=""/>
-	<trans at="output" of="tpl.main.html" 									with="Plugins/LiveVoting/xlvo.xsl" 			next="true" 	debug=""/>
-	<trans at="output" of="tpl.main.html" for="Customizing/global/plugins/Services/Repository/RepositoryObject/Kslxc" 
-																			with="Modules/Common/switch.xsl" 			next="true" 	debug=""/>
-	<trans at="output" of="tpl.main.html" for="Customizing/global/plugins/Services/Repository/RepositoryObject/Scast" 
-																			with="Modules/Common/switch.xsl" 			next="true" 	debug=""/>
+	<trans at="output" of="tpl.main.html" for="Customizing/global/plugins/Services/Repository/RepositoryObject/LearnLoc" with="Plugins/LearnLoc/xlel.xsl" next="true" debug="" />
+	<trans at="output" of="tpl.main.html" for="Customizing/global/plugins/Services/Repository/RepositoryObject/LiveVoting" with="Plugins/LiveVoting/xlvo.xsl" next="true" debug="" />
+	<trans at="output" of="tpl.main.html" with="Plugins/LiveVoting/xlvo.xsl" next="true" debug="" />
+
+	<!--<trans at="output" of="tpl.main.html" 									with="Plugins/LiveVoting/xlvo.xsl" 			next="true" 	debug=""/>-->
+	<trans at="output" of="tpl.main.html" for="Customizing/global/plugins/Services/Repository/RepositoryObject/Kslxc" with="Modules/Common/switch.xsl" next="true" debug="" />
+	<trans at="output" of="tpl.main.html" for="Customizing/global/plugins/Services/Repository/RepositoryObject/Scast" with="Modules/Common/switch.xsl" next="true" debug="" />
 
 	<!-- PD -->
-	<trans at="output" of="tpl.main.html" for="Services/PersonalDesktop" 	with="Services/PersonalDesktop/desktop.xsl"	next="true" 	debug=""/>
-	<trans at="output" of="tpl.main.html" 									with="main.xsl" 											debug=""/>
+	<trans at="output" of="tpl.main.html" for="Services/PersonalDesktop" with="Services/PersonalDesktop/desktop.xsl" next="true" debug="" />
+	<trans at="output" of="tpl.main.html" with="main.xsl" debug="" />
 
 	<!-- learning module related output -->
-	<trans at="output" of="Modules/LearningModule/tpl.frameset.html" 		with="Modules/LearningModule/frameset.xsl"  				debug=""/>
-	<trans at="output" of="Modules/LearningModule/tpl.page.html" 			with="Modules/LearningModule/page.xsl" 		next="true" 	debug=""/>
-	<trans at="output" of="Modules/LearningModule/tpl.page.html" for="Modules/LearningModule" with="main.xsl" 							debug=""/>
+	<trans at="output" of="Modules/LearningModule/tpl.page_new.html" with="Modules/LearningModule/page.xsl" next="true" debug="" />
+	<trans at="output" of="Modules/LearningModule/tpl.frameset.html" with="Modules/LearningModule/page.xsl" next="true" debug="" />
+	<trans at="output" of="Modules/LearningModule/tpl.page_new.html" for="Modules/LearningModule" with="main.xsl" next="" debug="" />
+	<trans at="output" of="Modules/LearningModule/tpl.frameset.html" for="Modules/LearningModule" with="main.xsl" next="true" debug="" />
+
+	<trans at="output" of="Services/Imprint/tpl.imprint.html" for="Services/Imprint/" with="imprint.xsl" next="true" debug="" />
 
 	<!-- transformation of single templates -->
-	<trans at="output" of="Services/Block/tpl.block.html" 					with="Services/Block/block.xsl" 							debug=""/>
-	<trans at="output" of="Services/Block/tpl.column.html" 					with="Services/Block/block.xsl" 							debug=""/>
-	<trans at="output" of="Services/InfoScreen/tpl.infoscreen.html" 		with="Services/InfoScreen/infoscreen.xsl" 					debug=""/>
-	<trans at="output" of="Modules/SurveyQuestionPool/tpl.il_svy_out_matrix.html" with="Modules/SurveyQuestionPool/matrix.xsl" 			debug=""/>
-	<trans at="output" of="tpl.tree.html" 									with="tree.xsl" />
-	<trans at="output" of="tpl.frameset.html" 								with="frameset.xsl" />
+	<trans at="output" of="Services/Block/tpl.block.html" with="Services/Block/block.xsl" debug="" />
+	<trans at="output" of="Services/Block/tpl.column.html" with="Services/Block/block.xsl" debug="" />
+	<trans at="output" of="Services/InfoScreen/tpl.infoscreen.html" with="Services/InfoScreen/infoscreen.xsl" debug="" />
+	<trans at="output" of="Modules/SurveyQuestionPool/tpl.il_svy_out_matrix.html" with="Modules/SurveyQuestionPool/matrix.xsl" debug="" />
+	<trans at="output" of="tpl.tree.html" with="tree.xsl" />
+	<trans at="output" of="tpl.frameset.html" with="frameset.xsl" />
+
 
 	<!-- specific hooks -->
-	<trans at="Services/Utilities/redirect" 																							debug=""/>
-	<trans at="Services/Container/async_item_list" 							with="main.xsl" 											debug=""/>
-	
+	<trans at="Services/Utilities/redirect" debug="" />
+	<trans at="Services/Container/async_item_list" with="main.xsl" debug="" />
+
 </transformations>

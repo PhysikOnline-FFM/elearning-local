@@ -32,6 +32,13 @@
 	<!-- BEGIN search_box -->
 	{SEARCHBOX}
 	<!-- END search_box -->
+	<!-- BEGIN help_icon -->
+	<div class="ilMainMenu"><a class="MMInactive" id="help_tr" href="#" onclick="return il.Help.listHelp(event, false);"><img src="{IMG_HELP}" /></a></div>
+	<!-- END help_icon -->
+	<!-- BEGIN help_tt_icon -->
+	<div class="ilMainMenu"><a class="MMInactive" id="help_tt" href="#" onclick="return il.Help.switchTooltips(event);"><img src="{IMG_TT_ON}" id="help_tt_switch_on" /><img class="ilNoDisplay" src="{IMG_TT_OFF}" id="help_tt_switch_off" /></a></div>
+	<!-- END help_tt_icon -->
+
 	<!-- BEGIN top_section -->
 	<!-- END top_section -->
 </div>

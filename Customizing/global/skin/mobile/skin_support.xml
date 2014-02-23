@@ -145,7 +145,7 @@
 	
 	<!-- Wiki -->
 	<allow _type="wiki" cmdclass="" cmd="" />
-	<allow baseclass="ilwikihandlergui" cmdclass="">
+	<allow baseclass="ilwikihandlergui" cmdclass="" />
 	<allow cmdclass="ilwikipagegui" /> 
 	<allow cmd="preview" />
 	

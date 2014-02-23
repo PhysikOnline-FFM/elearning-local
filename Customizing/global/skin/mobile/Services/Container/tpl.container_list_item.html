@@ -1,0 +1,79 @@
+<div class="mobileContainerItem">
+	
+	{COMMAND_SELECTION_LIST}
+	<!-- BEGIN icon -->
+	<img alt="{ALT_ICON}" title="{ALT_ICON}" src="{SRC_ICON}" class="ui-li-icon ui-li-thumb" /> 
+	<!-- BEGIN i_1 --><!-- END i_1 -->
+	<!-- BEGIN icon_link_s --><!-- END icon_link_s -->
+	<!-- BEGIN icon_link_e --><!-- END icon_link_e -->
+	<!-- END icon -->
+	<!-- BEGIN item_title -->
+	<h1 class="mobileContainerItemTitle noaccess">{TXT_TITLE}</h1>
+	<!-- END item_title -->
+	<!-- BEGIN item_title_linked -->
+	<h1 class="mobileContainerItemTitle">{TXT_TITLE_LINKED}</h1>
+	<a rel="external" class="mobileContainerItemLink" href="{HREF_TITLE_LINKED}" <!-- BEGIN title_linked_frame --> target="{TARGET_TITLE_LINKED}"<!-- END title_linked_frame -->></a>
+	<!-- END item_title_linked -->
+	
+
+	<!-- BEGIN check -->
+	<!--<label for="{VAL_ID}">Select</label>-->
+	<!--<input data-theme="c" id="{VAL_ID}" type="checkbox" name="id[]" value="{VAL_ID}" />-->
+	<!-- END check -->
+	<div class="mobileContainerItemDetails">
+		
+		<p class="mobileContainerItemDesc">{TXT_DESC}</p>
+		
+		<!-- DIV_ID: {DIV_ID} -->
+		<!-- BEGIN expand --><!-- END expand -->
+		<!-- BEGIN d_0 --><!-- END d_0 -->
+		<!-- BEGIN d_1 --><!-- END d_1 -->
+		<!-- BEGIN d_2 --><!-- END d_2 -->
+		<!-- BEGIN position -->
+		<input type="text" name="position{POS_ID}" value="{POS_VAL}" size="3" maxlength="4" />
+		<!-- END position -->
+		<!-- BEGIN bold_title_start --><!-- END bold_title_start -->
+		<!-- BEGIN item_progress -->
+		<p>{TXT_PROGRESS_INFO}:<img src="{PROGRESS_TYPE_IMG}" alt="{PROGRESS_ALT_IMG}" title="{PROGRESS_ALT_IMG}" /></p>
+		<!-- END item_progress -->
+		<!-- BEGIN item_description -->
+		<!-- END item_description -->
+		<!-- BEGIN search_fragment -->
+		<p>{TXT_SEARCH_FRAGMENT}</p>
+		<!-- END search_fragment -->
+		<!-- BEGIN item_properties -->
+		<p>
+			<!-- BEGIN item_property -->
+			<!-- BEGIN separator_prop --><!-- END separator_prop -->
+			<!-- BEGIN newline_prop --><!-- END newline_prop -->
+			<!-- BEGIN std_prop --><span><!-- END std_prop -->
+
+				<!-- END item_property --></p>
+				<!-- END item_properties -->
+				<!-- BEGIN item_detail_links --><p>
+					<!-- BEGIN item_detail_intro -->{ITEM_DETAIL_INTRO_TXT}<!-- END item_detail_intro -->
+					<!-- BEGIN item_detail_link -->{ITEM_DETAIL_LINK_DESC}<a target="{ITEM_DETAIL_LINK_TARGET}" href="{ITEM_DETAIL_LINK_HREF}">{ITEM_DETAIL_LINK_NAME}</a><br /><!-- END item_detail_link --></p>
+					<!-- END item_detail_links -->
+					<!-- BEGIN path --><p><!-- BEGIN path_item -->{SEPARATOR} {PATH_ITEM}<!-- END path_item --></p>
+					<!-- END path -->
+					<!-- BEGIN notice_property -->
+					<p><!-- BEGIN notice_item -->{NOTICE_ITEM_VALUE}<br /><!-- END notice_item --></p>
+					<!-- END notice_property -->
+					<!-- BEGIN preconditions -->
+					<p>{TXT_PRECONDITIONS}:</p>
+					<!-- BEGIN precondition -->
+					<p>{TRIGGER_ITEM}</p>
+					<!-- END precondition -->
+					<!-- END preconditions -->
+					<!-- BEGIN subitem -->
+					
+					<div>{SUBITEM_NONE}</div>
+					
+					<!-- END subitem -->
+					{ADDITIONAL}
+					<!-- BEGIN relevance -->
+					<p>{TXT_RELEVANCE} <img border="0" height="5px" width="{WIDTH_A}px" src="{IMG_A}" /><img border="0" height="5px" width="{WIDTH_B}px" src="{IMG_B}" /> {VAL_REL}</p>
+					<!-- END relevance -->
+				</div><!-- mobileContainerItemDetails -->
+					
+			</div><!-- mobileContainerItem -->

@@ -21,7 +21,7 @@
 <!-- 
 	MainPageLayout
 -->
-<xsl:template match="//td[@class='il_CenterColumn']">
+<xsl:template match="//div[@id='il_center_col']">
 	<final>
 		<div class="FSXlists">
 			<ul data-role="listview">
@@ -95,7 +95,7 @@
 <!-- 
 	Suche /////////////////////////////////////////////////////////////////////////
 -->
-<xsl:template match="//td[@class='il_RightColumn']">
+<xsl:template match="//div[@id='il_right_col']">
 <!--	<final>-->
 	<div data-role="page" id="wikiMenu">
 		<ul data-role="listview" data-theme="a">
@@ -156,25 +156,25 @@
 </xsl:template>
 
 <xsl:template match="div[@class='small']" mode="wikiMenu">
-	<div data-role="controlgroup">
-		<xsl:variable name="set" select="php:function('ilSkinTransformer::getTxt', 'settings')" />
-		<xsl:variable name="cont" select="php:function('ilSkinTransformer::getTxt', 'wiki_contributors')" />
-	
-		<xsl:for-each select="p/a">
-			
-			
-			<xsl:variable name="str">
-				<xsl:value-of select="." />	
-			</xsl:variable>
+	<!--<div data-role="controlgroup">-->
+		<!--<xsl:variable name="set" select="php:function('ilSkinTransformer::getTxt', 'settings')" />-->
+		<!--<xsl:variable name="cont" select="php:function('ilSkinTransformer::getTxt', 'wiki_contributors')" />-->
 
-			<xsl:if test="$str != $cont and $str != $set "> <!-- Settings und Mitwirkende nicht anzeigen -->
-				<a data-role="button" rel="external">
-					<xsl:copy-of select="@*" />
-					<xsl:value-of select="." />
- 				</a>
- 			</xsl:if>
-		</xsl:for-each>
-	</div>
+		<!--<xsl:for-each select="p/a">-->
+
+
+			<!--<xsl:variable name="str">-->
+				<!--<xsl:value-of select="." />-->
+			<!--</xsl:variable>-->
+
+			<!--<xsl:if test="$str != $cont and $str != $set "> &lt;!&ndash; Settings und Mitwirkende nicht anzeigen &ndash;&gt;-->
+				<!--<a data-role="button" rel="external">-->
+					<!--<xsl:copy-of select="@*" />-->
+					<!--<xsl:value-of select="." />-->
+ 				<!--</a>-->
+ 			<!--</xsl:if>-->
+		<!--</xsl:for-each>-->
+	<!--</div>-->
 </xsl:template>
 
 

@@ -58,7 +58,7 @@ class ilPOIncludesUIHookGUI extends ilUIHookPluginGUI {
 			case "foo": return "Bar <b>Bar</b>\n\n\n<div class=\"color:red\">BAZ</div>";
 			default:
 				# gehe von maskierung aus - auf sauberen string im regex oben schon gecheckt
-				$includes_path = "/var/www/elearning/local/includes/";
+				$includes_path = "/home/elearning-www/public_html/elearning/local/includes/";
 				$file = $includes_path . $id . ".htm";
 				if(file_exists($file)) {
 					if(!is_readable($file))
