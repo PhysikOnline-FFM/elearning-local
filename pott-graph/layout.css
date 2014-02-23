@@ -1,0 +1,201 @@
+/* Tango Color Pallette
+   http://sobac.com/sobac/tangocolors.htm
+*/
+
+body {
+	font-family: Verdana, Arial, sans-serif;
+	margin: 0;
+}
+
+header {
+	position: absolute;
+	top: 1.2em;
+	left: 1.2em;
+	z-index: 1;
+}
+
+#logo {
+	float: left;
+}
+
+header h1 {
+	font-size: 1.1em;
+	margin-left: 70px;
+	margin-top: 10px;
+}
+
+header h1 .subtitle {
+	display: block;
+	font-size: 80%;
+}
+
+svg {
+	position: relative;
+	z-index: 2;
+	/*border: 1px solid #eee;*/
+}
+
+#details {
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	right: 0;
+
+	width: 300px;
+	/*overflow-y: scroll;*/
+	overflow-x: hidden;
+
+	background: rgba(255,255,255,.9);
+	padding: 2em;
+	box-shadow: 0 -19px 18px rgba(0, 0, 0, 0.22);
+}
+
+#details.ticket > h3 {
+	background-color: rgba(114, 159, 207, 0.25);
+}
+
+#details.wiki > h3 {
+	background-color: rgba(233, 185, 110, 0.25);
+}
+
+#details > h3 {
+	margin: -2em;
+	padding: 2em;
+	margin-bottom: .5em;
+}
+
+#details > h3 a {
+	color: rgb(82,82,255);
+}
+
+/* Loaded contents */
+#trac-content {
+	font-size: 80%;
+}
+
+#trac-content div.date p {
+	margin: 0;
+	text-align: right;
+	font-size: 80%;
+}
+
+#trac-content h1,
+#trac-content h2, #trac-content h3 {
+	font-size: 1.2em;
+}
+
+#trac-content table {
+}
+
+#trac-content table, #trac-content tr {
+	display: block;
+}
+
+#trac-content th {
+	display: block;
+	clear: left;
+	float: left;
+	width: 10em;
+	text-align: right;
+}
+
+#trac-content td {
+	display: block;
+	margin-left: 12em;
+}
+
+#trac-content form {
+	display: none;
+}
+
+#trac-content a {
+	font-weight: normal;
+}
+
+#trac-content a.ext-link,
+#trac-content a.no-graph-link {
+	font-weight: normal;
+	/* Von Wikipedia-Skin entnommen: */
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgdmVyc2lvbj0iMS4xIgogICB3aWR0aD0iMTAiCiAgIGhlaWdodD0iMTAiCiAgIGlkPSJzdmcyIj4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGE3Ij4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRsZT48L2RjOnRpdGxlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZwogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC04MjYuNDI4NTksLTY5OC43OTA3NykiCiAgICAgaWQ9ImxheWVyMSI+CiAgICA8cmVjdAogICAgICAgd2lkdGg9IjUuOTgyMTQyOSIKICAgICAgIGhlaWdodD0iNS45ODIxNDI5IgogICAgICAgeD0iODI2LjkyODU5IgogICAgICAgeT0iNzAyLjMwODY1IgogICAgICAgaWQ9InJlY3QyOTk2IgogICAgICAgc3R5bGU9ImZpbGw6I2ZmZmZmZjtmaWxsLW9wYWNpdHk6MTtzdHJva2U6IzAwNjZjYztzdHJva2Utd2lkdGg6MXB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEiIC8+CiAgICA8ZwogICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMC43MDcxMDY3OCwwLjcwNzEwNjc4LC0wLjcwNzEwNjc4LDAuNzA3MTA2NzgsNzYyLjg3LC0zNTkuODgzMzkpIgogICAgICAgaWQ9Imc0ODE1Ij4KICAgICAgPHBhdGgKICAgICAgICAgZD0ibSA3OTYuOTA4MTksNzAwLjI4MzE3IDMuNzAxMjcsLTMuNzAxMjYgMy44MTE3NCwzLjgxMTc1IC0wLjAxODksMi4yMDMzNiAtMS44NTIzNCwwIDAsMy44NTQzIC0zLjgwMjMzLDAgMCwtMy45NzEwOCAtMS44NTM2LDAgeiIKICAgICAgICAgaWQ9InBhdGg0Nzc3IgogICAgICAgICBzdHlsZT0iZmlsbDojMDA2NmZmO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lIiAvPgogICAgICA8cGF0aAogICAgICAgICBkPSJtIDgwMC42MDk0Niw2OTguMDAyNDQgMy40Njk4NiwzLjQzODY1IC0yLjU3MDIsMCAwLDQuMDc0MzYgLTEuNzM2MiwwIDAsLTQuMDc0MzYgLTIuNjE3NTQsLTMuNmUtNCB6IgogICAgICAgICBpZD0icGF0aDQ3NzkiCiAgICAgICAgIHN0eWxlPSJmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOm5vbmUiIC8+CiAgICA8L2c+CiAgPC9nPgo8L3N2Zz4K");
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding-right: 13px;
+}
+
+#trac-content a.graph-link {
+	/* Detected links which can be made on same page by graph */
+	font-weight: bold;
+	/*color: magenta;*/
+
+	background-image: url("/projekt/chrome/site/favicon.ico");
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding-right: 20px;
+}
+
+#trac-content .lastmod.trac-diff {
+	display: block;
+	font-size: 80%;
+}
+
+#trac-content img {
+	max-width: 100%;
+}
+
+
+.node {
+	stroke: #fff;
+	stroke-width: 1.5px;
+}
+
+.node.ticket {
+	fill: #729fcf;
+	stroke: #3465a4;
+}
+
+.node.wiki {
+	fill: #e9b96e;
+	stroke: #c17d11;
+}
+
+.node.details-active {
+	stroke: #ef2929;
+	stroke-width: 3px;
+}
+
+.link {
+	stroke: #999;
+	stroke-opacity: .6;
+}
+
+.link.details-active {
+	stroke: #ef2929;
+	stroke-width: 3px;
+}
+
+
+#tooltip {
+	position: absolute;
+	border-radius: .5em;
+	background-color: #1FA31A;
+	font-size: 90%;
+	padding: .5em;
+
+	opacity: .7;
+	transition: opacity 200ms ease-out;
+	z-index: 10;
+}
+
+.node.hover {
+	fill: #1FA31A;
+}
+
+#tooltip.hidden {
+	/*opacity: 0;*/
+	display: none;
+}
+
+#tooltip.visible {
+	/*opacity: .9;*/
+	display: block;
+}
