@@ -7,12 +7,18 @@ h1 small { display: block; opacity: .8; font-size: 80%; }
 h2 { padding: 15px 0 5px 0; }
 
 
-div.positionen div.heading a {
+div.positionen div.heading a,
+div.no-positions {
     background-color: #CCE3EF;
     display: block;
     font-size: 123%;
     padding: 1em;
     outline: none;
+}
+
+div.no-positions {
+	font-size: 100%;
+	background-color: #E9F0F4;
 }
 
 div.positionen div.heading.open a {

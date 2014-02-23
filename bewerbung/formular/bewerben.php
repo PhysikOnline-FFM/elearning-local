@@ -101,6 +101,18 @@ function eingaben_ueberpruefen(){
 &nbsp; &rarr; <small><a href="./">Zurück zur Ausschreibung</a></small>
 </p>
 
+<?php
+if(count(aktive_ausschreibungen()) == 0) {
+?><div class="no-positions">
+Derzeit sind <b>keine</b> Stellen ausgeschrieben!
+
+<p>Bitte verwende diese Bewerbungsmaske nicht, sondern schreibe uns an obige E-Mail-Adresse,
+wenn du Kontakt aufnehmen willst.
+</div>
+<?php
+}
+?>
+
  <table  id="tbl_contact">
   <tr>
    <td class="left">Name:</td>

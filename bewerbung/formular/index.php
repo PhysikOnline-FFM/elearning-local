@@ -18,7 +18,7 @@ include "header.php";
 ?>
 -->
 
-<p>Derzeit offene Positionen:</p>
+<p>Laufende Ausschreibungen:</p>
 <div class="positionen">
 <?php
 $found = 0;
@@ -34,9 +34,11 @@ foreach($ausschreibungen_data as $id => $data) {
 	}
 }
 if(!$found) {
-	?><div>Derzeit leider <b>keine</b> offenen Positionen!
-	<br>Trotzdem kannst du uns, wenn du unsere Arbeit gut findest, jederzeit schreiben.
-	Siehe dazu <a href="/go/impressum">das Impressum</a> für Kontaktdaten!
+	?><div class="no-positions">Derzeit leider <b>keine</b> offenen Positionen!
+	<p>Wir haben zurzeit keine Stellen ausgeschrieben. Wenn du unsere Arbeit gut findest, kannst
+	du uns trotzdem jederzeit schreiben. Es lohnt sich allemal: Wir arbeiten mit anderen
+	Uni-Organen zusammen, die auch oft Verstärkung suchen.
+	Siehe dazu <a href="/go/impressum">das Impressum</a> für Kontaktdaten.
 	</div><?php
 }
 ?>
