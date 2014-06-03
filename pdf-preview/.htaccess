@@ -1,0 +1,3 @@
+# damit PDFs im Cache nicht von Google ausgelesen werden.
+Options -Indexes
+
