@@ -1,4 +1,4 @@
-.btnbar {
+div.ilLeftNavSpace.btnbar {
 	background-color:#006699;
 }
 a.menu:link, a.menu:visited {
@@ -456,19 +456,7 @@ td.boxed {
 	border-style: solid;
 	border-width: thin;
 }
-/*Link, Visited, Hover, Focus, Activ*/
-a.il_ContainerItemCommand2:link, a.il_ContainerItemCommand2:visited,
-a.il_ContainerItemCommand:link, a.il_ContainerItemCommand:visited{
-	font-size: 80%;
-	text-decoration: none;
-	margin: 0px 3px 0px 0px;
-	white-space: nowrap;
-	font-weight: normal;
-}
-a.il_ContainerItemCommand2:hover,
-a.il_ContainerItemCommand:hover{
-	text-decoration: underline;
-}
+
 div.il_ContainerItemCommands2{
 	text-align: right;
 	margin: 0px 3px 3px 3px;
@@ -1131,7 +1119,6 @@ div.il_droparea{
 	border-width: 1px;
 	border-color: #D0D0D0;
 	font-size: 1px;
-	background-image: url(images/drop_back.png);
 	background-repeat: repeat;
 	padding: 0px 0px;
 	text-align: center;
@@ -1143,7 +1130,6 @@ div.il_droparea_active{
 	border-width: 1px;
 	border-color: #000000;
 	font-size: 1px;
-	background-image: url(images/drop_back_active.png);
 	background-repeat: repeat;
 	text-align: center;
 	height: 12px;
@@ -1154,7 +1140,6 @@ div.il_droparea_valid_target{
 	border-width: 1px;
 	border-color: #000000;
 	font-size: 1px;
-	background-image: url(images/drop_back.png);
 	background-repeat: repeat;
 	text-align: center;
 	height: 12px;
@@ -1715,9 +1700,11 @@ img.ilAreaClose {
 	top: 0;
 	cursor: pointer;
 }
+/* Deaktiviert 16.05.2014 (Philip). siehe #654 (LeftContent)
 div.ilLeftNavSpace {
 	padding: 0 20px 0 310px;
 }
+*/
 /*div.ilContentFixed {
 	background-color: #F9F9F9;
 	right: 0px;

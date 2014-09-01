@@ -99,19 +99,27 @@
 	background-color: @content-bg;
 }
 .green-box {
-	.gradient (top, white, @green);
+	/* .gradient (top, white, @green); */ //Wird laut #793 als altbacken und unpassend angesehen.
 	.bordered(@green);
 	padding: (2*@padding);
 	margin-bottom: @margin;
 	background-color: @content-bg;
 }
 .red-box {
-	.gradient (top, white, @red);
+	/* .gradient (top, white, @red); */ //Wird laut #793 als altbacken und unpassend angesehen.
 	.bordered(@red);
 	padding: (2*@padding);
 	margin-bottom: @margin;
 	background-color: @content-bg;
 }
+.blue-box {
+	/* .gradient (top, white, @main-color); */ //Wird laut #793 als altbacken und unpassend angesehen.
+	.bordered(@main-color);
+	padding: (2*@padding);
+	margin-bottom: @margin;
+	background-color: @content-bg;
+}
+
 
 .btn-normal{
 	.transition;

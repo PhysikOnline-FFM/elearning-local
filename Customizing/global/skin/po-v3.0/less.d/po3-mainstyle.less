@@ -52,11 +52,18 @@ body {
 		margin-top: (2*@margin);
 	}
 	div.ilMessageBox {
+		margin: (2*@margin) (2*@margin) 0 (2*@margin);
+		
 		div.ilSuccessMessage {
 			.green-box;
+			color: @green;
+			padding: @padding (5*@padding);
 		}
 		div.ilFailureMessage{
 			.red-box;
+			color: @red;
+			font-weight: bold;
+			padding: @padding (5*@padding);
 		}
 	}
 	label, input[type="checkbox"], input[type="radio"], select {
@@ -178,9 +185,9 @@ body {
 	a.il_ContainerItemCommand2:visited, 
 	a.il_ContainerItemCommand:link, 
 	a.il_ContainerItemCommand:visited {
-		font-size: 0.8em;
+		font-size: 0.9em;
 		text-decoration: none;
-		margin: 0px 3px 0px 0px;
+		margin: 0 @margin 0 0;
 		white-space: nowrap;
 		font-weight: normal;
 	}
@@ -355,6 +362,21 @@ body {
 			}
 		}
 		
+		div.ilMemberViewMainHeader {
+			margin-bottom: (2*@margin);
+			
+			div#po3-memberView {
+				.blue-box;
+				color: @main-color;
+				padding: (2*@padding);
+				//background-color: #84cbfe; background-color: rgba(1,99,170, 0.4);
+				
+				h1,h4 {
+					margin: (2*@margin) 0;
+				}
+			}
+		}
+		
 		div.il_adv_sel {
 			//.bordered;
 			.box-shadow;
@@ -468,11 +490,11 @@ body {
 				li {
 					float: left;
 					margin: 0 @margin -1px 0;
-					padding: (@padding / 2) @padding;
+					padding: (@padding/2) @padding;
 					font-size: 0.9em;
 					white-space: nowrap;
 					
-					&.tabinactive, &nontabbed {
+					&.tabinactive, &.nontabbed {
 						//border-bottom: 1px solid transparent;
 						background-color: @body-bg;
 						color: lighten(@second-color, 15%);
@@ -487,6 +509,12 @@ body {
 							text-decoration: none;
 							cursor: pointer;
 						}
+					}
+					&.backtab {
+						padding: (@padding/2) @padding 0 0;
+					}
+					&.nontabbed {
+						padding: (1.5*(@padding/4)) @padding;
 					}
 				}
 			}
@@ -596,7 +624,8 @@ body {
 							background-color: ligthen(@highlight4, 15%);
 						}
 						form#ilToolbar > div.ilToolbar {
-							float: right; // Test (möglicherweise nicht auf allen Seiten gut)
+							//float: right;    // Test (möglicherweise nicht auf allen Seiten gut -> Stimmt)
+							text-align: right; // Neuer Test
 						}
 						
 						div.ilAdminRow{}
@@ -747,11 +776,11 @@ body {
 
 				// Ab hier: Erweiterungen zum Footer, von Sven
 				// in Bezug auf POTT #689 geschrieben
-
 				.ilFooterText {
 					position: absolute;
 					top: (@padding/2);
 					right: (@padding/2);
+					max-width: 51%; text-align:right; a{white-space: nowrap} // Fix: Textüberschneidung nach #803
 				}
 
 				.ilFloatLeft {
@@ -808,11 +837,16 @@ body {
 						div.ilForm {
 							margin: auto;
 						}
+						
+						&[name=languageselection] { 
+							padding: @padding;
+						}
 					}
 					
 					div.po-login-info {
-						.green-box;
+						.blue-box;
 						font-size: 0.80em;
+						
 						img {
 							float: right;
 							margin-left: 2em;

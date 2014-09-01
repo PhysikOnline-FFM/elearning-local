@@ -3,31 +3,19 @@
 -->
 <div class="po-content" id="po-hauptseite">
 	<div id="po3-hauptseite-top">
-		<div class="po3-introduction startseite">
-		  <img src="https://elearning.physik.uni-frankfurt.de/local/files/construction.jpg" alt="Under Construction">
-		  <div class="alert">
-				<h2>Willkommen zu <b>PhysikOnline&nbsp;3.0</b></h2>
-				<p class="subtitle">PhysikOnline ist funktionaler geworden, damit
-				mehr Zeit für die Physik bleibt.</p>
-		  </div>
-		  <p style="clear:left">Im September 2013 arbeiten wir noch an vielen Detailverbesserungen.
-		  Bitte <a href="/go/impressum">schreiben Sie uns eine E-Mail oder rufen Sie an</a>, falls Fehler
-		  auftreten oder etwas nicht (mehr) geht. Auch Feedback können Sie an uns
-		  richten.
-		  <p>
-		  <p>Offizieller Launch ist Semesterbeginn WS 2013/14.</p>
-		</div>
-	
-	<!--
 		<div class="" id="po3-hauptseite-willkommen">
 			<h1>Willkommen bei PhysikOnline</h1>
-			<p>PhysikOnline ist das eLearning-Portal des <a href="http://www.physik.uni-frankfurt.de/">Fachbereichs Physik</a> der <a href="http://www.uni-frankfurt.de/">Uni Frankfurt</a>.<br />
-			Hier finden sie multimedial unterstützte Vorlesungen, Aufgaben, Kompedien, Repetitorien, Java-Applets, Maple-Arbeitsblätter, Skripte und vieles mehr.</p>
+			<p>PhysikOnline ist das eLearning-Portal des <a href="http://www.physik.uni-frankfurt.de/">Fachbereichs Physik</a> der <a href="http://www.uni-frankfurt.de/">Goethe Universit&auml;t</a>.</p>
+
+			<div id="more-text" class="hidden-js">
+				<p>Hier finden sie multimedial unterstützte Vorlesungen, Aufgaben, Kompedien, Repetitorien, Java-Applets, Maple-Arbeitsblätter, Skripte und vieles mehr.</p>
 			
-			<p>Nach dem Login können Sie PhysikOnline personalisieren (persönlicher Schreibtisch, automatische Benachrichtigungen, eigene Lerngruppen, WebDAV-Zugriff und vieles mehr).<br />
-			Seit Wintersemester 07/08 verzeichnet PhysikOnline über 1400 registrierte Benutzer.</p>
+				<p>Nach dem Login können Sie PhysikOnline personalisieren (persönlicher Schreibtisch, automatische Benachrichtigungen, eigene Lerngruppen, WebDAV-Zugriff und vieles mehr).<br />
+				Seit Wintersemester 07/08 verzeichnet PhysikOnline über 1400 registrierte Benutzer.</p>
+			</div>
+			<div id="more-btn"><a class="js-only" href="#mehr">mehr</a></div>
 		</div>
-	-->
+
 		<div class="" id="po3-hauptseite-login">
 			<form id="form_po3_login" method="post" action="ilias.php?lang=de&client_id=FB13-PhysikOnline&cmd=post&cmdClass=ilstartupgui&cmdNode=di&baseClass=ilStartUpGUI&rtoken=" name="formlogin">
 				<table>
@@ -41,42 +29,68 @@
 				</table>
 			</form>
 		</div>
-	</div>
+
+	</div><!-- ende von #po3-hauptseiten-top -->
+
+	<div id="po3-hauptseite-tile" style="display: none;">
+		<div class="po3-tile-row">
+			<a href="/goto_FB13-PhysikOnline_cat_49.html">
+			<div id="po3-tile-veranstaltungen" class="po3-tile">
+				<div class="po3-tile-caption">
+					<span class="po3-tile-caption-main">Veranstaltungen</span>
+				</div>
+			</div>
+			</a>
+		</div>
+		<div class="po3-tile-row po3-tile-2col">
+			<a href="/goto_FB13-PhysikOnline_cat_41.html">
+			<div id="po3-tile-theo" class="po3-tile">
+				<div class="po3-tile-caption">
+					<span class="po3-tile-caption-main">Theoretische Physik</span>
+					<span class="po3-tile-caption-sub">Vorlesungen</span>
+				</div>
+			</div>
+			</a>
+			<a href="/goto_FB13-PhysikOnline_cat_42.html">
+			<div id="po3-tile-exp" class="po3-tile">
+				<div class="po3-tile-caption">
+					<span class="po3-tile-caption-sub">Vorlesungen</span>
+					<span class="po3-tile-caption-main">Experimentalphysik</span>
+				</div>
+			</div>
+			</a>
+		</div>
+		<div class="po3-tile-row po3-tile-2col">
+			<a href="/goto_FB13-PhysikOnline_cat_74.html">
+			<div id="po3-tile-ebooks" class="po3-tile">
+				<div class="po3-tile-caption">
+					<span class="po3-tile-caption-main">eBooks</span>
+					<span class="po3-tile-caption-sub">Zusatzmaterial</span>
+				</div>
+			</div>
+			</a>
+			<a href="http://podcast-wiki.physik.uni-frankfurt.de/">
+			<div id="po3-tile-pwp" class="po3-tile">
+				<div class="po3-tile-caption">
+					<span class="po3-tile-caption-sub">Projekt</span>
+					<span class="po3-tile-caption-main">Podcast Wiki Physik</span>
+				</div>
+			</div>
+			</a>
+		</div>
+		<div class="po3-tile-row">
+			<a href="#">
+			<div id="po3-tile-schalter" class="po3-tile">
+				<div class="po3-tile-caption">
+					<span class="po3-tile-caption-main">Liste aller Materialien anzeigen</span>
+				</div>
+			</div>
+			</a>
+		</div>
+	</div><!-- ende von #po3-hauptseiten-tile -->
+
+	<!-- Kategorien-Auflistung -->
+	<div id="po3-hauptseite-list">
 	[list-cat]
+	</div>
 </div>
-<script>
-$( document ).ready(function() {
-	block = $("#po3-hauptseite-top").detach();
-	rows = "#item_row_1361, #item_row_90, #item_row_1393, #item_row_75, #item_row_76";
-	
-	// Füge PodcastWiki Zeile ein
-	$("#po-hauptseite table.ilContainerBlock").append("<tr id='item_row_podcastwiki' class='ilCLIRow2'><td class='ilCLI'><div id='po3-podcastwiki' class='ilContainerListItemOuter'><div><a href='http://podcast-wiki.physik.uni-frankfurt.de/'><img width='22' src='/local/logos/podcast-goethe-klein.png' title='Symbol Kategorie' alt='' style='position: absolute;  padding: 0px;'></img></a></div><div style='margin: 0px 0px 0px 25px; padding: 0px;'><div class='il_ContainerListItem'><div class='po3-itemHeader'><div style='float:left;padding-bottom: 5px'><h4 class='il_ContainerItemTitle'><a class='il_ContainerItemTitle' href='http://podcast-wiki.physik.uni-frankfurt.de/'>  Podcast Wiki Physik</a></h4></div></div><div class='il_Description' style='clear:both; zoom:1;'>PodcastWiki ist ein studentisches Videoprojekt, das physikalische Experimente vorführt, Vorlesungsinhalte erklärt oder Arbeitsgruppen des Fachbereichs Physik der Goethe-Universität vorstellt.</div><div style='clear:both;'></div></div></div></div></td></tr>");
-	
-	if ($("#po3-anonymous-user").length !== 0){
-		// Wenn nicht angemeldet
-		$("#mainspacekeeper div.il_HeaderInner").append(block);
-		
-		// Blende obige Listenpunkte aus
-		$(rows).hide();
-		// Füge "Alle anzeigen" hinzu
-		$("<tr>")
-			.addClass("ilCLIRow2")
-			.attr("id", "po3-showAllRows")
-			.append(
-				$("<td>")
-					.css({"text-align": "center"})
-					.append(
-						$("<a>")
-							.css({"display": "block"})
-							.text("Alle anzeigen")
-							.click(function(){
-								$(rows).show();
-								$("#po3-showAllRows").hide();
-							})
-					)
-				)
-			.appendTo("#po-hauptseite table.ilContainerBlock");
-	}
-	
-});
-</script>

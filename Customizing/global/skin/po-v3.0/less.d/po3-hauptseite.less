@@ -25,17 +25,17 @@ div#po3-hauptseite-top {
 			font-size: 1.65em;
 		}
 		p {margin: 0;}
-		div#more {
+		div#more-btn {
 			text-align: right;
-			a.more {
+			a{
 				color: @highlight1;
 				font-size: 0.8em;
 				margin-right: 2px;
 			}
 		}
-		div.more {
-			text-align:justify;
-			padding: 0 62px;
+		div#more-text {
+			text-align: justify;
+			padding: 0 45px;
 		}
 	}
 	
@@ -75,7 +75,7 @@ div#po3-hauptseite-tile {
 	}
 	.po3-tile {
 		opacity: 0.4;
-		.opacity-transition(300ms);
+		.opacity-transition(200ms);
 		
 		.bordered;
 		height: 140px;
@@ -88,7 +88,7 @@ div#po3-hauptseite-tile {
 		
 		.po3-tile-caption{
 			opacity: 0;
-			.opacity-transition(300ms);
+			.opacity-transition(200ms);
 			width: 100%;
 			height: 40px;
 			line-height: 40px;
@@ -105,11 +105,11 @@ div#po3-hauptseite-tile {
 	}
 	.po3-tile:hover, .po3-tile:focus, .po3-tile:active {
 		opacity: 1;
-		.opacity-transition(400ms);
+		.opacity-transition(150ms);
 		
 		.po3-tile-caption{
 			opacity: 1;
-			.opacity-transition(400ms);
+			.opacity-transition(150ms);
 		}
 	}
 	a .po3-tile-caption-sub {color: @highlight1}
