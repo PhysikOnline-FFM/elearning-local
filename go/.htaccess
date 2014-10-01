@@ -1,0 +1,5 @@
+# Klineer URL-Shortening service, #636
+RewriteEngine On
+RewriteBase /local/go/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$  index.php?$1

@@ -1,0 +1,10 @@
+/*
+ *	Layout Bug Fixing
+**/
+
+// #699 - Filterleiste in Admin/Sprachen/Deutsch
+select[name='filter_mode'] { max-width: 300px }
+
+// #690, #691, #694 - Suchergebnisse unschön
+// In diesem Zusammenhang verstecke ich die Voransicht während man Suchbegriffe eingibt. Die ist wirklich hässlich und mir erschließt sich der Sinn nicht
+div#mm_search_menu {display: none !important}
