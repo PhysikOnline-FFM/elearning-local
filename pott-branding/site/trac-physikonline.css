@@ -217,6 +217,10 @@ body.sensitive-ticket #main, body.sensitive-wiki #main {
 	background-image: url("/projekt/chrome/site/pott-sensitive-bg.png");
 }
 
+body.sensitive-wiki div.trac-content {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
 /* Inhaltsstile, zum Aufgreifen in der Wiki: */
 
 /* small-query wrapper um ein Query-Macro in einer Wiki-Seite */
@@ -242,8 +246,11 @@ img.right {
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
-/* Weihnachtsaktion POTT #459  - Bommelmuetze aufm Logo */
-/*#header .logo:after {
+/* Weihnachtsaktion, beschrieben im
+     POTT #459 (erstmals 2012),
+     POTT #742 (fuer2013)   - Bommelmuetze aufm Logo */
+/*
+#header .logo:after {
 	position: absolute;
 	left: -5px; top: -21px;
 	content: url("/local/logo_weihnachten_overlay.png");
@@ -252,7 +259,8 @@ img.right {
 #header h1 { padding-left: 132px; }
 #header h1 a:hover::after, #header h1 a:focus::after {
 	position-left: 132px;
-}*/
+}
+*/
 /* Ende der Weihnachtskorrekturen */
 
 /* Bugfix: Ueberbreite Meilensteine, usw.-Eingabefelder begrenzen */
@@ -267,6 +275,149 @@ fieldset#properties td.fullrow input {
 	width: 98%;
 }
 
+/* Bugfix komischer Trac-Styles */
+#altlinks ul { padding: 0; }
+
+/* Neue Startseitenstyles seit 23.02.2014,
+   dazu responsives Zweispaltigkeitslayout */
+/* Inspiriert von Bootstrap3,
+   http://stackoverflow.com/questions/18854259/why-did-bootstrap-3-switch-to-box-sizing-border-box/18858771
+*/
+.cols, .cols *, .cols *:before, .cols *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.cols {
+	padding: 18px 0;
+}
+
+.cols:after, .clearfix:after { /* clearfix */
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+.col50 {
+	float: left;
+	width: 50%;
+	padding-left: 15px;
+	padding-right: 15px;
+	position: relative;
+}
+
+@media handheld, screen and (max-width: 850px) {
+	.col50 { width: 100%; }
+}
+
+.col50.first { padding-left: 0; }
+.col50.last { padding-right: 0; }
+
+.box.welcome {
+	border: 1px solid #E4E4E4;
+	border-radius: .5em;
+	padding: 1em;
+	box-shadow: 0.1em 0.1em 1.2em 0 #EBEBEB;
+}
+
+.box.welcome img.logo {
+	max-width: 25%;
+	margin-right: 17px;
+}
+
+/* Bild mit viel Schatten und kreisrund. Ist ja Mode momentan. Genutzt auf
+   WikiStart. Gut fuer quadratische Bilder. */
+img.circle-image {
+	box-shadow: 0.1em 0.1em 1.2em 0 #BBBBBB;
+	border-radius: 50%;
+}
+
+.cols h1, .cols h2, .cols h3 {
+	margin-left: 0;
+}
+
+/* Diese schrecklichen Boxes-Defaulteinstellung (riesengrosser Shadow)
+   etwas eleganter machen */
+.wikiextras.box {
+	box-shadow: 0.1em 0.1em 0.2em 0 rgba(119, 119, 119, 0.31);
+	border: 1px solid #C9C9C9;
+}
+
+.wikiextras.box.image {
+	padding: 11px 11px 0; /* zumindest bei .right oder .image */
+}
+
+.wikiextras.box.red {
+	border: 1px solid #FF7878;
+}
+
+/* Das gleiche bei den Buttons (immer am Seitenende), die total beschissen aussehen */
+#attachments + div.buttons {
+	margin: 0.5em 0.5em 1.5em;
+	text-align: center;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"], button {
+	box-shadow: 0.1em 0.1em 0.3em 0 #CDCDCD;
+	border-left: 1px solid #f1f1f1;
+	border-top:  1px solid #f1f1f1;
+	border-bottom: 1px solid #a9a9a9;
+	border-right:  1px solid #a9a9a9;
+}
+
+/* Nur fuer die Startseite: Video-Previewicons von der PodcastWiki */
+div.pwp-feed li {
+	list-style: none;
+	display: inline;
+	margin: 0; padding: 0;
+}
+
+div.pwp-feed a {
+	display: block;
+	float: left;
+	margin-right: 1em;
+	position: relative;
+	width: 120px; height: 68px; /* bildmasse */
+	overflow: hidden;
+}
+
+div.pwp-feed .title, div.pwp-feed .subtitle {
+	/* Erst beim Hovern zeigen */
+	display: none;
+	position: relative;
+	z-index: 3; /* ueber Bild */
+	font-size: 80%;
+}
+
+div.pwp-feed a:link, div.pwp-feed a:visited {
+	border-bottom: none; /* Trac */
+}
+
+
+div.pwp-feed a img {
+	display: block;
+	position: absolute;
+	left: 0; top: 0;
+}
+
+div.pwp-feed a:hover img,
+div.pwp-feed a:focus img {
+	opacity: 0.5; /* damit man text sieht */
+}
+
+
+div.pwp-feed a:hover span.title,
+div.pwp-feed a:focus span.title {
+	display: block;
+
+	font-weight: bold;
+	position: absolute;
+	bottom: 0; left: 0;
+	line-height: 100%;
+	color: black;
+	padding: .8em;
+}
 
 
 /* mobile enhancements */

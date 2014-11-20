@@ -32,3 +32,11 @@
 .js-only {
 	display: none;
 }
+
+// Nur in Print-Layout
+.print-only {display: none !important}
+@media print {
+    .print-only {display: initial !important}
+	.print-hidden {display: none !important}
+	.print-show {display: initial !important}
+}

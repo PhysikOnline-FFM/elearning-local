@@ -58,6 +58,10 @@ skyline.progress = function() {
 skyline.setup_plot = function() {
 	// setup linestyle etc. for plotting
 	// only needs to be done once, saves time in each loop
+	if (skyline.c === undefined){
+		log('skyline.c is undefined. Please call skyline.setup() first');
+		return;
+	}
 	ctx = skyline.c;
 	ctx.strokeStyle = "darkblue";
 	ctx.fillStyle = skyline.skyline_color;
@@ -66,6 +70,10 @@ skyline.setup_plot = function() {
 
 skyline.bg = function() {	
 	// clear by painting the background
+	if (skyline.c === undefined){
+		log('skyline.c is undefined. Please call skyline.setup() first');
+		return;
+	}
 	ctx = skyline.c;
 	ctx.save();
 	ctx.fillStyle = skyline.background_color;
@@ -156,6 +164,10 @@ skyline.loop = function() {
 skyline.plot_frame = function(prev, next, due) {
 	skyline.bg();
 	
+	if (skyline.c === undefined){
+		log('skyline.c is undefined. Please call skyline.setup() first');
+		return;
+	}
 	ctx = skyline.c;
 	stepsize = 1; // pixelaufloesung
 
@@ -184,6 +196,11 @@ skyline.plot = function(skyline_index) {
 //	skyline.bg();
 
 	ydata = skyline.data[skyline_index];
+	
+	if (skyline.c === undefined){
+		log('skyline.c is undefined. Please call skyline.setup() first');
+		return;
+	}
 	ctx = skyline.c;
 	stepsize = 2; // schrittgroesse in elementen des datenarrays = pixeln
 

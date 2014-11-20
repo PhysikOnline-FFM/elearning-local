@@ -11,13 +11,15 @@
     More information about site appearance customization can be found here:
     
       http://trac.edgewall.org/wiki/TracInterfaceCustomization#SiteAppearance
-  -->
+  
+   ***
 
-  <!-- body-Klassen zusammenbauen (Sensitive Tickets hervorheben, etc) -->
+   body-Klassen zusammenbauen (Sensitive Tickets hervorheben, etc) -->
   <?python
       from genshi.builder import tag
       body_klassen = ''
-      if defined('ticket') and ticket['sensitive'] == u'1':
+      # bugfix fuer #369
+      if defined('ticket') and (not isinstance(ticket, (str,unicode))) and ticket['sensitive'] == u'1':
           body_klassen += ' sensitive-ticket'
       if defined('page') and page.name.startswith('Intern'):
           body_klassen += ' sensitive-wiki'
@@ -28,13 +30,19 @@
      ${select('*|text()|comment()')}
   </body>
 
-
-
   <head py:match="head" py:attrs="select('@*')">
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     ${select('*|text()|comment()')}
-    <link rel="stylesheet" type="text/css" href="/projekt/chrome/site/trac-physikonline.css" />
-    <script type="text/javascript" src="/projekt/chrome/site/trac-physikonline.js"></script>
+    <link rel="stylesheet" type="text/css" href="/local/pott-branding/site/trac-physikonline.css" />
+    <script type="text/javascript" src="/local/pott-branding/site/trac-physikonline.js"></script>
+
+    <!--! Versuch (klappt sogar!), die Scripte auszulesen wg #672 
+    <?python
+	def get_header_scripts():
+	    list_of_scripts = [att.get('src','ERROR') for att in select('script/@src')]
+	    return str(list_of_scripts) ?>
+    <meta name="scripts" value="sind: ${get_header_scripts()}" />
+    -->
   </head>
 
   <div py:match="div[@id='header']" py:attrs="select('@*')">
@@ -50,9 +58,29 @@
   <div py:match="div[@id='footer']" id="pe-footer">
     <hr />
     <a href="/go/impressum">Impressum</a>
- &middot;   <a href="/go/datenschutz">Nutzungsvereinbarungen und Datenschutz</a>
+ &middot;   <a href="/go/nutzungsvereinbarung">Nutzungsvereinbarungen</a>
+ &middot;   <a href="/go/datenschutz">Datenschutz</a>
  &middot;   <a href="/" title="Zum ILIAS-Lernsystem wechseln">zum eLearning-System</a>
-    <div class="ending">PhysikOnline ist ein Projekt des <a href="http://www.uni-frankfurt.de/fb/fb13/">Fachbereichs Physik</a> der <a href="http://www.uni-frankfurt.de">Uni Frankfurt</a>.</div>
+    <div class="ending"><a href="/" title="Zur PhysikOnline-Startseite">PhysikOnline</a> ist ein Projekt des <a href="http://www.uni-frankfurt.de/fb/fb13/">Fachbereichs Physik</a> der <a href="http://www.uni-frankfurt.de">Uni Frankfurt</a>.</div>
+
+    <!-- Piwik PO3 Benutzerstatistiken POTT #441 -->
+    <script type="text/javascript">
+    /*<![CDATA[*/
+	var _paq = _paq || [];
+	_paq.push(["trackPageView"]);
+	_paq.push(["enableLinkTracking"]);
+
+	(function() {
+		var u="/logs/piwik/";
+		_paq.push(["setTrackerUrl", u+"piwik.php"]);
+		_paq.push(["setSiteId", "3"]);
+		var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+		g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+	})();
+    /*]]>*/
+    </script>
+    <noscript><img src="https://th.physik.uni-frankfurt.de/~elearning-www/stat/piwik/piwik.php?idsite=3&amp;rec=1" style="border:0" /></noscript>
+    <!-- End Piwik Code -->
   </div>
 
 </html>

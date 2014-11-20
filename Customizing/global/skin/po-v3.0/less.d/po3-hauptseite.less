@@ -12,31 +12,35 @@ div#po3-hauptseite-top {
 	
 	div#po3-hauptseite-willkommen {
 		float: left;
-		padding: 0 (@padding);
+		padding: 0;
 		width: 640px;
-		min-height: 88px;
+		min-height: 87px;
 		font-size: 0.9em;
 		color: @highlight1;
 		text-align: center;
-		
+
 		h1 {
-			margin-bottom: 2px;
+			margin: 10px 0 2px 0;
 			color: @main-color;
 			font-size: 1.65em;
+			text-align: center;
 		}
-		p {margin: 0;}
+		
+		p {margin: 0}
+		
+		div#welcome-text {padding: 0 (2*@padding)}
+		
 		div#more-btn {
 			text-align: right;
-			a{
+			margin: 5px 0;
+			a {
 				color: @highlight1;
 				font-size: 0.8em;
 				margin-right: 2px;
 			}
 		}
-		div#more-text {
-			text-align: justify;
-			padding: 0 45px;
-		}
+		
+		div#more-text {margin-top: (2*@margin); text-align: justify}
 	}
 	
 	div#po3-hauptseite-login {

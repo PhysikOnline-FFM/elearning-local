@@ -70,6 +70,7 @@ if(!$found) {
 <!--<div style="font-size: 1.5em; text-align: center;"><a href="bewerben.php">Jetzt
 bewerben</a></div>-->
 
-
+	</div>
+	</div><!-- end of #main -->
 </body>
 </html>

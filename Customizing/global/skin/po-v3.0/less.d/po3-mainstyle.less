@@ -41,7 +41,17 @@ body {
 		font-size: 0.8em;
 		color: white;
 	}
-
+	
+	.il_VAccordionHead, .il_HAccordionHead {
+		background-color: @highlight4;
+		border-color: @border-color;
+		color: @main-color;
+	}
+	.il_HAccordionHead:hover, .il_VAccordionHead:hover,
+	.il_HAccordionHeadActive, .il_VAccordionHeadActive {
+		background-color: @highlight3;
+	}
+	
 	.il_ItemAlertProperty {
 		//.btn-active;
 		.bordered(@red);
@@ -93,8 +103,9 @@ body {
 	}
 	
 	div.ilForm {
-		border-spacing: 0px;
-		border-collapse: collapse;
+		//border-spacing: 0px;
+		//border-collapse: collapse;
+		width: 99.8%;
 		border: 1px solid @border-color;
 		display: table;
 
@@ -209,10 +220,10 @@ body {
 					margin: @margin;
 					position: relative;
 					
-					h1 a, h2 a {
-						/* SEO: im HTML ist Text, der versteckt wird */
-						text-indent: -2000px;
-						display: inline-block;
+					h1, h2, h3, h4 {
+						color: @main-color;
+						margin-top: 2px;
+						margin-bottom: 4px;
 					}
 					
 					#il_main_logo {
@@ -566,9 +577,9 @@ body {
 				.ilBlockHeader, .ilBlockHeaderBig, .ilContainerBlockHeader {
 					//.gradient-overlay ("center top", 0.05); // EXP: Entfernt um Flächen zu erhalten
 					//border-bottom: 1px solid @border-color; // EXP: Entfernt
-					background-color: @highlight4; // EXP: NEW
+					//background-color: @highlight4; // EXP: NEW
 					background-image: none; // Delos-Defaulthintergrund nicht einblenden
-					font-size: 0.8em;
+					//font-size: 0.8em;
 					font-weight: bold;
 					padding: (@padding/2);
 					text-align: left;

@@ -58,7 +58,7 @@ po.skyline.setup = function() {
 		if(!po.skyline.canvas) {
 			po.skyline.canvas = $("<canvas/>").appendTo(po.skyline.wrapper);
 			$.getJSON(po.skyline.config.json_url, function(data) {
-				log("Skyline JSON loaded");
+				if (skyline.debug) log("Skyline JSON loaded");
 				po.skyline.loaded = true;
 				if(po.skyline.ignore_this_time) {
 					// Maus schon wieder weggenommen
@@ -66,7 +66,7 @@ po.skyline.setup = function() {
 					return;
 				}
 				// window.skyline is now present
-				log("Setup:", po.skyline.canvas);
+				if (skyline.debug) log("Setup:", po.skyline.canvas);
 				skyline.setup(po.skyline.canvas, data, po.skyline.finished);
 				// canvas anzeigen
 				po.skyline.wrapper.addClass("running");

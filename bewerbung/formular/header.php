@@ -30,19 +30,35 @@ function aktive_ausschreibungen() {
 }
 
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+	<meta charset="utf-8" />
 	<title>Jobs bei PhysikOnline: Stellenangebote und Bewerben!</title>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" type="text/css" href="https://elearning.physik.uni-frankfurt.de/Customizing/global/skin/physik/physik.css?vers=4-3-0-Beta1--2012-09-04" />
-	<link rel="stylesheet" type="text/css" href="bewerbung.css">
+	
+	<link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic|Yanone+Kaffeesatz:400,300,200,700|Oswald:400,300,700' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
-	<script type="text/javascript" src="jquery.js"></script>
-	<script type="text/javascript" src="jquery.collapse.js"></script>
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/bewerbung.css" rel="stylesheet" type="text/css" />
+	
+	<script src="js/html5shiv.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.collapse.js"></script>
+	
 	<script type="text/javascript">
 		$(function(){
-			$(".positionen").collapse({
+			$(".positionen").filter(function(){
+				// 2014 hinzugekommen:
+				// nur wenn mehr als eine Position offen ist, Aufklappmenue aktivieren.
+				show_collapse = $(this).find("div div.heading").length > 1;
+				if(!show_collapse) {
+					// uebelst haesslich: Aufklappmenue simulieren.
+					$(this).find('div div.heading').addClass("open").wrapInner("<a/>");
+				}
+				return show_collapse;
+			}).collapse({
 				query: 'div div.heading',
 				show: function() { this.slideDown(300); },
 				hide: function() { this.slideUp(300);  },
@@ -50,17 +66,22 @@ function aktive_ausschreibungen() {
 		});
 	</script>
 </head>
-<body class="std">
-<div id="ilAll">
-<div class="ilStartupFrame" id="po-startupframe">
-	<div id="il_startup_logo">
-		<div class="po-head">
-			<a id="po-logo" href="/" title="Zur Physik Online Startseite"><img src="https://elearning.physik.uni-frankfurt.de/Customizing/global/skin/physik/src/logo_small-new.png" alt="Physik eLearning" /></a>
-			<div class="ilTopTitle">
-				<a href="/" title="Zur Startseite des Lernportals">PhysikOnline</a>
-				<div class="po-subtitle">Das eLearning-Portal des Fachbereichs Physik</div>
-			</div>
-		</div>
+<body lang="de">
+	<div id="wikitools"></div>
+
+	<div id="physik-online-bar">
+		<a id="po-logo" href="/" title="Zur Physik Online Startseite"><img src="https://elearning.physik.uni-frankfurt.de/Customizing/global/skin/physik/src/logo_small-new.png" alt="" /></a>
+		<h1 id="logo-title">
+			<span>PhysikOnline</span>
+		</h1>
 	</div>
-	<div id="il_startup_content">
-		<div class="po-content po-clearafter">
+
+	<div id="main">
+		<header class="main-bodys">
+			<nav id="site-navigation">
+				<ul>
+				</ul>
+			</nav>
+		</header>
+
+		<div id="the-grid" class="main-bodys">

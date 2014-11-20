@@ -20,12 +20,11 @@ po.anpassungen.setup = function() {
 
 	po.anpassungen.header();
 	po.anpassungen.footer();
-	po.anpassungen.tablerow_links();
+	//po.anpassungen.tablerow_links(); Deaktivieren, POTT #712.
+	po.anpassungen.treestructures();
 };
 
 po.anpassungen.tablerow_links = function() {
-	return false; // Deaktivieren, POTT #712.
-
 	// Tabellenzeilen anklickbar machen (größere Klickfläche)
 	var t = $("table.ilContainerBlock td.ilCLI").css("cursor", "pointer");
 	var f = function(event){
@@ -48,9 +47,24 @@ po.anpassungen.tablerow_links = function() {
 	t.click(f);
 };
 
+po.anpassungen.treestructures = function(){
+	// Fix für Darstellung von Baumstrukturen und anderen "left contents" von ILIAS, die nicht mehr ins aktuelle Layout passen.
+	// Die Container sollen losgelöst, verschiebbar und größenänderbar sein.
+	// Siehe Tickets #654, #700, #713, #933
+	var div = $('div#left_nav').resizable().draggable();
+	
+	// Resize
+	var vp_width = $(window).width();
+	var cont_width = $('div.po3-contentBlock').width();
+	div.css('width', Math.max(240, Math.round((vp_width - cont_width - 50)/2)));
+	// Positioniere Container anders, bei kleinen Bildschirmenen
+	if (vp_width < 1400){
+		div.css({'left': (vp_width - div.width() - 30)+'px'})
+	}
+}
+
 po.anpassungen.header = function(){
 	// Im Wesentlichen von Philip geschrieben:
-
 	// Verschieben von Menüpunkten aus "persönlicher Schreibtisch" in Benutzer-Dropdown
 	$("#mm_desk_ov div.ilGroupedListSep").remove(); //Entferne Seperatoren
 	mm_mail = $("#mm_pd_mail").detach();

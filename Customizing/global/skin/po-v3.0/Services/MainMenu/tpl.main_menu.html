@@ -3,23 +3,19 @@
 		<!-- BEGIN osd_enabled --><script type="text/javascript">var OSDNotifier; $(function() { OSDNotifier = OSDNotifications({initialNotifications: {INITIAL_NOTIFICATIONS}, pollingIntervall: {OSD_POLLING_INTERVALL}, playSound: {OSD_PLAY_SOUND}})});</script><!-- END osd_enabled -->
 		<!-- BEGIN osd_container -->
 			<div class="osdNotificationContainer">
-
 			</div>
 		<!-- END osd_container -->
 
 		<!-- BEGIN header_top_title -->
 		<div class="ilTopTitle">
 			<h1>
-				<a id="il_main_logo" target="_top" href="/goto_FB13-PhysikOnline_root_1.html" title="Zur Physik Online Startseite">
-					PhysikOnline
-				</a>
+				<span class="print-only">PhysikOnline</span>
+				<a class="print-hidden" id="il_main_logo" href="/goto_FB13-PhysikOnline_root_1.html" title="Zur Physik Online Startseite"></a>
 			</h1>
-			<h2>
-				<a id="po3-headerTitle" href="/goto_FB13-PhysikOnline_root_1.html" title="Zur Physik Online Startseite">
-					Das eLearning-Portal des Fachbereichs Physik
-					<!-- {TXT_HEADER_TITLE} -->
-				</a>
-			</h2>
+			<h3>
+				<span class="print-only">Das eLearning-Portal des Fachbereichs Physik</span>
+				<a class="print-hidden" id="po3-headerTitle" href="/goto_FB13-PhysikOnline_root_1.html" title="Zur Physik Online Startseite"><!-- {TXT_HEADER_TITLE} --></a>
+			</h3>
 			<div id="po3-skyline">
 				<a title="Entdecke das PhysikOnline-Universum!" href="#load_physikonline_universe" class="po-universe header">
 					<img src="/Customizing/global/skin/po-v3.0/src/skyline.png" alt="Goethe-Universität Frankfurt" />
@@ -44,7 +40,7 @@
 	<div class="ilMainMenuSection">
 		<div class="po3-MainMenuContainer">
 			<h1 class="ilAccHeadingHidden">{TXT_MAIN_MENU}</h1>
-			{MAIN_MENU_LIST_ENTRIES}<ul class="ilMainMenu ilMainMenuSide">
+{MAIN_MENU_LIST_ENTRIES}<ul class="ilMainMenu ilMainMenuSide">
 				<!-- BEGIN help_icon -->
 				<li class="ilMainMenu">
 					<a class="MMInactive" id="help_tr" href="#" onclick="return il.Help.listHelp(event, false);">

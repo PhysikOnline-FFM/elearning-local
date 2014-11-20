@@ -1,0 +1,144 @@
+/* Zum alten physik.css von PO ergaenzende Styles fuer die Bewerbungsseiten */
+h1 small { display: block; opacity: .8; font-size: 80%; }
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+	font-size: 16px;
+	background-image: url('../img/POTV_FlyerBG');
+	background-attachment: fixed;
+	background-size: cover;
+}
+.main-bodys, div#main{
+	max-width: 780px;
+}
+
+div#main {
+	margin: 0 auto;
+	background-color: white;
+	background-color: rgba(255, 255, 255, 0.87);
+	border: 1px solid silver;
+}
+
+div#main > div.main-bodys{
+	padding: 0 1em;
+}
+
+a#po-logo {
+	display: inline-block;
+}
+a#po-logo img {
+	padding: 2px 4px 0 8px;
+	height: 56px;
+}
+
+#physik-online-bar {
+	width: 100%;
+	margin-bottom: 30px;
+	height: 60px;
+	/*
+	position: relative;
+	top: 0px;
+	*/
+
+	border-bottom: 1px solid #e7e7e7;
+
+	background-color: white;
+	background-color: rgba(255, 255, 255, 0.87);
+	/*background: -moz-linear-gradient(-10deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 65%, rgba(245,245,245,1) 100%);
+	background: -webkit-linear-gradient(-10deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 65%, rgba(245,245,245,1) 100%);
+	background: linear-gradient(170deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 65%, rgba(245,245,245,1) 100%);*/
+}
+
+#physik-online-bar h1 {
+	display: inline-block;
+	margin-left: 9px;
+	font-family: Bitter, sans-serif;
+	font-size: 2.4em;
+	line-height: 18px;
+	vertical-align: top;
+}
+
+div.positionen div.heading a,
+div.no-positions {
+    background-color: silver;
+    display: block;
+    padding: 1em;
+    outline: none;
+}
+
+div.positionen div.heading.open a {
+	border-bottom: 1px solid black;
+}
+
+div.positionen div.heading.close a span.triangle {
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 7.5px 0 7.5px 7.5px;
+	border-color: transparent transparent transparent black;
+}
+
+div.positionen div.heading.open a span.triangle {
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 7.5px 7.5px 0 7.5px;
+	border-color: black transparent transparent transparent;
+}
+
+
+/* Formular */
+#tbl_contact table {
+  border-style:none;
+  margin-top:10px 0px 0px 0px;
+  padding:0px;
+}
+
+input.txt_field {
+  font-size: 0.9em; 
+  font-family:Arial,Verdana,Helvetica,sans-serif;
+  width:300px;
+}
+
+input.txt_field_nmb {
+  font-size: 0.9em; 
+  font-family:Arial,Verdana,Helvetica,sans-serif;
+  width:50px;
+}
+
+textarea.txt_field {
+  font-size: 0.9em; 
+  font-family:Arial,Verdana,Helvetica,sans-serif;
+  width:500px;
+  height:300px;
+}
+
+td.left {
+  padding: 4px;
+  margin: 0px;
+  text-align:right;
+  vertical-align:top;
+  width: 200px;
+}
+
+td.right {
+  padding: 4px;
+  margin: 0px;
+  vertical-align:top;
+}
+
+/* Einzelstyle Okt 2014 */
+div.side-images {
+	float: right;
+	width: 200px;
+	margin-left: 1em;
+}
+
+div.side-images img {
+	display: block;
+	margin: 0 0 .5em 0;
+	width: 100%;
+}

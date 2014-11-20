@@ -1,0 +1,28 @@
+<html>
+<body>
+      <form method="post" id="acctmgr_loginform" action="//elearning.physik.uni-frankfurt.de/projekt/login">
+<!--<div><input type="hidden" name="__FORM_TOKEN" value="1ebf19c21b26b981ec9fb413" /></div>-->
+        <div>
+          <input type="hidden" name="referer" value="https://elearning.physik.uni-frankfurt.de/projekt/timeline" />
+        </div>
+        <div class="textbox">
+          <label for="user">Nutzername:</label><br />
+          <input type="text" id="user" name="user" class="textwidget" size="20" />
+        </div>
+        <div class="textbox">
+          <label for="password">Kennwort:</label><br />
+          <input type="password" id="password" name="password" class="textwidget" size="20" />
+        </div>
+        <div id="login_options" class="central">
+          <p class="hint">
+            <a href="/projekt/reset_password">Kennwort vergessen?</a>
+          </p>
+        </div>
+        <div class="textbox">
+          <input type="checkbox" id="rememberme" name="rememberme" value="1" />
+          <label for="rememberme">Angemeldet bleiben</label>
+        </div>
+        <div id="login_options" class="buttons central nav">
+          <input type="submit" value="Anmelden" />
+        </div>
+      </form>
