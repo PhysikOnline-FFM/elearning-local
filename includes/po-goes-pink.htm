@@ -1,0 +1,49 @@
+<style>
+    body { 
+        background-image: url('/local/includes/po-goes-pink2.jpg');
+        background-attachment: fixed;
+        background-repeat: repeat-x;
+        background-color: rgb(253,204,226);
+    }
+    body div.po3-contentBlock {
+        background-color: rgba(255,255,255,0.85) !important;
+        margin: -10px auto;
+        padding: 10px 7px;
+    }
+    div.po-goes-pink {
+        color: #0163aa;
+        background-color: #fff;
+        border: 1px solid #b9b9b9;
+        margin: 8px 0; 
+        padding: 8px 12px; 
+        text-align: center;
+    }
+    div.po-goes-pink a {
+        font-weight: bold;
+    }
+    div.po-goes-pink .pink-title {
+        font-size: 1.2em
+    }
+</style>
+<script>
+    $(function(){
+        $('.po-goes-pink div.pink-more').toggle(false);
+
+        $('.po-goes-pink a.why-pink').click(function(event){
+            event.preventDefault();
+            $('.po-goes-pink div.pink-more').toggle(true);
+        });
+        
+    });
+</script>
+<div class="po-goes-pink">
+    <div class="pink-title">PhysikOnline ist <strong style="color:#ff69b4">pink!</strong> <a href="#why-pink" class="why-pink">Warum?</a></div>
+    <div class="pink-more" style="padding-top: 8px; text-align: justify;">
+        Aufgrund des Wunsches einer einzelnen Studentin hat sich das Erscheinungsbild von PhysikOnline für die Weihnachtszeit verändert. 
+        Auch du kannst bei uns etwas bewirken! Wir suchen ständig frische, motivierte Studenten, die sich unserem studentischen Projekt anschließen. 
+        Nur durch Teamzuwachs kann das Wegfallen von Absolventen ausgeglichen und die Plattform bestehen und weiterentwickelt werden! 
+        <a href="mailto:team@elearning.physik.uni-frankfurt.de">Schreib uns jetzt, um dich vorzustellen und uns beim nächsten Meeting kennen zu lernen.</a><br />
+        (Wenn dich besonders das Produzieren von Videos interessiert <a href="http://physikelearning.de/machmit">lies doch hier weiter und mach mit</a>.)<br /><br />
+        Außerdem wünscht euch das gesamte Team auf diesem Wege eine schöne und besinnliche Adventszeit.
+    </div>
+</div>
