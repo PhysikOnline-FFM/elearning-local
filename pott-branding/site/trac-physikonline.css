@@ -250,7 +250,7 @@ img.right {
      POTT #459 (erstmals 2012),
      POTT #742 (fuer 2013)   - Bommelmuetze aufm Logo
      POTT #1026 (fuer 2014) */
-
+/*
 #header .logo:after {
 	position: absolute;
 	left: -5px; top: -21px;
@@ -261,7 +261,7 @@ img.right {
 #header h1 a:hover::after, #header h1 a:focus::after {
 	position-left: 132px;
 }
-
+*/
 /* Ende der Weihnachtskorrekturen */
 
 /* Bugfix: Ueberbreite Meilensteine, usw.-Eingabefelder begrenzen */

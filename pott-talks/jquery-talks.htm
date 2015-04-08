@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>PhysikOnline Talks und Präsentationen - Goethe-Universität Frankfurt</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<!-- jQuery per CDN -->
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<!-- Bootstrap 3 per CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<!-- Handlebars templating per CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js"></script>
+
+	<!-- Masonry dynamical grid -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.2.2/masonry.pkgd.min.js"></script>
+
+	<!-- some styling -->
+	<style type="text/css">
+		body { background-color: #eef9ff; }
+		.page-header {
+			background-color: white;
+			box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
+			padding: 1em;			
+		}
+		img.logo {
+			width: 120px;
+			float: right;
+		}
+		.thumbnail:hover {
+			background-color: #f9f9f9;
+		}
+		.btn strong {
+			/* POTT-Links Raute # */
+			color: black;
+			display: inline-block;
+			margin-right: 3px;
+		}
+	</style>
+
+<body>
+<div class="container-fluid">
+
+<div class="page-header">
+	<img class="logo" src="https://elearning.physik.uni-frankfurt.de/local/logos/PhysikOnline-Logo3D.png">
+	<h1>Talkdatenbank-Visualisierung
+		<small>Tech-Demo</small>
+	</h1>
+	<p>Hier werden <a href="https://elearning.physik.uni-frankfurt.de/projekt/report/17">alle Talks</a>
+	dynamisch aus dem <a href="https://elearning.physik.uni-frankfurt.de/projekt/">POTT</a> geladen, mithilfe
+	des <a href="https://elearning.physik.uni-frankfurt.de/projekt/ticket/1068">Vortragsdatenbank</a>-Programmes.
+	Das JavaScript auf dieser Seite lädt sich dann einfach <a href="talkdb.php">einen JSON-Dump</a> der Vorträge,
+	lädt mit dem <a href="https://elearning.physik.uni-frankfurt.de/projekt/ticket/867">PDF-Previewer</a> Vorschaubilder
+	für die Vorträge und stellt das ganze in <a href="http://getbootstrap.com/">Bootstrap 3</a> eingebettet mit
+	<a href="http://masonry.desandro.com/">Masonry</a> dar. Siehe auch die <a href="talks.php">statische Variante</a>.
+</div>
+
+<div class="row talk_container">
+
+</div>
+
+<script type="text/javascript">
+function get_pdf_preview_url(pdf_url, page=null,size=500) {
+	// $.param has problems with UTF-8 characters, encode by ourselve
+	return "/pdf-preview/?url="+encodeURI(pdf_url)+"&size="+size+"x"+(page?"&page="+(page-1):"");
+	// page counting bug in PDF preview, workaround here.
+}
+
+$(function(){
+	$.getJSON("talkdb.php", function(data) {
+		// enrich data with thumbnails
+		dataThumbed = $.map(data, function(x) {
+			if(x.slides && !x.thumb)
+				x.thumb = get_pdf_preview_url(x.slides, 
+					"thumb_slide" in x ? x.thumb_slide : null);
+			
+			return x;
+		});
+
+		// get template and render!
+		tmplSource = $("#talks-template").html();
+		tmpl = Handlebars.compile(tmplSource);
+
+		rendered = tmpl({'talks':dataThumbed});
+		$(".talk_container").html(rendered);
+
+		msnry = new Masonry(".talk_container", {
+			itemSelector: '.msnry-item',
+			columnWidth: '.msnry-item'
+		});
+	});
+});
+</script>
+
+<script type="text/x-handlebars-template" id="talks-template">
+	{{#each talks}}
+	<div class="col-sm-6 col-md-4 msnry-item">
+		<div class="thumbnail">
+			<a href="{{ slides }}"><img src="{{ thumb }}" alt="thumbnail"></a>
+			<div class="caption">
+				<h4>{{ title }} <small class="date">{{ date }}</small></h4>
+				<p class="presenter">{{ presenter }}</p>
+				<p>
+				<a href="http://physikelearning.de/{{ ticket_id }}" class="btn btn-default btn-xs">
+					<strong>#</strong>{{ticket_id}}
+				</a>
+
+				{{#if video }}
+				<a href="{{video}}" type="button" class="btn btn-default btn-xs">
+					<span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> Video
+				</a>
+				{{/if}}
+				</p>
+			</div>
+		</div>
+	</div>
+	{{/each}}
+</script>
+
+</body>
+</html>

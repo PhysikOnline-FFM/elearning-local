@@ -7,6 +7,12 @@
 var width = 1200,
     height = 800;
 
+var filters = [
+	{ label: "Wiki-Seiten", filter: function(d) { return d.type == "wiki"; } },
+	{ label: "Geschlossene Tickets", filter: function(d) { return d.type == "ticket" && d.status && d.status == "closed"; } },
+	{ label: "Offene Tickets", filter: function(d) { return d.type == "ticket" && d.status && d.status != "closed"; } },
+];
+
 var color = d3.scale.category20();
 
 var force = d3.layout.force()
@@ -120,6 +126,20 @@ d3.json("get_graph.php", function(error, graph) {
     node.attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; });
   });
+
+  // setup filter menu
+  $("#filters").append($.map(filters, function(f){
+      var id = "filter-"+f.label;
+      var cb = $("<label><input type='checkbox' checked='checked'> "+f.label+"</label>");
+      cb.find('label').attr('for', id);
+      cb.find('input').attr('id', id).change(function() {
+          // if "filtered" is true, the node is shaded out.
+          var filtered = this.checked ? 0 : 1;
+
+          node.filter(f.filter).classed("filtered", filtered);
+      });
+      return cb;
+  }));
 });
 
 

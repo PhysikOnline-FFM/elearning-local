@@ -13,28 +13,38 @@
 </header>
 
 <div id="svg-container"></div>
-<div id="details">
-	<h3>Die Arbeit an PhysikOnline als Graph</h3>
-	<div class="info">
-	<p>Dieser Graph visualisiert unsere
-	<a href="/projekt">Projektmanagament-Plattform POTT</a>: Jeder
-	Knoten (Kreis) ist eine Seite davon (die blauen sind <a href="https://elearning.physik.uni-frankfurt.de/projekt/report/1">Tickets</a>,
-	die gelben <a href="https://elearning.physik.uni-frankfurt.de/projekt/wiki">Wiki-Seiten</a>).
-	Verlinkungen sind durch Kanten (Linien) dargestellt: Sobald es eine Verknüpfung gibt,
-	gibt es eine Linie.
+<div id="details-container">
+	<div id="details">
+		<h3>Die Arbeit an PhysikOnline als Graph</h3>
+		<div class="info">
+		<p>Dieser Graph visualisiert unsere
+		<a href="/projekt">Projektmanagament-Plattform POTT</a>: Jeder
+		Knoten (Kreis) ist eine Seite davon (die blauen sind <a href="https://elearning.physik.uni-frankfurt.de/projekt/report/1">Tickets</a>,
+		die gelben <a href="https://elearning.physik.uni-frankfurt.de/projekt/wiki">Wiki-Seiten</a>).
+		Verlinkungen sind durch Kanten (Linien) dargestellt: Sobald es eine Verknüpfung gibt,
+		gibt es eine Linie.
 
-	<p>Unser Ziel ist es natürlich, irgendwann alle Kreise miteinander zu verbinden,
-	da unsere Arbeit ja auch miteiander zu tun hat. Eine gute Dokumentation zeichnet
-	sich dadurch aus, dass sie untereinander stark vernetzt ist und dadurch Redundanz
-	verhindert und Klarheit schafft.
+		<p>Unser Ziel ist es natürlich, irgendwann alle Kreise miteinander zu verbinden,
+		da unsere Arbeit ja auch miteiander zu tun hat. Eine gute Dokumentation zeichnet
+		sich dadurch aus, dass sie untereinander stark vernetzt ist und dadurch Redundanz
+		verhindert und Klarheit schafft.
 
-	<p>Beim Anklicken von Knoten erscheint an dieser Stelle die Seite, auf diese Weise
-	kann man sich durch den Graph navigieren.
+		<p>Beim Anklicken von Knoten erscheint an dieser Stelle die Seite, auf diese Weise
+		kann man sich durch den Graph navigieren.
 
-	<p>Dieser Graph wird in Echtzeit aus unserer Plattform generiert. Die Quelltexte
-	sind <a href="pott-graph.js">frei</a> <a href="get_graph.php?s">einsehbar</a>.
+		<p>Dieser Graph wird in Echtzeit aus unserer Plattform generiert. Die Quelltexte
+		sind <a href="pott-graph.js">frei</a> <a href="get_graph.php?s">einsehbar</a>.
+		</div>
+		<div id="trac-content"><!-- Trac-Seite wird per JSON geladen --></div>
 	</div>
-	<div id="trac-content"><!-- Trac-Seite wird per JSON geladen --></div>
+</div>
+<div id="footmenu-container">
+	<div id="footmenu">
+		<b>Anzeigen:</b>
+		<span id="filters"><!--<input type="checkbox" class="filter" name="wiki"> Wiki-Seiten
+		<input type="checkbox" class="filter" name="open_ticket"> Offene Tickets
+		<input type="checkbox" class="filter" name="closed_ticket"> geschlossene Tickets--></span>
+	</div>
 </div>
 
 <script src="d3.v3.min.js"></script>

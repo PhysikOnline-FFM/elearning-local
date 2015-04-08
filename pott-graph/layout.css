@@ -5,6 +5,9 @@
 body {
 	font-family: Verdana, Arial, sans-serif;
 	margin: 0;
+
+	width: 100%;
+	height: 100%;
 }
 
 header {
@@ -32,22 +35,48 @@ header h1 .subtitle {
 svg {
 	position: relative;
 	z-index: 2;
+
+	width: 100%; height: 100%;
 	/*border: 1px solid #eee;*/
 }
 
-#details {
+#details-container {
 	position: absolute;
 	z-index: 3;
 	top: 0;
 	right: 0;
 
-	width: 300px;
-	/*overflow-y: scroll;*/
+	width: 400px;
+	height: 100%;
+	overflow-y: scroll;
 	overflow-x: hidden;
 
-	background: rgba(255,255,255,.9);
-	padding: 2em;
+	background: rgba(255,255,255,.6);
 	box-shadow: 0 -19px 18px rgba(0, 0, 0, 0.22);
+}
+
+#footmenu-container {
+	position: absolute;
+	z-index: 4;
+	bottom: 0;
+	left: 0;
+
+	width: 100%;
+	background: rgba(255,255,255,.35);
+	box-shadow: -10px 0 18px rgba(0,0,0, 0.22);
+}
+
+#footmenu {
+	padding: .5em;
+	text-align: center;
+}
+
+#filters label {
+	margin-right: 1em;
+}
+
+#details {
+	padding: 2em;
 }
 
 #details.ticket > h3 {
@@ -161,6 +190,11 @@ svg {
 .node.details-active {
 	stroke: #ef2929;
 	stroke-width: 3px;
+}
+
+.node.filtered {
+	/* almost invisible node */
+	opacity: .3;
 }
 
 .link {

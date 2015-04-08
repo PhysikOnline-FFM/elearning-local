@@ -7,6 +7,8 @@
  * means of simple trac definition lists. Talks and publications can
  * be filtered by keywords.
  *
+ * This script supports JSONP if called with ?jsonp=padding
+ *
  * -- Sven, Feb 2014
  *
  */
@@ -74,7 +76,13 @@ if(basename(__FILE__) == basename($_SERVER['PHP_SELF'])) {
 	connect_to_pott();
 	$talks = crawl_talks();
 	header("Content-Type: application/json; charset=utf-8");
-	print json_encode($talks);
+	if(isset($_GET['jsonp'])) {
+		$padding = $_GET['jsonp'];
+		print $padding.'(';
+		print json_encode($talks);
+		print ');';
+	} else
+		print json_encode($talks);
 } else {
 	// this file is included. Use it as a library
 }

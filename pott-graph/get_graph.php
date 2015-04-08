@@ -45,8 +45,12 @@ $link_regex = array(
 	// "stupid" full ticket links
 	"%(?:$wikiopen)?https?://elearning.physik.uni-frankfurt.de/projekt/ticket/(\d+)%Si",
 
-	// Todo: 
+	// Todo (schwierig!): 
 	// [[TitleIndex(POKAL/,hideprefix)]] --- aufloesen!!
+
+	// Nicht so schwer: Triviale Queries aufloesen
+	// allerdings kann hier eine Liste stehen, vgl. Problembeschreibung in POTT #811
+	"%${wikiopen}TicketQuery\(id=(\d+)%Si"
 	
 );
 
@@ -92,8 +96,8 @@ $nodedata = array();
 # The key will be used to identify the node (like a number for tickets and a string for wiki pages).
 # Any further columns will be put into $nodedata.
 $queries = array(
-	"SELECT 'ticket' as `type`, `id` as `key`,`description` as `text` FROM `ticket`",
-	'SELECT "ticket" as `type` `ticket` as `key`,`newvalue` as `text` FROM `ticket_change` WHERE (not newvalue ="") AND (field LIKE "%comment%" OR field = "description" OR field = "summary" )  ORDER BY ticket',
+	"SELECT 'ticket' as `type`, `id` as `key`, `description` as `text`, `status` as `status` FROM `ticket`",
+	'SELECT "ticket" as `type`, `ticket` as `key`, `newvalue` as `text` FROM `ticket_change` WHERE (not newvalue ="") AND (field LIKE "%comment%" OR field = "description" OR field = "summary" )  ORDER BY ticket',
 
 	# test: Wikiseiten. Dieses Query bekommt alle neusten Wikiseiten
 	# Intern-Seiten rausgefiltert, weil Seitenname sonst publik waere

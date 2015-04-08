@@ -16,7 +16,7 @@ $(function(){
 				c.toggle();
 			else
 			    $('<input type="text" id="shortlink_copy">').val(shortlink).click(function(){
-				$(this).select();
+				this.focus(); this.select();
 			    }).insertAfter('#shortlink');
 			return false;
 		});
@@ -43,7 +43,10 @@ function find_shortlink() {
 		"r": /projekt\/report/,
 		
 		// 3. Superkurze Ticketurls: ...de/t/123 => ...de/123
-		"/": /\/t\//		
+		"/": /\/t\//,
+
+		// 4. Entferne Hash (location.hash)
+		"": /#(.+)$/,
 	}
 
 	$.each(replacements, function(repl, regex) {
