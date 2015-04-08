@@ -55,7 +55,7 @@ div#po3-hauptseite-top {
 			background-color: @body-bg;
 			.bordered(@body-bg);
 			
-			&:hover, &:focus, &:active {.bordered(@main-color);}
+			&:hover, &:focus, &:active, &.simulate-hover {.bordered(@main-color);}
 		}
 		input#username {width: 250px;}
 		input#password {width: 150px;}
@@ -107,7 +107,7 @@ div#po3-hauptseite-tile {
 			}
 		}
 	}
-	.po3-tile:hover, .po3-tile:focus, .po3-tile:active {
+	.po3-tile:hover, .po3-tile:focus, .po3-tile:active, .simulate-hover {
 		opacity: 1;
 		.opacity-transition(150ms);
 		
@@ -168,6 +168,6 @@ div#po3-hauptseite-tile {
 	// Graustufen-Effekt soweit unterstützt
 	#po3-tile-veranstaltungen, #po3-tile-theo, #po3-tile-ebooks, #po3-tile-exp, #po3-tile-pwp {
 		.grayscale-on;
-		&:hover {.grayscale-off}
+		&:hover, &.simulate-hover {.grayscale-off}
 	}
 }
