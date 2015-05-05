@@ -22,7 +22,7 @@ function get_pdf_link($uri, $desc="", $size=Null, $extrastyles=Null) {
 	<span class='desc'>$desc</span></a>";
 }
 
-function get_pdf_preview($uri, $size=Null, $page=Null) {
+function get_pdf_preview($uri, $size=Null, $page=Null, $pagefrom=Null) {
 	global $url_path_to_pdf2jpg;
 	$data = array();
 
@@ -39,6 +39,7 @@ function get_pdf_preview($uri, $size=Null, $page=Null) {
 		$data['url'] = $uri;
 	if($size) $data['size'] = $size;
 	if($page != Null) $data['page'] = $page;
+	if(!$pagefrom != Null) $data['page_from'] = $pagefrom;
 	$str= $url_path_to_pdf2jpg.'?'.http_build_query($data);
 	return $str;
 }

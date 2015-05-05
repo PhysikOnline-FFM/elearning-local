@@ -45,7 +45,8 @@ if(preg_match('/[\'"]/', $url)) {
 }
 
 # make sure this doesnt crawl the web.
-if(strpos($url, 'uni-frankfurt.de') === false) {
+$url_allowed_regexp = '/uni-frankfurt.de|physikelearning.de/';
+if(!preg_match($url_allowed_regexp, $url)) {
 	header("HTTP/1.0 403 Forbidden");
 	exit_message("Bad url: Only uni-frankfurt.de domains allowed");
 }
@@ -65,6 +66,13 @@ if($page && !preg_match('/^\d{0,2}$/', $page)) {
 	header("HTTP/1.0 400 Bad Request");
 	exit_message("Bad page: $page, must be decimal [INT] between 0 and 99.");
 }
+
+$page_from = def_arg('page_from', 0);
+if(!is_numeric($page_from)) {
+	header("HTTP/1.0 400 Bad Request");
+	exit_message("Bad page_from: $page_from must be decimal");
+}
+$page = $page - $page_from;
 
 $tmp = $cache_dir.'/'.md5($url);
 $tmpfile = $tmp.'.pdf';
