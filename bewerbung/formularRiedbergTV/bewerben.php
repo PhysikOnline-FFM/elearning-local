@@ -42,16 +42,16 @@ $time      = (date("H:i"));
 
 
 # UTF8: Sonderzeichen repariert
-# Die Reparierung der Sonderzeichen repariert - 25.02.16 - LG
-$headers = "Content-Type: text/plain; charset='UTF-8'\n\n";
+#$headers = "Content-Type: text/plain; charset=UTF-8\n\n";
+# fehlt From header und ICH HAB AUCH KENIEN BOCK MEHR DAS ZU MACHEN
 
 
  # Diese Nachricht wird an E-Mail-Adresse gesendet
  $text = "Diese Bewerbung wurde am $day, den $day_num.$month.$year um $time Uhr via Webformular verschickt:\n\nName: $name\nE-Mail: $email\nStelle: $stelle_lesbar\nStudiengang: $studiengang\nSemester: $semester\nInformationen: \n$informationen";
- $text2 = "Hallo $name,\n\ndeine Bewerbung wurde am $day, den $day_num.$month.$year um $time Uhr via Webformular verschickt. Vielen Dank.\n\nWir werden uns demnächst bei dir melden.  Bei Fragen kannst du uns jederzeit auf diese Mail antworten.\n\nViele Gruesse,\ndas eLearning-Team der Physik\n\n\nP.S.: Folgende Angaben hast du gemacht:\n\nName: $name\nE-Mail: $email\nStudiengang: $studiengang\nSemester: $semester\nInformationen: \n$informationen";
- mail($an, "Bewerbung bei PhysikOnline", $text, "From: " . $email . "\r\n" . $headers);
- mail($email, "Bewerbung bei PhysikOnline", $text2, "From: PhysikOnline <team@elearning.physik.uni-frankfurt.de>" . "\r\n" . $headers);
- echo "Deine Bewerbung wurde gesendet. Vielen Dank.<br><br>Wir werden uns demnächst bei dir melden. <br>
+ $text2 = "Hallo $name,\n\ndeine Bewerbung wurde am $day, den $day_num.$month.$year um $time Uhr via Webformular verschickt. Vielen Dank.\n\nWir wollen nun erst einmal die Bewerbungen sammeln und werden uns dann vorraussichtlich Ende Oktober bei Dir melden. Bei Fragen kannst du uns jederzeit auf diese Mail antworten.\n\nViele Gruesse,\ndas eLearning-Team der Physik\n\n\nP.S.: Folgende Angaben hast du gemacht:\n\nName: $name\nE-Mail: $email\nStudiengang: $studiengang\nSemester: $semester\nInformationen: \n$informationen";
+ mail($an, "Bewerbung bei PhysikOnline", $text, "From: " . $email);
+ mail($email, "Bewerbung bei PhysikOnline", $text2, "From: PhysikOnline <team@elearning.physik.uni-frankfurt.de>");
+ echo "Deine Bewerbung wurde gesendet. Vielen Dank.<br><br>Wir wollen nun erst einmal die Bewerbungen sammeln und werden uns dann vorraussichtlich Ende Oktober bei Dir melden. <br>
 		Wenn du weitere Fragen hast, schreib uns einfach ein Mail an <a href='mailto:elearning@th.physik.uni-frankfurt.de'>elearning (at) th.physik.uni-frankfurt.de</a>.   
 		<br><br>Folgende Daten wurden verschickt: <br> <br>
 		<b>Name:</b> $name <br><b>E-Mail:</b> $email<br><b>Empfänger:</b> $an<br><b>Studiengang:</b> $studiengang<br><b>Semester:</b> $semester<br><b>Informationen:</b> <br><p style='font-family:Verdana,Arial,Helvetica,sans-serif;'>$informationen</p>";
@@ -92,12 +92,12 @@ function eingaben_ueberpruefen(){
 }
 </script>
 
-<h2>Bewerben bei PhysikOnline</h2>
+<h2>Bewerben bei RiedbergTV</h2>
 
 <form name="Formular" method="post" action="bewerben.php"
  onSubmit="return eingaben_ueberpruefen();">
 
-<p>Bitte f&uuml;lle f&uuml;r die Bewerbung folgendes Formular aus. Wenn du weitere Fragen hast, schreib uns einfach ein Mail an <a href='mailto:elearning@th.physik.uni-frankfurt.de'>elearning (at) th.physik.uni-frankfurt.de</a>.
+<p>Bitte f&uuml;lle f&uuml;r die Bewerbung folgendes Formular aus. Wenn du weitere Fragen hast, schreib uns einfach eine Mail an <a href='mailto:elearning@th.physik.uni-frankfurt.de'>elearning (at) th.physik.uni-frankfurt.de</a>.
 &nbsp; &rarr; <small><a href="./">Zurück zur Ausschreibung</a></small>
 </p>
 
@@ -130,7 +130,7 @@ wenn du Kontakt aufnehmen willst.
    <td class="left">Semesteranzahl:</td>
    <td class="right"><input type="text" class="txt_field_nmb" name="semester" maxlength="2"></td>
   </tr>
-      <?php
+      <!--<?php
 		$ausschreibungen_data = aktive_ausschreibungen();
 		if(count($ausschreibungen_data) > 1) {
 			?>
@@ -142,7 +142,7 @@ wenn du Kontakt aufnehmen willst.
 				}
 			    ?></select></td></tr><?php
 		} else print '<input type="hidden" name="stelle" value="0">';
-       ?>
+       ?>-->
   <tr>
    <td class="left">Weitere Informationen:<br><small>(z.B. Vorkenntnisse, Motivation, Infos &uuml;ber dich, ...)</small></td>
    <td class="right"><textarea class="txt_field" name="informationen"></textarea></td>
