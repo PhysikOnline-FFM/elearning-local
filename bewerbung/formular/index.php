@@ -1,88 +1,51 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-error_reporting(E_ALL & ~E_NOTICE);
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-// Ausschreibungsmagic in header.php
-include "header.php";
+  <title>Jobs bei PhysikOnline: Stellenangebote und Bewerben!</title>
 
-?>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-<h1>Kreatives Mitgestalten</h1>
-PhysikOnline steht f&uuml;r die Idee, als Studenten an der Goethe Universit&auml;t das Studium der Physik mitzugestalten und kreativ zu erg&auml;nzen. 
-Was darunter genau zu verstehen ist, ist eine zentrale Frage der wir regelm&auml;&szlig;ig in offenen Diskussionen nachgehen. 
-In der Vergangenheit sind daraus ganz unterschiedliche Projekte hervorgegangen, wie das <b>Elearning System</b> des Fachbereichs, <b>PhysikOnline-TV</b> (Podcast-Wiki Physik) 
-und die gerade ausgelaufene (bzgl. Förderzeit) kollaborative Arbeits- und Lernplatform <b>POKAL</b>. 
-In diesen Sparten spiegeln sich die diversen Interpretationen der oben genannten Zielsetzung wider, 
-die ma&szlig;geblich durch die Zusammensetzung der Gruppe von Studenten hinter PhysikOnline bestimmt wird. 
-Deshalb sind wir auf der Suche nach interessierten und motivierten Studenten, <b>wie Dir!</b> 
-Aus jedem neuen Kopf entspringen frische Ideen, die diskutiert und umgesetzt werden wollen. 
-PhysikOnline ist die studentische Plattform, wo genau das realisiert werden kann!
+  <link rel="stylesheet" href="css/bewerbung.css">
 
-<h2>Umsetzen von Ideen</h2>
-Die Herausforderung ist dabei anf&auml;ngliche, wage Ideen zu konkretisieren und nach und nach in Taten zu &uuml;bersetzen.
-Hierf&uuml;r sind meist auch Gelder (z.B. f&uuml;r Kameras, Videoschnittsoftware, Server, ...), R&auml;ume und andere Hilfe notwendig. 
-Diese versuchen wir regelm&auml;&szlig;ig z.B. durch Vermarktung der Ideen in Vortr&auml;gen vor potentiellen Unterst&uuml;tzern 
-und nutzen von F&ouml;rderungsprogrammen der Universit&auml;t und des Landes Hessen zu gewinnen. 
-Zus&auml;tzlich k&ouml;nnen wir durch die mittlerweile langj&auml;hrige Integration in den Fachbereich auch von dort auf Unterst&uuml;zung hoffen. 
-Ein erfolgreiches studentisches Zusammenarbeiten bei PhysikOnline setzt also nicht nur Kreativit&auml;t sondern auch Projektorganisation voraus!
+  	<link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic|Yanone+Kaffeesatz:400,300,200,700|Oswald:400,300,700' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
-<h2>Studenten</h2>
-Es liegt in der Natur des Curriculums des Physikstudiums, dass es nach planm&auml;&szlig;ig f&uuml;nf (Master) Jahren endet. 
-Da PhysikOnline ein ausschlie&szlig;lich studentisches Projekt ist, unterliegt es demnach zwangsl&auml;fig einem Schrumpfungsprozess, 
-dem es entgegenzuwirken gilt. Nicht nur aus Diversit&auml;tsgr&uuml;nden sind demnach explizit motivierte 
-<strong>Studenten eines jeden Semesters</strong> (und auch angrenzender Fachbereiche) herzlich zur Teilnahme eingeladen.
-<b>Es bedarf nun unbedingt neuer Gesichter im Team</b>, da das von uns etablierte und gepflegte System für den reibungslosen Vorlesungsbetrieb essentiell geworden ist und wir in die Jahre gekommen sind.
-<br>
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/bewerbung.css" rel="stylesheet" type="text/css" />
 
-<h2>Melde dich!</h2>
-Wenn du Interesse hast, uns alte Hasen abzulösen, weil du alles besser und moderner gestalten willst, dann w&uuml;rden wir Dich sehr gerne kennenlernen! 
-Schreib uns einfach eine unverbindliche Mail an <a href="mailto:elearning@th.physik.uni-frankfurt.de">elearning@th.physik.uni-frankfurt.de</a>.
-<br><br>
-Dein PhysikOnline Team!
-<br><br>
-PS: Wenn Du dich konkret f&uuml;r PhysikOnline/RiedbergTV interessierst, dann gibt es unterhalb noch mehr Infos zu den Stellenausschreibungen.
+</head>
 
+<body lang="de">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-<hr />
+<div id="wikitools"></div>
 
+	<div id="physik-online-bar">
+		<a id="po-logo" href="/" title="Zur Physik Online Startseite"><img src="https://elearning.physik.uni-frankfurt.de/Customizing/global/skin/physik/src/logo_small-new.png" alt="" /></a>
+		<h1 id="logo-title">
+			<span>PhysikOnline</span>
+		</h1>
+	</div>
 
-<h1>Stellenausschreibungen und Bewerbungen <small> bei PhysikOnline</small></h1>
-<!--
- Debugginginfo über Ausschreibungen:
-<?php
- ###var_dump($ausschreibungen);
- ###var_dump($ausschreibungen_data);
-?>
--->
-
-<p>Laufende Ausschreibungen:</p>
-<div class="positionen">
-<?php
-$found = 0;
-foreach($ausschreibungen_data as $id => $data) {
-	if(!isset($data["titel"]) || !isset($data["aktiv"])) {
-		print "Ungültige Ausschreibung: ".$ausschreibungen[$id];
-		continue;
-	}
-
-	if(preg_match("/Ja|Yes|True/i", $data["aktiv"])) {
-		print_ausschreibung($id);
-		$found++;
-	}
-}
-if(!$found) {
-	?><div class="no-positions">Derzeit leider <b>keine</b> offenen Positionen!
-	<p>Wir haben zurzeit keine Stellen ausgeschrieben. Wenn du unsere Arbeit gut findest, kannst
-	du uns trotzdem jederzeit schreiben. Es lohnt sich allemal: Wir arbeiten mit anderen
-	Uni-Organen zusammen, die auch oft Verstärkung suchen.
-	Siehe dazu <a href="/go/impressum">das Impressum</a> für Kontaktdaten.
-	</div><?php
-}
-?>
+<div class="container text-center" style="margin-top: 15em; background: white; padding-bottom: 20px;">
+<h2>Die Bewerbungsseite ist umgezogen:</h2>
+ <a href="http://physikonline.uni-frankfurt.de/portal/page/bewerbung">
+ 	<button class="btn btn-default">
+ 		Zur neuen Bewerbungsseite
+ 	</button>
+ </a>
 </div>
 
-	</div>
-	</div><!-- end of #main -->
 </body>
 </html>

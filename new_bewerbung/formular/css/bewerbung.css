@@ -1,0 +1,36 @@
+body {
+	background: #0163aa;
+}
+
+
+
+#main-container {
+	background-color: white;
+}
+
+#main-headElement {
+	text-align: center;
+	background: white;
+	margin-bottom: 50px;
+}
+
+#main-headElement img {
+
+	width: 200px;
+}
+
+#po-headElement {
+	
+	/*padding-bottom: 50px;*/
+}
+
+#po-headElement h1 {
+	color: #0163aa;
+
+}
+
+
+
+#bewerbung-container {
+	background: white
+}
