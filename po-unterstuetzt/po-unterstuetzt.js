@@ -28,28 +28,57 @@ var pa_advertise = {
              'placeAd': function(){
                  var imagelist =['DRK_Zeichen_Setzen_Helfer_Slogan.png', 'DRK_Zeichen_Setzen_Ehrenamt_Slogan.png', 'DRK_Setze_ein_Zeichen_Dach_Slogan.png'],
                      randomkey = Math.floor(Math.random() * (imagelist.length)),
-                     image = '<a href="drk.de"><img src="https://elearning.physik.uni-frankfurt.de/local/po-unterstuetzt/drk/'+imagelist[randomkey]+'" title="DRK.de" alt="" style="height:180px"/></a>',
-                     text  = '<strong>&raquo;PhysikOnline unterstützt&laquo;</strong><br />'+
+                     image = '<a href="http://drk.de"><img src="https://elearning.physik.uni-frankfurt.de/local/po-unterstuetzt/drk/'+imagelist[randomkey]+'" title="DRK.de" alt="" style="height:180px"/></a>',
+                     text  = '<strong>RiedbergTV unterstützt</strong><br />'+
                              'Die nächsten Tage möchten wir auf die Arbeit des DRK aufmerksam machen: Es bewältigt große humanitäre Aufgaben, während die meisten es als selbstverständlich hinnehmen, aber das ist es nicht. '+
-                             '<strong>Hilf auch du!</strong> <br />Werde Förderer, Blutspender oder <strong>ehrenamtlicher Helfer!</strong> Mehr Infos auf <a href="http://drk.de">drk.de</a> oder <a href="http://drkfrankfurt.de">drkfrankfurt.de</a>',
+                             '<strong>Hilf auch du!</strong> <br />Werde Förderer, Blutspender oder <strong>ehrenamtlicher Helfer!</strong> Mehr Infos auf <a href="https://www.drk.de/mitwirken/der-mensch-im-mittelpunkt-ehrenamt-beim-drk/">drk.de</a> oder <a href="http://drkfrankfurt.de/index.php/ehrenamt.html">drkfrankfurt.de</a>',
                    comment = '<br /><small>Diese Box wird im Rahmen von <a href="http://physikonline.uni-frankfurt.de/portal/page/po-unterstuetzt#SetzeEinZeichen" title="Wir unterstützen!">&raquo;PhysikOnline-Unterstützt&laquo;</a> angezeigt.</small>';
-                 var $parent = $('#po3-hauptseite-tile'),
-                     $newbox = $('<div class="po3-tile-row"></div>');
+                 var $parent = $('.seitenleiste div.box'),
+                     $newbox = $('<div class="po3-advertisement"></div>');
                  // add image and text to $newbox
-                 $newbox.css({'background-color': '#fff','border': '1px solid #b9b9b9', 'margin-top': '18px', 'padding':'8px'})
-                    .append($(image).css({'float':'left', 'display':'block', 'width':'50%', 'text-align':'center', 'margin-right': '14px'}))
-                    .append($('<div></div>').css({'text-align':'left'}).html(text+comment))
-                    .append($('<div style="clear:both;" />'));
+                 $newbox.css({'background-color': '#fff','border': '1px solid #b9b9b9', 'margin-top': '12px', 'padding':'8px'})
+                    .append($(image).css({'display':'block', 'text-align':'center'}))
+                    .append($('<div></div>').css({'text-align':'left', 'margin-top': '8px'}).html(text+comment));
                  // insert $newbox into tile section
-                 $($parent.children('.po3-tile-row')[3]).before($newbox);
+                 $parent.prepend($newbox);
               },
             },
-            {'name': 'nightlineffm',
-             'active': {'start': undefined, 'stop': undefined},
+            {'name': 'DRK-2',
+             'active': {'start': '2016-06-29', 'stop': '2016-07-12'},
              'placeAd': function(){
-                 var image = '',
-                     text  = '',
-                   comment = '<br />';
+                 var imagelist =['DRK_Zeichen_Setzen_Helfer_Slogan.png', 'DRK_Setze_ein_Zeichen_Gabel_Slogan.png', 'DRK_Setze_ein_Zeichen_Dach_Slogan.png', 'DRK_Setze_ein_Zeichen_Wasser_Slogan.png'],
+                     randomkey = Math.floor(Math.random() * (imagelist.length)),
+                     image = '<a href="http://drk.de"><img src="https://elearning.physik.uni-frankfurt.de/local/po-unterstuetzt/drk/'+imagelist[randomkey]+'" title="DRK.de" alt="" style="height:180px"/></a>',
+                     text  = '<strong>RiedbergTV unterstützt</strong><br />'+
+                             'Die nächsten Tage möchten wir auf die Arbeit des DRK aufmerksam machen: Es bewältigt große humanitäre Aufgaben, während die meisten es als selbstverständlich hinnehmen, aber das ist es nicht. '+
+                             '<strong>Hilf auch du!</strong> <br />Werde Förderer, Blutspender oder <strong>ehrenamtlicher Helfer!</strong> Mehr Infos auf <a href="https://www.drk.de/mitwirken/der-mensch-im-mittelpunkt-ehrenamt-beim-drk/">drk.de</a> oder <a href="http://drkfrankfurt.de/index.php/ehrenamt.html">drkfrankfurt.de</a>',
+                   comment = '<br /><small>Diese Box wird im Rahmen von <a href="http://physikonline.uni-frankfurt.de/portal/page/po-unterstuetzt#SetzeEinZeichen" title="Wir unterstützen!">&raquo;PhysikOnline-Unterstützt&laquo;</a> angezeigt.</small>';
+                 var $parent = $('.seitenleiste div.box'),
+                     $newbox = $('<div class="po3-advertisement"></div>');
+                 // add image and text to $newbox
+                 $newbox.css({'background-color': '#fff','border': '1px solid #b9b9b9', 'margin-top': '12px', 'padding':'8px'})
+                    .append($(image).css({'display':'block', 'text-align':'center'}))
+                    .append($('<div></div>').css({'text-align':'left', 'margin-top': '8px'}).html(text+comment));
+                 // insert $newbox into tile section
+                 $parent.prepend($newbox);
+              },
+            },
+            {'name': 'DPG-PfF',
+             'active': {'start': '2016-06-13', 'stop': '2016-06-28'},
+             'placeAd': function(){
+                 var image = '<a href="http://www.dpg-physik.de/pff/index.html"><img src="https://elearning.physik.uni-frankfurt.de/local/po-unterstuetzt/dpg/Logo-Physics-for-all.png" title="dpg-physik.de" alt="" style="height:180px"/></a>',
+                     text  = '<strong>RiedbergTV unterstützt</strong><br />'+
+                             'Die folgenden Tage möchten wir auf ein Projekt der DPG aufmerksam machen: Physikalische Phänomene sind universell und global, daher ist das Ziel von <strong>Physik für Flüchtlinge</strong>, '+
+                             'Kindern und Jugendlichen in Flüchtlingsunterkünften und Erstaufnahmeeinrichtungen in ganz Deutschland Physik spielerisch und anhand einfacher Experimentier-Aufgaben näherzubringen. Mehr Infos auf <a href="http://www.dpg-physik.de/pff/ueber_pff/index.html">dpg-physik.de/pff/</a>',
+                   comment = '<br /><small>Diese Box wird im Rahmen von <a href="http://physikonline.uni-frankfurt.de/portal/page/po-unterstuetzt#Physik4Fluechtlinge" title="Wir unterstützen!">&raquo;PhysikOnline-Unterstützt&laquo;</a> angezeigt.</small>';
+                 var $parent = $('.seitenleiste div.box'),
+                     $newbox = $('<div class="po3-advertisement"></div>');
+                 // add image and text to $newbox
+                 $newbox.css({'background-color': '#fff','border': '1px solid #b9b9b9', 'margin-top': '12px', 'padding':'8px'})
+                    .append($(image).css({'display':'block', 'text-align':'center'}))
+                    .append($('<div></div>').css({'text-align':'left', 'margin-top': '8px'}).html(text+comment));
+                 // insert $newbox into tile section
+                 $parent.prepend($newbox);
               },
             },
         ],
@@ -59,13 +88,13 @@ var pa_advertise = {
              'placeAd': function(){
                  var imagelist =['DRK_Zeichen_Setzen_Helfer_Slogan.png', 'DRK_Zeichen_Setzen_Ehrenamt_Slogan.png', 'DRK_Setze_ein_Zeichen_Dach_Slogan.png'],
                      randomkey = Math.floor(Math.random() * (imagelist.length)),
-                     image = '<a href="drk.de"><img src="https://elearning.physik.uni-frankfurt.de/local/po-unterstuetzt/drk/'+imagelist[randomkey]+'" title="DRK.de" alt="" style="height:180px"/></a>',
+                     image = '<a href="http://drk.de"><img src="https://elearning.physik.uni-frankfurt.de/local/po-unterstuetzt/drk/'+imagelist[randomkey]+'" title="DRK.de" alt="" style="height:180px"/></a>',
                      text  = '<strong>&raquo;PhysikOnline unterstützt&laquo;</strong><br />'+
                              'Die nächsten Tage möchten wir auf die Arbeit des DRK aufmerksam machen: Es bewältigt große humanitäre Aufgaben, während die meisten es als selbstverständlich hinnehmen, aber das ist es nicht. '+
-                             '<strong>Hilf auch du!</strong> <br />Werde Förderer, Blutspender oder <strong>ehrenamtlicher Helfer!</strong> Mehr Infos auf <a href="http://drk.de">drk.de</a> oder <a href="http://drkfrankfurt.de">drkfrankfurt.de</a>',
+                             '<strong>Hilf auch du!</strong> <br />Werde Förderer, Blutspender oder <strong>ehrenamtlicher Helfer!</strong> Mehr Infos auf <a href="https://www.drk.de/mitwirken/der-mensch-im-mittelpunkt-ehrenamt-beim-drk/">drk.de</a> oder <a href="http://drkfrankfurt.de/index.php/ehrenamt.html">drkfrankfurt.de</a>',
                    comment = '<br /><small>Diese Box wird im Rahmen von <a href="http://physikonline.uni-frankfurt.de/portal/page/po-unterstuetzt#SetzeEinZeichen" title="Wir unterstützen!">&raquo;PhysikOnline-Unterstützt&laquo;</a> angezeigt.</small>';
                  var $parent = $('#po3-hauptseite-tile'),
-                     $newbox = $('<div class="po3-tile-row"></div>');
+                     $newbox = $('<div class="po3-tile-row po3-advertisement"></div>');
                  // add image and text to $newbox
                  $newbox.css({'background-color': '#fff','border': '1px solid #b9b9b9', 'margin-top': '18px', 'padding':'8px'})
                     .append($(image).css({'float':'left', 'display':'block', 'width':'50%', 'text-align':'center', 'margin-right': '14px'}))
@@ -80,13 +109,13 @@ var pa_advertise = {
              'placeAd': function(){
                  var imagelist =['DRK_Zeichen_Setzen_Helfer_Slogan.png', 'DRK_Setze_ein_Zeichen_Gabel_Slogan.png', 'DRK_Setze_ein_Zeichen_Dach_Slogan.png', 'DRK_Setze_ein_Zeichen_Wasser_Slogan.png'],
                      randomkey = Math.floor(Math.random() * (imagelist.length)),
-                     image = '<a href="drk.de"><img src="https://elearning.physik.uni-frankfurt.de/local/po-unterstuetzt/drk/'+imagelist[randomkey]+'" title="DRK.de" alt="" style="height:180px"/></a>',
+                     image = '<a href="http://drk.de"><img src="https://elearning.physik.uni-frankfurt.de/local/po-unterstuetzt/drk/'+imagelist[randomkey]+'" title="DRK.de" alt="" style="height:180px"/></a>',
                      text  = '<strong>&raquo;PhysikOnline unterstützt&laquo;</strong><br />'+
                              'Die nächsten Tage möchten wir auf die Arbeit des DRK aufmerksam machen: Es bewältigt große humanitäre Aufgaben, während die meisten es als selbstverständlich hinnehmen, aber das ist es nicht. '+
-                             '<strong>Hilf auch du!</strong> <br />Werde Förderer, Blutspender oder <strong>ehrenamtlicher Helfer!</strong> Mehr Infos auf <a href="http://drk.de">drk.de</a> oder <a href="http://drkfrankfurt.de">drkfrankfurt.de</a>',
+                             '<strong>Hilf auch du!</strong> <br />Werde Förderer, Blutspender oder <strong>ehrenamtlicher Helfer!</strong> Mehr Infos auf <a href="https://www.drk.de/mitwirken/der-mensch-im-mittelpunkt-ehrenamt-beim-drk/">drk.de</a> oder <a href="http://drkfrankfurt.de/index.php/ehrenamt.html">drkfrankfurt.de</a>',
                    comment = '<br /><small>Diese Box wird im Rahmen von <a href="http://physikonline.uni-frankfurt.de/portal/page/po-unterstuetzt#SetzeEinZeichen" title="Wir unterstützen!">&raquo;PhysikOnline-Unterstützt&laquo;</a> angezeigt.</small>';
                  var $parent = $('#po3-hauptseite-tile'),
-                     $newbox = $('<div class="po3-tile-row"></div>');
+                     $newbox = $('<div class="po3-tile-row po3-advertisement"></div>');
                  // add image and text to $newbox
                  $newbox.css({'background-color': '#fff','border': '1px solid #b9b9b9', 'margin-top': '18px', 'padding':'8px'})
                     .append($(image).css({'float':'left', 'display':'block', 'width':'50%', 'text-align':'center', 'margin-right': '14px'}))
@@ -105,7 +134,7 @@ var pa_advertise = {
                              'Kindern und Jugendlichen in Flüchtlingsunterkünften und Erstaufnahmeeinrichtungen in ganz Deutschland Physik spielerisch und anhand einfacher Experimentier-Aufgaben näherzubringen. Mehr Infos auf <a href="http://www.dpg-physik.de/pff/ueber_pff/index.html">dpg-physik.de/pff/</a>',
                    comment = '<br /><small>Diese Box wird im Rahmen von <a href="http://physikonline.uni-frankfurt.de/portal/page/po-unterstuetzt#Physik4Fluechtlinge" title="Wir unterstützen!">&raquo;PhysikOnline-Unterstützt&laquo;</a> angezeigt.</small>';
                  var $parent = $('#po3-hauptseite-tile'),
-                     $newbox = $('<div class="po3-tile-row"></div>');
+                     $newbox = $('<div class="po3-tile-row po3-advertisement"></div>');
                  // add image and text to $newbox
                  $newbox.css({'background-color': '#fff','border': '1px solid #b9b9b9', 'margin-top': '18px', 'padding':'8px'})
                     .append($(image).css({'float':'left', 'display':'block', 'width':'50%', 'text-align':'center', 'margin-right': '14px'}))
