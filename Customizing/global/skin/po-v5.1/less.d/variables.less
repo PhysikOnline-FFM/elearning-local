@@ -1,0 +1,208 @@
+//== Variablen aus PO-V3.0
+@skin-url: "/Customizing/global/skin/po-v5.1/";
+
+@height-btn: 20px;
+@padding: 8px;
+@margin: 8px;
+
+@content-bg: #ffffff;
+
+@main-color: #005EAA;
+@lighter1: lighten(@main-color, 10%);
+@lighter2: lighten(spin(@main-color, 10), 20%);
+@darker1: darken(@main-color, 10%);
+@darker2: darken(spin(@main-color, -10), 20%);
+
+@second-color: #393939;
+@highlight1: lighten(@second-color, 25%);
+@highlight2: lighten(@second-color, 35%);
+@highlight3: lighten(@second-color, 50%);
+@highlight4: lighten(@second-color, 65%);
+
+@green: #01aa48;
+@red: #aa010f;
+@purpel: #aa0163;
+@brown: #aa4801;
+@border-color: @highlight3;
+
+//== Neue Variablen für PO-V5.1
+//== Colors
+/*		Color scheme
+		Dark BLue: #0f2152;
+		Mid Blue: #4c6586;
+		Green: #6ea03c;
+		Light Brown: #dcb496;
+		Dark Brown: #523228;
+		Orange: #fa8228;
+		External Blue: #21c5d8;
+		ILIAS 4 MainMenu Color: #c8e6ff;
+*/
+
+@brand-primary: @main-color;
+@brand-secondary: #01aa9d;
+@brand-success: @green;
+@brand-info: @purpel;
+@brand-warning: @brown;
+@brand-danger: @red;
+
+@background-images-path: "/templates/default/images/";
+@web-font-path: "/templates/default/fonts/";
+@icon-font-path: "/Services/UICore/lib/bootstrap-3.2.0/fonts/";
+
+@mid-gray: @highlight2;
+@il-primary-container-bg: @content-bg;
+@il-secondary-container-bg: @highlight3;
+
+@il-highlight-bg: #FFFFD0;
+@il-brand-3rd: @second-color;
+@gray-dark: @highlight1;
+//== Scaffolding
+@body-bg: #F1F1F1;
+@text-color: @gray-dark;
+@link-color: lighten(@brand-primary, 5%);
+@link-hover-color: darken(@link-color, 15%);
+
+//== Typography
+@font-family-sans-serif: 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+
+@font-size-base: 14px;
+@font-size-large: ceil((@font-size-base * 1.25));
+@font-size-small: ceil((@font-size-base * 0.85));
+
+@font-size-h1: floor((@font-size-base * 1.6));
+@font-size-h2: floor((@font-size-base * 1.4));
+@font-size-h3: ceil((@font-size-base * 1.3));
+@font-size-h4: ceil((@font-size-base * 1.2));
+@font-size-h5: ceil((@font-size-base * 1.1));
+@font-size-h6: @font-size-base;
+
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+@padding-base-vertical: 3px;
+@padding-base-horizontal: 8px;
+
+@padding-large-vertical: 6px;
+@padding-large-horizontal: 12px;
+
+@padding-small-vertical: 3px;
+@padding-small-horizontal: 6px;
+
+@padding-xs-vertical: 1px;
+@padding-xs-horizontal: 5px;
+
+@line-height-large: 1.33;
+@line-height-small: 1.5;
+
+@border-radius-base: 0px;
+@border-radius-large: 0px;
+@border-radius-small: 0px;
+
+//== Navs
+@nav-link-padding: 5px 10px;
+@nav-tabs-border-color: #E0E0E0;
+/* @nav-tabs-link-hover-border-color: @brand-primary; */
+@nav-tabs-active-link-hover-border-color: #E0E0E0;
+
+// this is related to the main menu
+@il-fixed-menu-height: 117px;
+@il-fixed-menu-height-bar-only: 40px;
+
+//== Breadcrumbs
+//
+//##
+@breadcrumb-padding-vertical: 6px;
+@breadcrumb-padding-horizontal: 6px;
+//** Breadcrumb background color
+@breadcrumb-bg: transparent;
+//** Breadcrumb text color
+@breadcrumb-color: @link-color;
+//** Text color of current page in the breadcrumb
+@breadcrumb-active-color: @link-hover-color;
+//** Textual separator for between breadcrumb elements
+@breadcrumb-separator: "»";
+
+//== Buttons
+//
+//##
+@btn-default-color: @link-color;
+@btn-default-border: darken(@link-color,20%);
+@btn-default-bg: @content-bg;
+
+//== Badges
+//
+//##
+@badge-color: #FFFFFF;
+//** Linked badge text color on hover
+@badge-link-hover-color: #FFFFFF;
+@badge-bg: darken(@brand-warning, 10%);
+
+//** Badge text color in active nav link
+@badge-active-color: #FFFFFF;
+//** Badge background color in active nav link
+@badge-active-bg: darken(@brand-warning, 10%);
+
+@badge-font-weight: bold;
+@badge-line-height: 1;
+@badge-border-radius: 10px;
+
+//== Forms
+//
+//##
+@input-border-radius: 0;
+@input-border: #CCCCCC;
+@input-border-focus: lighten(@brand-primary, 20%);
+@ilFormInputFontSize: @font-size-small;
+@input-height-base: (floor((@ilFormInputFontSize * @line-height-base)) + (@padding-base-vertical * 2) + 2);
+
+@ilFormColor: #808080;
+@ilFormBgColor: #FDFDFD;
+
+/* ILIAS variables candidates */
+@ilMainMenuColor: lighten(@brand-primary, 10%);
+@ilButtonFontSize: @font-size-small;
+
+//== Panels
+//
+//##
+@panel-bg: @il-secondary-container-bg;
+@panel-body-padding: 15px;
+@panel-heading-padding: 10px 15px;
+@panel-footer-padding: @panel-heading-padding;
+@panel-border-radius: @border-radius-base;
+
+//** Border color for elements within panels
+@panel-inner-border: #DDDDDD;
+@panel-footer-bg: #F5F5F5;
+
+@panel-default-text: @gray-dark;
+@panel-default-border: none;
+@panel-default-heading-bg: @il-secondary-container-bg;
+
+@panel-primary-text: @gray-dark;
+@panel-primary-border: none;
+@panel-primary-heading-bg: @il-primary-container-bg;
+
+//== DropDowns
+//
+//##
+@dropdown-link-hover-bg: lighten(@brand-primary, 53%);
+;
+
+//== Tables
+//
+//## Customizes the `.table` component with basic values, each used across all table variations.
+//** Padding for `<th>`s and `<td>`s.
+@table-cell-padding: 8px;
+//** Padding for cells in `.table-condensed`.
+@table-condensed-cell-padding: 5px;
+
+//** Default background color used for all tables.
+@table-bg: transparent;
+//** Background color used for `.table-striped`.
+@table-bg-accent: #FFFFFF;
+
+//** Border color for table and cell borders.
+@table-border-color: #DDDDDD;
+
+@il-table-head-bg: @highlight3;
+@il-data-table-bg: @highlight4;
+@il-table-cmd-bg: @highlight4;

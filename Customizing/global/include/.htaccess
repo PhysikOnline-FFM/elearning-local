@@ -1,0 +1,3 @@
+ErrorDocument 403 /Customizing/global/include/test/index.html
+order deny,allow
+deny from 93.234.165.97

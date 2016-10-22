@@ -1,0 +1,44 @@
+// BASIS: POTT #523
+/*
+ * Bei Container-Auflistungen (Kategorieseiten etc.) "Aktionen"
+ * nur beim drüberhovern anzeigen
+ ** */
+
+ /*
+.ilContainerBlock .ilFloatRight {
+    opacity: 0;
+}
+*/
+
+.ilContainerBlock .ilCLI:hover,
+div.ilContainerListItemOuterHighlight {
+    background-color: #F5F5F5;
+    transition: background-color 0.2s linear;
+}
+
+.ilContainerBlock .ilCLI:hover div.ilFloatRight,
+.ilContainerBlock .ilCLI div.ilFloatRight:hover {
+    opacity: 1;
+    transition: opacity 0.2s linear;
+}
+
+/**
+ * Obige Tabs nur anzeigen, wenn man mit Maus dorthin geht
+ * Ebenso mit diesem Baumansicht-Ein-Ausklapppfeil
+ ** */
+/* klappt, nur trotzdem mal deaktiviert:
+div.il_Header {
+	position: relative;
+}
+div.il_Header .il_Tab,
+a#imgtree {
+	opacity: 0;
+	position: absolute;
+	bottom: -10px;
+}
+div.il_Header .il_Tab:hover,
+a:hover#imgtree {
+	opacity: 1;
+	transition: opacity 0.7s linear;
+}
+*/

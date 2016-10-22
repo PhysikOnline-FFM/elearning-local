@@ -1,0 +1,515 @@
+/*
+ * Page Style / Layout
+ * Basiert auf Skin von Uni Freiburg.
+ */
+
+
+#ilAll, body, html, .po3-contentContainer, .po3-contentBlock {
+  background-color: @body-bg;
+  width: 100%;
+  min-height: 100% !important;
+}
+
+// Change subheading "Status: Offline" to red
+div.ilHeaderAlert {
+  color: @brand-danger;
+}
+
+#ilTopBar.ilTopBar.ilTopFixed.ilMemberViewMainHeader {
+  background-image: none;
+  background-color: @brand-danger;
+  float: right;
+}
+
+/**
+* ILIAS Head
+*/
+.ilMainHeader {
+    height: auto;
+    margin: 0; // po5, wichtig!
+}
+
+.ilFixedTopSpacer {
+  margin-top: 0;
+  padding-top: 5px; // Header ist nicht mehr fixed, daher reicht weniger. PA;
+}
+
+#ilTopBar.ilTopBar {
+  background-color: @main-color;
+  background-image: url("data:image/gif;base64,R0lGODlhAQCCAOYAABFpsBBoryh3tyN0tgRgqyl4uAhjrRtvsyBytQpkrS16uTB8uhZssSFztSZ2tyt5uBNqsCV1tglkrR5xtBVrsRhtsjN+uw1mrgdirCp5uBxwsyh4txpushJpsB9xtAxlrgFeqip4uB1xtCV2th1wtBRqsRRrsQdjrBlusjB9ug9oryR1thltsgRhqzJ9uxdtshdsshpvsxpusyR0tiJ0tSJztRJqsAJgqwxmrgljrSd3ty17uQ9nryd2tx9ytC57uQNgqwFfqg5nry98ugJfqwZirABeqjJ+uwtlrix6uQVhrDF9ugAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAABAIIAAAd3gEaCIEGFRIc3QIoEBC1Kj0WRGBgnBgY5EhIJCUidHzgXF0KjPCoBAQAAHTYQECUmFBQMDDAvFRUsKBwyMQcHGhokIhMTHj4ICA0NNTQDAzMrEREjDg49OgICGwUFIRkZDw9J4woKOz/oQ+oLCylL70suR/MWFoEAOw==");
+  background-repeat: repeat-x;
+  height: 100px;
+}
+
+.po5-TitleContainer {
+    display: inline-block;
+    margin: 8px 0 0 0;
+    
+    .po5-Logo {
+        margin-right: 25px;
+        padding-right: 25px;
+        float: left;
+        border-right: 1px solid white;
+    }
+    #po5-gufLogo {
+        max-height: 80px;
+    }
+
+    .ilTopTitle {
+      font-size: 30pt;
+      font-family: "Times New Roman", Times, serif;
+      font-weight: normal;
+      padding: 12px 0 0 200px;
+      float: none;
+    }
+    .ilTopSubtitle {
+        padding: 2px 0 0 200px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+} 
+
+div#po3-skyline {
+    /* Absolut positioniert... */
+    display: inline-block;
+    
+    position: absolute;
+    left: 600px;
+    top: 34px;
+
+    canvas {
+        // Überlagert das PNG
+        position: absolute;
+        top: 0; left: 0;
+        // standardmaessig ausgeblendet
+        opacity: 0;
+        // Uebergang zu ein/ausgeblendet
+        .opacity-transition(@time: 600ms);
+    }
+
+    a.running canvas {
+        // Animation laeuft/aktiv: Anzeigen
+        opacity: 1;
+        .opacity-transition(@time: 600ms);
+    }
+}
+
+ /* Responsive MainMenu Button */
+#ilTopNav button.navbar-toggle {
+   background-color: @darker1;
+   position: absolute;
+   top: -40px;
+   left: 20px;
+}
+#ilTopNav button.navbar-toggle:hover {
+    background-color: @main-color;
+}
+
+/**
+* MainMenu
+*/
+#ilTopBarNav .dropdown.open, #ilTopBarNav li:hover, #ilTopBarNav li:focus {
+  background-color: @main-color;
+  color: @second-color;
+}
+ilTopFixed .navbar-nav > .open > a:focus,
+#ilTopNav .navbar-nav > li.open > a {
+  border-top: none;
+}
+
+#ilTopNav.navbar {
+  min-height: none;
+  margin: 0px; //po5, wichtig!
+}
+
+#ilTopNav.navbar > .navbar-collapse, #ilTopNav.navbar {
+  padding: 0;
+}
+
+#ilTopNav .navbar-nav > li {
+  margin: 0px;
+}
+#ilTopNav .navbar-nav > li.open > a {
+  border-top:none;
+}
+#ilTopNav .navbar-nav > li > a {
+  border-top: 0px;
+  padding: 3px 10px;
+  font-size: 10pt;
+  color: @second-color;
+  border-right: 1px solid grey;
+  margin: 0;
+}
+
+#ilTopNav .navbar-nav > .active > a, 
+#ilTopNav .navbar-nav > .active > a:hover, 
+#ilTopNav .navbar-nav > .active > a:active, 
+#ilTopNav .navbar-nav > .active > a:focus, 
+#ilTopNav .navbar-nav > .open > a, 
+#ilTopNav .navbar-nav > .open > a:hover, 
+#ilTopNav .navbar-nav > .open > a:active, 
+#ilTopNav .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, 
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+  background-color: @second-color;
+  color: #ffffff;
+  border-top: none; //po5, wichtig für #ilTopNav .navbar-nav > .open > a:hover
+ }
+
+/**
+* Dropdown Menu
+*/
+.dropdown-header {
+  font-size: 14px;
+  background-color: @highlight4;
+  font-weight: bold;
+}
+
+.dropdown-menu, .dropdown-menu li > a {
+  background-color: @highlight4;
+  color: @second-color;
+}
+
+.dropdown-menu li > a:hover, 
+.dropdown-menu li > a:focus {
+  background-color: @second-color;
+  color: #ffffff;
+}
+
+/**
+* User Setting Buttons
+*/
+#ilTopBarNav {
+  margin-top: 59px;
+}
+#ilTopBarNav > li > a {
+  background-color: @darker1;
+}
+#ilTopBarNav > li > a:hover, 
+#ilTopBarNav > li > a:active, 
+#ilTopBarNav > li > a:focus,
+#ilTopBarNav .dropdown.open, 
+#ilTopBarNav li:hover, 
+#ilTopBarNav li:focus {
+  background-color: @main-color;
+}
+#ilTopBarNav > .active > a, 
+#ilTopBarNav > .open > a, 
+#ilTopBarNav > .active > a:hover, 
+#ilTopBarNav > .open > a:hover, 
+#ilTopBarNav > .active > a:active, 
+#ilTopBarNav > .open > a:active, 
+#ilTopBarNav > .active > a:focus, 
+#ilTopBarNav > .open > a:focus {
+  background-color: @highlight4;
+}
+#ilTopBarNav .dropdown-menu {
+  background-color: @highlight4;
+  
+  a { color: @second-color; }
+  
+  .dropdown-menu a:hover {
+    background-color: @second-color;
+    color: #ffffff;
+  }
+  
+  .dropdown-menu #ilMMSearchMenu a {
+    color: @second-color;
+  }
+}
+
+#ilMMSearchMenu p {
+  color: @second-color;
+}
+
+/* no left Banner, Content responsive */
+// placed here to be able to switch ilTopBar height responsively
+@media screen and (max-width: 768px) {
+  #ilTopBar.ilTopBar {
+	height: 40px;
+  }
+
+  .ilTopFixed {
+    left:0px;
+  }
+  
+  .ilMainMenu {
+    background-color: @body-bg;
+
+    
+    .ilContainerWidth{
+      padding: 0;
+      max-width: 100% !important;
+      width: 100%;
+    }
+    &.ilTopFixed {
+	  top: 40px;
+    }
+  }
+  
+  .ilFixedTopSpacer, .ilFixedTopSpacerBarOnly {
+    margin-top: 10px; // Header ist nicht mehr fixed, daher reicht weniger. PA; 
+  } 
+  
+  #ilTopBarNav {
+    margin-top: 0px;
+    
+    .dropdown-menu {
+	  background-color: @body-bg;
+	  top: 40px;
+    }
+  }
+
+  .ilMainHeader,
+  .ilMainHeader.ilTopFixed,
+  .ilTopSubtitle,
+  .ilTopTitle,
+  .po5-TitleContainer,
+  #ilTopBar.ilTopBar div#po3-skyline {
+	display: none;
+  }
+  
+  #ilTopNav {
+    margin: 0px 0 0 0px;
+        width: 100%;
+        
+    .navbar-nav {
+      margin: 0; //po5, wichtig
+      background-color: @darker1;
+      //background-image: url("data:image/gif;base64,R0lGODlhAQCCAOYAABFpsBBoryh3tyN0tgRgqyl4uAhjrRtvsyBytQpkrS16uTB8uhZssSFztSZ2tyt5uBNqsCV1tglkrR5xtBVrsRhtsjN+uw1mrgdirCp5uBxwsyh4txpushJpsB9xtAxlrgFeqip4uB1xtCV2th1wtBRqsRRrsQdjrBlusjB9ug9oryR1thltsgRhqzJ9uxdtshdsshpvsxpusyR0tiJ0tSJztRJqsAJgqwxmrgljrSd3ty17uQ9nryd2tx9ytC57uQNgqwFfqg5nry98ugJfqwZirABeqjJ+uwtlrix6uQVhrDF9ugAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAABAIIAAAd3gEaCIEGFRIc3QIoEBC1Kj0WRGBgnBgY5EhIJCUidHzgXF0KjPCoBAQAAHTYQECUmFBQMDDAvFRUsKBwyMQcHGhokIhMTHj4ICA0NNTQDAzMrEREjDg49OgICGwUFIRkZDw9J4woKOz/oQ+oLCylL70suR/MWFoEAOw==");
+      //background-repeat: repeat-x;
+      color: white;
+      
+      & > li > a {
+        color: white;
+        padding: 8px 10px;
+      }
+      
+      .dropdown-menu li > a,
+      .dropdown-menu .divider {
+        background-color: @main-color;
+        color: white;
+      }
+    }
+  }
+    #ilTopNav .navbar-nav > .active > a, 
+    #ilTopNav .navbar-nav > .active > a:hover, 
+    #ilTopNav .navbar-nav > .active > a:active, 
+    #ilTopNav .navbar-nav > .active > a:focus, 
+    #ilTopNav .navbar-nav > .open > a, 
+    #ilTopNav .navbar-nav > .open > a:hover, 
+    #ilTopNav .navbar-nav > .open > a:active, 
+    #ilTopNav .navbar-nav > .open > a:focus,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, 
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus,
+    .navbar-default .navbar-nav .open .dropdown-menu .dropdown-header {
+      background-color: @darker1;
+      color: #ffffff;
+      border-top: none; //po5, wichtig für #ilTopNav .navbar-nav > .open > a:hover
+     }
+}
+
+/**
+* Breadcrumb
+*/
+ol.breadcrumb {
+  font-size: 14px;
+  padding-top:2px;
+}
+
+div.il_HeaderInner {
+    padding-top: 0;
+}
+
+/* Tree */
+a#imgtree {
+  top: 180px;
+}
+
+.ilLeftNav {
+  background-color: @body-bg;
+  border-right: 2px solid @border-color;
+  z-index: 0;
+  width: 289px;
+  margin-left: 0px;
+  top: 140px;
+}
+
+/* Repository Content */
+.ilContainerWidth {
+  max-width: 95% !important;
+  right: 0px;
+}
+
+/* Categorie table */
+.ilContainerListItemContent ul.dropdown-menu li {
+  list-style-type: none;
+}
+
+/**
+* Footer
+*/
+div#minheight {
+    height: auto;
+}
+footer.ilFooter {
+  height: auto;
+  padding: 8px 8px;
+  line-height: 1;
+  font-size: 0.8em;
+  position: static;
+  background-color: @main-color;
+  
+  div.ilFooterContainer {
+    color: @highlight4;
+    #current_perma_link {
+      width: auto;
+      font-size: 100%;
+      padding: 0;
+      margin-left: 4px;
+      background-color: transparent;
+      border: none;
+    }  
+  }
+  a { color: white }
+  h3 { 
+    font-weight: bold;
+    margin-top: 4px;
+    margin-bottom: 0;
+    font-size: 100%;
+  }
+  ul { 
+    list-style-type: none; 
+    padding-left: 20px;
+    margin: 0;
+  }
+}
+
+/*.po5Footer {
+  //position: absolute;
+  right: 0;
+  bottom: 0 !important;
+  left: 0;
+}*/
+
+/**
+* Buttons
+**/
+
+//changed order of btn definitions for all primary buttons to work
+.btn-default {
+  background-color: @darker1;
+  border-color: @main-color;
+}
+.btn-primary {
+  background-color: @brand-success;
+  border-color: @brand-success;
+}
+.btn-link {
+    color:@darker1;
+}
+
+/**
+* Tabs
+**/
+#ilTab.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, #ilTab.nav-tabs > li.active > a:focus {
+  background-color: @darker1;
+}
+#ilTab {
+  border-color: -moz-use-text-color -moz-use-text-color @darker1;
+  border-bottom: 2px solid @darker1;
+}
+#ilTab.nav > li > a:hover, #ilTab.nav > li > a:focus {
+  color: #fff;
+  background-color: @main-color;
+}
+
+
+/**
+* Fonts
+**/
+h1.media-heading, h1.ilHeader {
+  color: @second-color !important;
+  font-family: "Times New Roman", Times, serif;
+}
+
+h3.ilHeader {
+  color: @highlight2;
+  text-transform: none;
+}
+div.ilHeaderDesc {
+  color: @highlight1;
+}
+
+.jstree a {
+  color: @link-color !important;
+}
+
+a {
+  color: @link-color;
+}
+
+a#il_mhead_t_focus  {
+  color: @second-color !important;
+}
+
+.ilTopMemberView h3 {
+  display: none;
+}
+
+.ilToolbar.navbar {
+  background-color:@highlight4;
+}
+
+// == FORMS
+/* define max form width */
+.form-horizontal input.form-control, .form-horizontal textarea.form-control,
+.form-horizontal select.form-control {
+  max-width: 760px;
+}
+.il_InfoScreenProperty {
+  color: @second-color;
+}
+.ilInfoScreenSec.form-horizontal .form-group {
+  background-color: white;
+}
+fieldset.ilTableFilter {
+  background-color: @highlight4;
+}
+
+div.il_Block, table.il_Block, div.ilBlockInfo {
+  background-color: @highlight4;
+}
+
+//New Object Button
+div.ilNewObjectSelector {
+  padding-right: 0px;
+}
+
+div.ilBlockRow1 {
+  background-color : white; //#E9E9E9;
+}
+
+.ilFrmPostTitle .alert-danger {
+  background-color: inherit !important;
+  border: inherit !important;
+} 
+
+/* make the alert warning message box (delete confirmation etc. better visible ) */
+.alert-warning {
+  background-color: lighten(@brand-warning, 20%);
+  border-color: darken(@brand-warning, 20%);
+  color: @brand-warning;
+}
+
+// remove system messages from the DOM
+#block_pdsysmess_0 {
+  display: none;
+}
+
+div.alert-danger {
+  margin-top: 50px;
+}

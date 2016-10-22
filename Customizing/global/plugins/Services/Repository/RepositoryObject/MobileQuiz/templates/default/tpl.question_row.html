@@ -1,0 +1,78 @@
+<style>
+    /* let the images small. Else they disturb the table*/
+    #QuestionTable img{
+        max-height: 75px;
+        max-width: 100px;
+    }
+</style>
+
+<!-- Enable LaTeX Support -------------------------------------------------- -->
+<script type="text/javascript">
+    
+    deEscapeCurvyBrackets();
+    
+    if ( {VAL_LATEX} ) {
+        (function () {
+          var head = document.getElementsByTagName("head")[0], script;
+          script = document.createElement("script");
+          script.type = "text/x-mathjax-config";
+          script[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({\n"
+            + "tex2jax: { inlineMath:  [['$$$','$$$']],\n"
+            + "           displayMath: [['$$','$$']],\n"
+            + "     }\n"
+            + "});";
+          head.appendChild(script);
+          script = document.createElement("script");
+          script.type = "text/javascript";
+          script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+          head.appendChild(script);
+        })();
+    }
+    
+    // -------------------------------------------------------------------------
+    
+    function deEscapeCurvyBrackets(){
+        
+         $('.mq_question_table_text').each(function( ) {
+             
+            var new_text = $(this).html();
+             
+            new_text.replace(/#\(#/g,"{");        
+            new_text.replace(/#\)#/g,"}");
+            
+            $(this).html(new_text);             
+         })        
+    }
+</script>
+
+<!-- Begin HTML Page ------------------------------------------------------- -->
+
+<tr class="{CSS_ROW}">
+    <td class="mq_question_table_text">
+        {VAL_SHOW_CHOICES_HREF}
+        {VAL_TEXT}
+    </td>
+    <td>
+        {VAL_TYPE}
+    </td>
+    <td>
+        {VAL_CHOICES}
+    </td>
+    <td>
+        {VAL_EDIT_QUESTION_HREF}
+        {VAL_EDIT_QUESTION_TXT}
+    </td>
+    <td>
+        {VAL_DELETE_QUESTION_HREF}
+        {VAL_DELETE_QUESTION_TXT}
+    </td>
+    <td>
+        {VAL_ARROW_UP_HREF}
+        {VAL_ARROW_UP_TXT}
+    </td>
+    <td>
+        {VAL_ARROW_DOWN_HREF}
+        {VAL_ARROW_DOWN_TXT}
+    </td>
+</tr>

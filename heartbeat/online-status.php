@@ -98,7 +98,7 @@ class HostQueries {
 		// paranoid:
 		if(strpos($url, '..') !== false || !preg_match('/^http/', $url)) err("Bad URL: $url");
 		// even more paranoid 
-		if(!preg_match('#^https?://[a-z0-9.-]+.uni-frankfurt.de/#', $url)) err("Need a uni Frankfurt URL");
+		if(! (preg_match('#^https?://[a-z0-9.-]+.uni-frankfurt.de/#', $url) || preg_match('#^https?://riedberg.tv/#', $url))) err("Need a uni Frankfurt URL"); // simple but dirty change to allow https://riedberg.tv
 		// using the HTTP PECL module (unfortunately here not present)
 		/*
 		$response = http_get($url, array('timeout'=>5), $infos);

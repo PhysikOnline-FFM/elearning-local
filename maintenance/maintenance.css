@@ -1,0 +1,19 @@
+/*
+ * Style für die Wartungsseite
+ * Lars Gröber, 30.09.16 
+ * Sven Koeppel, 14.06.2011
+ */
+
+html { background-image: url(stripe.png); }
+body {  background-image: url(stripe.png);}
+#box { background-color: white; border: 10px solid #A5D0E3; box-shadow: 0 .2em 1em .3em #CCE8EC; margin: 4em auto; padding: 20px 20px; }
+.left { text-align: center; }
+
+img { border: none; }
+
+.h1-top { font-size: 140%; font-weight: bold;  }
+h1 { margin-top: 0; font-size: 187%; font-weight: bold; }
+
+
+.right a { color: #27709D; text-decoration: none; }
+.right a:hover { text-decoration: underline; cursor: pointer; }

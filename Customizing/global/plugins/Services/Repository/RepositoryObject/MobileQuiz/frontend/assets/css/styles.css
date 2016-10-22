@@ -1,0 +1,84 @@
+/* center the content on big screens */
+.ui-content{
+    max-width: 1000px;
+    
+    position: relative;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+
+/* This is because if not, the pictures are taken as thumbnails. */
+.ui-li-thumb {
+	max-width: 500px;
+	max-height: 500px;
+	position: relative;
+	float: none;
+}
+
+/* Same reason */
+.ui-li-static.ui-li-has-thumb {
+	padding-left: 15px;
+}
+
+/* Additional Stuff */
+.ui-header{
+        background-image: -webkit-gradient(linear, left top, left bottom, from( #87afc9 ), to( #678fa9 )); /* Saf4+, Chrome */
+        background-image: -webkit-linear-gradient( #87afc9, #678fa9 ); /* Chrome 10+, Saf5.1+ */
+        background-image:    -moz-linear-gradient( #87afc9, #678fa9 ); /* FF3.6 */
+        background-image:     -ms-linear-gradient( #87afc9, #678fa9 ); /* IE10 */
+        background-image:      -o-linear-gradient( #87afc9, #678fa9 ); /* Opera 11.10+ */
+        background-image:         linear-gradient( #87afc9, #678fa9 );
+}
+
+.ui-btn{
+        background-image: -webkit-gradient(linear, left top, left bottom, from( #e6e6e6 ), to( #c6c6c6 )); /* Saf4+, Chrome */
+        background-image: -webkit-linear-gradient( #e6e6e6, #c6c6c6 ); /* Chrome 10+, Saf5.1+ */
+        background-image:    -moz-linear-gradient( #e6e6e6, #c6c6c6 ); /* FF3.6 */
+        background-image:     -ms-linear-gradient( #e6e6e6, #c6c6c6 ); /* IE10 */
+        background-image:      -o-linear-gradient( #e6e6e6, #c6c6c6 ); /* Opera 11.10+ */
+        background-image:         linear-gradient( #e6e6e6, #c6c6c6 );
+}
+
+.ui-btn:hover{
+        background-image: -webkit-gradient(linear, left top, left bottom, from( #b6b6b6 ), to( #969696 )); /* Saf4+, Chrome */
+        background-image: -webkit-linear-gradient( #b6b6b6, #969696 ); /* Chrome 10+, Saf5.1+ */
+        background-image:    -moz-linear-gradient( #b6b6b6, #969696 ); /* FF3.6 */
+        background-image:     -ms-linear-gradient( #b6b6b6, #969696 ); /* IE10 */
+        background-image:      -o-linear-gradient( #b6b6b6, #969696 ); /* Opera 11.10+ */
+        background-image:         linear-gradient( #b6b6b6, #969696 );
+}
+
+.ui-footer{
+        font-size: 0.8em;
+        font-weight:normal;
+        
+        text-align: center;
+        background-color: #666;
+        
+        padding: 2px 2px 2px 2px;
+}
+
+/* Make Choice Questions as broad as the screen*/
+.ui-field-contain
+.ui-controlgroup-controls{
+    width: 100%;
+}
+
+.question img {
+    max-height: 300px;
+    max-width: 400px;
+}
+
+.ui-listview li p {
+    font-size: 1.0em;
+    font-weight: normal;
+    margin: 0 0;
+}
+
+label.ui-btn {
+    font-weight: normal;
+}

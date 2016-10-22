@@ -1,0 +1,42 @@
+/*   Format Classes */
+.po-framed, .po-frame, .po-box {
+	.bordered;
+	/* .gradient-overlay(top, 0.08); */ //Wird laut #793 als altbacken und unpassend angesehen.
+	margin-bottom: (1 * @margin);
+	padding: (3 * @padding);
+}
+.small {
+    font-size: 0.85em;
+    text-decoration: none;
+}
+.light {
+    color: @highlight3;
+}
+.po-right {
+	float: right;
+	margin: 2px 0 2px 6px;
+}
+.po-left {
+	float: left;
+	margin: 2px 6px 2px 0;
+}
+
+// Clearfix, http://www.m6tt.com/2011/09/22/a-less-approach-to-clearfix
+.clearfix() {
+  zoom: 1;
+  &:before { content: ''; display: block; }
+  &:after { content: ''; display: table; clear: both; }
+}
+
+// Erst durch Javascript anzeigen
+.js-only {
+	display: none;
+}
+
+// Nur in Print-Layout
+.print-only {display: none !important}
+@media print {
+    .print-only {display: initial !important}
+	.print-hidden {display: none !important}
+	.print-show {display: initial !important}
+}

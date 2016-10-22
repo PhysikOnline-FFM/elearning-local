@@ -1,0 +1,3 @@
+RewriteEngine On
+#RewriteRule ^po-v5.1.css$ /Customizing/global/skin/po-v5.1/physik.css.php [L]
+RewriteRUle ^js/po-v5.1.js$  /Customizing/global/skin/po-v5.1/physik.js.php [L]

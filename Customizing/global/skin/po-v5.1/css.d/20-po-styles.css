@@ -1,0 +1,127 @@
+/**
+ * PO 2.1 WS 12/13: Einheitliche Style-Klassen um einheitliche Boxen zu machen,
+ * mit Bildern und so.
+ **/
+
+.po-clearfix:after, .po-clearafter:after {
+	content: "."; visibility: hidden; height: 0; display: block; clear: both;
+}
+
+.po-clear {
+	clear: both;
+}
+
+.po-hidden {
+	display: none;
+}
+
+.po-framed, .po-frame {
+	border: 1px solid #D6D6D6;
+	background: #fff url("/Customizing/global/skin/physik/src/FramedBack.gif") repeat-x;
+	margin-bottom: 20px;
+	padding: 20px;
+}
+
+.po-box h2 {
+	color: #666;
+	margin: .2em 0 .2em;
+	font-size: 150%
+}
+
+div.po-superheading {
+	/* label ueber einer ueberschrift analog subheading */
+	font-size: 89%;
+	margin-bottom: -9px;
+	color: #555;
+}
+
+.po-highlight {
+	color: #FF6600;
+}
+
+img.po-right {
+	float: right;
+	margin: 0 0 10px 10px;
+}
+
+img.po-left {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+.po-box dl dt {
+	font-weight: bold;
+}
+
+.po-box dl dd {
+	margin-left: 18px;
+}
+
+dl.po-feed dd {
+	margin: 0 0 18px 0;
+}
+
+
+/* Hero Units, according Twitter Bootstrap */
+.po-hero-unit {
+	/*background-color: #eee;
+	border-radius: 7px;*/
+	padding: 30px;
+}
+
+.po-hero-unit h2 {
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.po-hero-unit p {
+	font-size: 16px;
+	font-weight: 2000;
+	line-height: 27px;
+}
+
+/* Big: Boxen die sich viel platz nehmen (.po-box additional) */
+.po-big h2 {
+	margin: 20px 0;
+}
+
+
+/* Prettytables */
+table.po-pretty {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+
+table.po-pretty td, table.po-pretty th {
+	padding: 8px;
+	border-bottom: 1px solid #ddd;
+}
+
+table.po-pretty th {
+	font-weight: bold;
+	border-bottom: 2px solid #aaa;
+}
+
+table.po-pretty tr:nth-child(odd) td,
+table.po-pretty tr:nth-child(odd) th {
+	background-color: #fbfbfb;
+}
+
+.po-content tt {
+	font-family: monospace;
+}
+
+.po-content b {
+	font-weight: bold;
+}
+
+.po-content ul {
+	margin-left: 30px;
+}
+
+.po-content li {
+	list-style-position: outside;
+	list-style-type: square;
+	margin-bottom: .3em;
+}

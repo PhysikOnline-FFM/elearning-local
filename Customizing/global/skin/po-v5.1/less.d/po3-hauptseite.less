@@ -1,0 +1,209 @@
+div#po3-hauptseite-top {
+	//po5 width: 100%;
+	//po5 margin: 0px;
+	padding: 0px;
+	
+	div#po3-hauptseite-willkommen, div#po3-hauptseite-login, div#po5-message-area {
+		//po5 .bordered;
+		margin-bottom: (@margin*3);
+		display: inline-bock;
+		background-color: @content-bg;
+		width: 100%;
+	}
+
+	@hauptseite-box-size: 120px;
+
+	div#po5-message-area {
+		padding: 2*@padding 2*@padding;
+		min-height: @hauptseite-box-size;
+		//overflow: auto;
+
+		.panel-group {
+			margin: 0px;
+		}
+
+		.panel-body {
+			background-color: white;
+		}
+
+	}
+
+
+	
+	div#po3-hauptseite-willkommen {
+		//po5 float: left;
+		//po5 width: 640px;
+		padding: 2*@padding 2*@padding;
+		min-height: @hauptseite-box-size;
+		//po5 font-size: 0.9em;
+		color: @highlight1;
+		text-align: center;
+
+		h1 {
+			margin: 10px 0 2px 0;
+			color: @main-color;
+			font-size: 1.65em;
+			text-align: center;
+		}
+		
+		p {margin: 0}
+		
+		//po5 div#welcome-text {padding: 0 (2*@padding)}
+		
+		div#more-btn {
+			text-align: right;
+			margin: 5px 0;
+			a {
+				color: @highlight1;
+				font-size: 0.8em;
+				margin-right: 2px;
+			}
+		}
+		
+		div#more-text {
+            margin-top: (2*@margin); 
+            text-align: justify
+        }
+	}
+	
+	/*div#po3-hauptseite-login {
+		//po5 float: right;
+		padding: @padding;
+		h1,h2,h3,h4,h5 { 
+            margin-top: 0; 
+            margin-bottom: 4px;
+            font-size: 100%; 
+        }
+		input {
+			padding: (@padding/2);
+		}
+		input#username, input#password {
+			background-color: @body-bg;
+			.bordered(@body-bg);
+			
+			&:hover, &:focus, &:active, &.simulate-hover {.bordered(@main-color);}
+		}
+		input#username {width: 99%; margin-bottom: @padding}
+		input#password {width: 60%}
+		input.submit {
+			width: 37.5%;
+            margin-left: 1%;
+            
+			.bordered(@main-color);
+		}
+	}*/
+}
+
+div#po3-hauptseite-tile {
+	//po5 margin: 0px;
+	padding: 0px;
+	display: block;
+	clear: both;
+	
+	// Kachel-Anordnung
+	.po3-tile-row, #po3-tile-veranstaltungen, #po3-tile-schalter{
+		display: block;
+		text-align: center;
+	}
+	.po3-tile {
+		opacity: 0.4;
+		.opacity-transition(200ms);
+		
+		//po5 .bordered;
+		height: 140px;
+		margin-top: 18px;
+		position: relative;
+		display: inline-block;
+		background-color: @content-bg;
+		background-repeat: no-repeat;
+		background-position: center center;
+		
+		.po3-tile-caption{
+			opacity: 0;
+			.opacity-transition(200ms);
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			position: absolute; bottom: 16px;
+			background-color: @content-bg;
+			background-color: rgba(255,255,255, 0.75);
+			
+			.po3-tile-caption-main {font-size: 1.6em}
+			.po3-tile-caption-sub {
+				font-size: 1.0em;
+				font-style: oblique;
+			}
+		}
+
+		@media (max-width: 991px) {
+			.po3-tile-caption, .po3-tile {
+				opacity: 1;
+			}
+		}
+	}
+	.po3-tile:hover, .po3-tile:focus, .po3-tile:active, .simulate-hover {
+		opacity: 1;
+		.opacity-transition(150ms);
+		
+		.po3-tile-caption{
+			opacity: 1;
+			.opacity-transition(150ms);
+		}
+	}
+	a .po3-tile-caption-sub {color: @highlight1}
+	
+	#po3-tile-veranstaltungen{
+		height: 90px; 
+		margin-top: 0px;
+		.po3-tile-caption{bottom: 10px}
+	}	
+	#po3-tile-schalter{
+		height: 30px;
+		opacity: 1;
+		.po3-tile-caption{
+			bottom: 0;
+			opacity: 1;
+			height: 30px;
+			line-height: 30px;
+			.po3-tile-caption-main {font-size: 1.0em}
+            }
+	}
+	
+	#po3-tile-theo, #po3-tile-ebooks, #po3-tile-exp, #po3-tile-pwp {
+		//po5 width: (0.5 * (@content-width - 24px));
+		width: 100%;
+	}
+	//po5 #po3-tile-theo, #po3-tile-ebooks {margin-right: 6px}
+	//po5 #po3-tile-exp, #po3-tile-pwp {margin-left: 7px}
+	
+	.po3-tile-2col {
+		span.po3-tile-caption-main, span.po3-tile-caption-sub {
+			display: inline-block;
+			padding-right:16px;
+			text-align: right;
+		}
+		.po3-tile-caption span:first-child {
+			float: left;
+			padding-right: 0;
+			padding-left: 16px;
+			text-align: left;
+		}
+		span.po3-tile-caption-main{width: 60%}
+		span.po3-tile-caption-sub {width: 40%}
+	}
+	
+	// Hintergrundbilder
+	#po3-tile-veranstaltungen{background-image: url("@{skin-url}images/startseite/osz-hoersaal.jpg")}
+	#po3-tile-theo{background-image: url("@{skin-url}images/startseite/sterngerlach.jpg")}
+	#po3-tile-ebooks{background-image: url("@{skin-url}images/startseite/bib-ebooks-a.jpg")}
+	#po3-tile-exp{background-image: url("@{skin-url}images/startseite/cern-ddp.jpg")}
+	#po3-tile-pwp{background-image: url("@{skin-url}images/startseite/pwp-mitmachen.jpg")}
+	
+	// Graustufen-Effekt soweit unterstützt
+	#po3-tile-veranstaltungen, #po3-tile-theo, #po3-tile-ebooks, #po3-tile-exp, #po3-tile-pwp {
+        background-size:cover;
+        
+		.grayscale-on;
+		&:hover, &.simulate-hover {.grayscale-off}
+	}
+}

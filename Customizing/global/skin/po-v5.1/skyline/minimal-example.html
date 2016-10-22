@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<title>test</title>
+	<meta charset="utf-8">
+	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<!--<script src="http://sprunge.us/dVHc"></script>-->
+	<script src="skyline_json.js"></script>
+	<script src="script.js"></script>
+	<script src="sprintf.js"></script>
+	<script>
+		$(function(){
+			skyline.debug = 1;
+			skyline.setup($("#c"), skyline_data);
+			skyline.start();
+
+			// on browser reload, verhindere persistente checkboxen
+			$("#debug").attr('checked', skyline.debug);
+			$("#reverse").attr('checked', !skyline.is_forward());
+		});
+	</script>
+</head>
+<body>
+<h3>Skyline-Test</h3>
+
+<p>Dieses Minimalbeispiel demonstriert die Zerlegung der Frankfurter
+Skyline in Fouriermoden mit HTML Canvas, vorberechnet mit Numpy (Python)
+bzw. POKAL</p>
+
+<canvas id="c" width="50" height="50">w+h set by javascript</canvas>
+<p>Zeichenschritt <progress max="100" value="0"></progress> <span id="cur">cur</span> / <span id="total">total</span>
+
+<p>Zeichendetails (Indexes):
+<pre></pre>
+
+<p><button onclick="skyline.start();">Start</button>
+<button onclick="skyline.pause();">Pause</button>
+<button onclick="skyline.stop();">Stop</button>
+
+<p><label for="debug"><input id="debug" type="checkbox" onchange="skyline.debug = this.checked"> Debugausgaben anzeigen</label>
+<br><label for="reverse"><input id="reverse" type="checkbox" onchange="this.checked ? skyline.set_backward() : skyline.set_forward();"> Rückwärts laufen</label>
+
+</body>
+</html>

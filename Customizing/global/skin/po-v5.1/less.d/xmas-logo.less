@@ -1,0 +1,26 @@
+/**
+  Einbindung des Weihnachtslogos gemaess POTT Ticket #742.
+
+  Zum Deaktivieren einfach den folgenden Inhalt auskommentieren 
+  oder die @include-Einbindung in der po3-v3.0.less auskommentieren.
+
+  - Sven, 06.12.2013.
+**/
+
+@regular-logo-width: 55px;
+@regular-logo-height: 61px;
+
+@xmas-logo-width: 80px;
+@xmas-logo-height: 76px;
+
+// Ausfuehrlicher Selektor, um vorheriges Logo zu ueberschreiben
+body div.po3-contentBlock div.ilMainHeader div.ilMainMenuHeadSection div.ilTopTitle #il_main_logo {
+	width: @xmas-logo-width;
+	height: @xmas-logo-height;
+	// wegen der bekackten statischen positionierung muessen wir
+	// hier voll aufwaendig die alte Position ausrechnen.
+	margin-left:  @regular-logo-width - @xmas-logo-width;
+	margin-top: (@regular-logo-height - @xmas-logo-height - 1);
+	
+	background-image: url("@{skin-url}src/logo_header_weihnachten.png");
+}

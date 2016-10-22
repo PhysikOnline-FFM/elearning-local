@@ -3,27 +3,56 @@
 <head>
   <title>Physik eLearning</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="/local/maintenance/lounge.css" type="text/css" title="Chill out!">
-  <meta name="author" content="Sven Koeppel">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script   src="https://code.jquery.com/jquery-3.1.1.slim.min.js"   integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="   crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/local/maintenance/maintenance.css" type="text/css" title="Chill out!">
+  <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <meta name="author" content="Sven Koeppel, Lars Gröber">
   <meta charset="utf-8">
 </head>
 <body>
-<div id="box">
+<div id="box" class="container row">
 
-<div class="left">
+<div class="col-md-4 left">
+	<img class="img-responsive center-block" src="/local/maintenance/logo_big.jpg" alt="Physik eLearning">
+</div>
 
-<img src="/local/maintenance/logo_big.jpg" alt="Physik eLearning">
+<div class="col-md-8">
 
-</div><div class="right">
-
-<a class="h1-top" href="https://elearning.physik.uni-frankfurt.de">Physik eLearning</a>
+<a class="h1-top" href="https://elearning.physik.uni-frankfurt.de">PhysikOnline</a>
 <h1>Wartungsarbeiten</h1>
 
-<p>Diese Seite erscheint, wenn ILIAS nicht verfügbar ist. Das ist aber
-derzeit nicht der Fall! Gehen Sie bitte auf
-<a href="/">elearning.physik.uni-frankfurt.de</a> und genießen sie
-das exzellente eLearning-Angebot des Fachbereichs Physik der Uni Frankfurt.</p>
+<p>Wir installieren gerade ILIAS v5.1.</p>
+<p>Dieser Vorgang sollte heute Abend abgeschlossen sein. 
+In der Zwischenzeit können wir euch nur empfehlen, einen Blick auf unseren <a href="http://physikonline.uni-frankfurt.de/portal/page/blog">Blog</a> oder auf <a href="https://riedberg.tv">RiedbergTV</a> zu werfen.</p>
+<small>This site is temporarily down for maintenance, we install ILIAS v5.1 and plan to be back online this evening. In the meantime you may have a look at our <a href="http://physikonline.uni-frankfurt.de/portal/page/blog">Blog</a> or at <a href="https://riedberg.tv">RiedbergTV</a>.</small>
 
+<hr>
+
+<p>Der geplante Ablauf:</p>
+<ol class="list-group">
+	<!-- relevante Klassen: list-group-item-success und active -->
+	<li class="list-group-item list-group-item-success">1. Zugang zur Plattform sperren.</li>
+	<li class="list-group-item list-group-item-success">2. Backup der Datenbank und lokaler Dateien erstellen.</li>
+	<li class="list-group-item list-group-item-success">3. Dateien von ILIAS v5.1 herunterladen und alte Dateien überschreiben.</li>
+	<li class="list-group-item list-group-item-success">4. Konfigurationsdateien mit alten überschreiben.</li>
+	<li class="list-group-item list-group-item-success">5. Datenbank mit ILIAS-internen Mitteln anpassen lassen.</li>
+	<li class="list-group-item list-group-item-success">6. Neuen Skin installieren und aktivieren.</li>
+	<li class="list-group-item list-group-item-success">7. Neues ILIAS auf "Öffentlich" schalten aber Zugriff serverseitig verbieten.</li>
+	<li class="list-group-item list-group-item-success">8. Kontrollstruktur neuladen.</li>
+	<li class="list-group-item list-group-item-success">9. Neue Plugins installieren und aktivieren.</li>
+	<li class="list-group-item active">10. Neue Installation auf Fehler überprüfen und letzte Anpassungen vornehmen.</li>
+	<li class="list-group-item">11. Serverseitig Zugriff zulassen -> Update abgeschlossen!</li>
+</ol>
+
+<div class="progress">
+  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="10"
+  aria-valuemin="0" aria-valuemax="100" style="width:80%">
+    <span class="">80% Complete</span>
+  </div>
+</div>
 <!--
 <p>PhysikOnline zieht heute (05.09.2013) auf einen neuen Server um. Die Plattform wird bald wieder verfügbar sein.
    Falls Sie dringend die Plattform benötigen, kontaktieren Sie bitte das <b><a href="mailto:elearning@th.physik.uni-frankfurt.de">eLearning-Team</a></b>

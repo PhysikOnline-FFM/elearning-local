@@ -1,0 +1,187 @@
+<style>
+    .numeric-chart-div{
+        border:1px solid #bbbbbb;
+        background: #e9e9e9;
+        margin-bottom: 20px;
+        padding: 0px 7px 7px 7px;
+    }
+    .choice-chart-div img {
+        max-height: 300px;
+        max-width: 600px;
+    }
+    .numeric-chart-title {
+        font-size: 1.5em;
+        line-height: 1.2em;
+        margin-bottom: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        
+    }    
+    .numeric-chart-content{
+        
+    }
+    .numeric-chart-labels{
+        float:left;
+        width: 5%;
+        height:350px;
+    }    
+    .numeric-chart-label{        
+        width:100%;
+        overflow: auto; 
+        border-bottom: 1px solid #dddddd;
+    }
+    .numeric-chart-label-text{          
+        width:100%;
+        text-align: right;
+        padding-right: 10px;
+    }    
+    .numeric-chart-plot{
+        float:left;
+        width: 95%;
+    }
+    .numeric-chart-canvas{
+        height: 350px !important;
+    }
+</style>
+
+<div class="numeric-chart-div"> 
+    <div class="numeric-chart-title">
+        {title}
+    </div>
+    
+    <!-- Canvas which is used to draw the chart-->
+    <div class="numeric-chart-content">
+        <div id="chart-labels-{question_id}" class="numeric-chart-labels">
+            <!-- emtpy at the start -->
+        </div>
+        <div class="numeric-chart-plot">
+            <canvas id="canvas-{question_id}" class="numeric-chart-canvas"></canvas>
+        </div>
+    </div>
+    
+    <div>
+        {correct_answer_text}
+    </div>
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+
+<!-- JAVASCRIPT for rendering the charts -->
+<script src="./Customizing/global/plugins/Services/Repository/RepositoryObject/MobileQuiz/lib/Chart.js"></script>
+<script>
+    /**
+     * All functionality is in the document ready function to set the 
+     * environment to this particular chart and template.
+     * Else they begin to interfear with each other.
+     */
+    $( document ).ready(function() {
+
+        var url = "{ajax_interface_url}";
+
+        var data = [{data}]; 
+
+        // plot the chart end remember the plot
+        var myChart = plotTheNumChart(data);
+
+        // set timer for ajax request
+        setInterval(function() {        
+            // ajax call
+            $.ajax({
+              type: "POST",
+              dataType: "json",
+              url: url,
+              data: {
+                    'question_id':"{question_id}",
+                    'round_id':"{round_id}",
+                    'action':"updateNumeric",
+                    'secret':"{secret}",
+                },
+              success: function(response){
+                  //console.log("AJAX Request sucess: "+ response);
+
+                  // update chart
+                  myChart.data.datasets[0].data = response;
+                  myChart.update();
+
+                },
+              error: function(){
+                  console.log("AJAX Request failed: "+url);
+              },
+            });
+
+        }, {ajax_update_time});
+
+
+    // -----------------------------------------------------------------------
+    // -----------------------------------------------------------------------
+
+        function plotTheNumChart(data){
+
+            // calculate steps manually, so that maximal 10 are on the screen
+            var steps = Math.max.apply(Math, [{data}]);
+
+            var plot = document.getElementById("canvas-{question_id}");
+            var myChart = new Chart(plot, {
+                type: 'bar',
+                data: {
+                    labels: [{labels}],
+                    datasets: [{
+                        label: 'Number of Votes',
+                        data: [{data}],
+                        backgroundColor: [{colors}],
+                        borderColor: [{colors_border}],
+                        borderWidth: 1
+                    }],
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    defaultFontSize: 20,
+                    scales: {
+                        xAxes: [{           
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero:true,
+                                min: 0,
+                                stepSize: Math.ceil(steps/10),
+                                fontSize: 20,
+                            },
+                        }],
+                    },
+                    title: {
+                        display: false,
+                        text: '{title}',
+                        fontSize: 16,
+                    },
+                    legend: {
+                        display: false,
+                    },
+                },        
+            });
+            return myChart;
+        }
+    }); 
+</script>
+
+<!-- Enable LaTeX Support -------------------------------------------------- -->
+<script type="text/javascript">
+    if ( {latex} ) {
+        (function () {
+          var head = document.getElementsByTagName("head")[0], script;
+          script = document.createElement("script");
+          script.type = "text/x-mathjax-config";
+          script[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({\n"
+            + "tex2jax: { inlineMath:  [['$$$','$$$']],\n"
+            + "           displayMath: [['$$','$$']],\n"
+            + "     }\n"
+            + "});";
+          head.appendChild(script);
+          script = document.createElement("script");
+          script.type = "text/javascript";
+          script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+          head.appendChild(script);
+        })();
+    }
+</script>

@@ -1,105 +1,117 @@
 <!-- Diese Datei wird seit PhysikOnline 2.1 (neu seit 3.0) automatisch als STARTSEITE
      (Magazin) geladen! Sie befindet sich unter /local/includes/portal-magazin.htm
 -->
-
-
-
 <div class="po-content" id="po-hauptseite">
 	<div id="po3-hauptseite-top">
-
-
 	<!-- Weihnachten 2015, #1231 -->
 	<!--PO:Include id="po-goes-pink"/-->
 
-		<div class="" id="po3-hauptseite-willkommen">
-			<h1>Willkommen bei PhysikOnline</h1>
-			<div id="welcome-text">
-				<p>PhysikOnline ist das eLearning-Portal des <a href="http://www.physik.uni-frankfurt.de/">Fachbereichs Physik</a> der&nbsp;<a href="http://www.uni-frankfurt.de/">Goethe&nbsp;Universit&auml;t</a>.</p>
-				<div id="more-text" class="hidden-js">
-					<p>Hier finden sie multimedial unterstützte Vorlesungen, Aufgaben, Kompedien, Repetitorien, Java-Applets, Maple-Arbeitsblätter, Skripte und vieles mehr.</p>
-					<p>Nach dem Login können Sie PhysikOnline personalisieren (persönlicher Schreibtisch, automatische Benachrichtigungen, eigene Lerngruppen, WebDAV-Zugriff und vieles mehr). <br />
-					Seit Wintersemester 07/08 verzeichnet PhysikOnline über 1400 registrierte Benutzer.</p>
+		<div class="row ">
+			<div class="col-lg-8">
+				<div class="" id="po3-hauptseite-willkommen">
+					<h1>Willkommen bei PhysikOnline</h1>
+					<div id="welcome-text">
+						<p>PhysikOnline ist das eLearning-Portal des <a href="http://www.physik.uni-frankfurt.de/">Fachbereichs Physik</a> der&nbsp;<a href="http://www.uni-frankfurt.de/">Goethe&nbsp;Universit&auml;t</a>.</p>
+						<div id="more-text" class="hidden-js">
+							<p>Hier finden Sie multimedial unterstützte Vorlesungen, Aufgaben, Kompedien, Repetitorien, Java-Applets, Maple-Arbeitsblätter, Skripte und vieles mehr. Nach dem Login können Sie PhysikOnline personalisieren (persönlicher Schreibtisch, automatische Benachrichtigungen, eigene Lerngruppen, WebDAV-Zugriff und vieles mehr). Seit Wintersemester 07/08 verzeichnet PhysikOnline über 1400 registrierte Benutzer.</p>
+						</div>
+						<div id="more-btn"><a class="js-only" href="#mehr">mehr</a></div>
+					</div>
 				</div>
-				<div id="more-btn"><a class="js-only" href="#mehr">mehr</a></div>
+			</div>
+			<div class="col-lg-4">
+				<div class="panel-group" id="po5-message-area">
+					<h2 hidden id="po5-no-message-message">
+						Momentan liegen keine Wartungsmeldungen vor.
+					</h2>
+					<!-- nur testweise hier eingebunden -> soll über js automatisch passieren -->
+					<!-- for the time being: nur zwei (möglichst kurze) Meldungen einbinden -->
+					  <div class="panel panel-info">
+					    <div class="panel-heading">
+					      <h4 class="panel-title">
+					        <a data-toggle="collapse" data-parent="#po5-message-area" href="#m1">Willkommen auf PhysikOnline Version 5.1.</a>
+					      </h4>
+					    </div>
+					    <div id="m1" class="panel-collapse collapse">
+					      <div class="panel-body">
+					      	PhysikOnline läuft nun auf ILIAS Version 5.1. Solltet ihr auf Probleme stoßen, <a href="mailto:elearning@itp.uni-frankfurt.de">kontaktiert</a> uns.
+					      </div>
+					    	<div class="panel-footer">
+					    		In dieser Box werden in Zukunft alle (Wartungs-)Meldungen angezeigt.
+					    	</div>
+					    </div>
+					  </div>
+					
+					  <div class="panel panel-success">
+					    <div class="panel-heading">
+					      <h4 class="panel-title">
+					        <a data-toggle="collapse" data-parent="#po5-message-area" href="#m2">Die Suche funktioniert nun wieder.</a>
+					      </h4>
+					    </div>
+					    <div id="m2" class="panel-collapse collapse">
+					      <div class="panel-body">Wir wurden darauf aufmerksam gemacht, dass die Suche auf der Webseite nicht funktioniert. Das Problem ist nun gelöst. Bitte entschuldigt die Unanehmlichkeiten. Falls ihr auf weitere Probleme stößt, <a href="mailto:elearning@itp.uni-frankfurt.de">kontaktiert</a> uns.</div>
+					    </div>
+					  </div>
+					
+				</div>
 			</div>
 		</div>
-
-		<div class="" id="po3-hauptseite-login">
-			<form id="form_po3_login" method="post" action="ilias.php?lang=de&client_id=FB13-PhysikOnline&cmd=post&cmdClass=ilstartupgui&cmdNode=di&baseClass=ilStartUpGUI&rtoken=" name="formlogin">
-				<table>
-					<tr>
-						<td colspan="2"><input id="username" type="text" name="username" maxlength="200" placeholder="Benutzername oder HRZ-Name" /></td>
-					</tr>
-					<tr>
-						<td><input id="password" type="password" name="password" placeholder="Passwort" /></td>
-						<td><input class="submit" type="submit" value="Anmelden" name="cmd[showLogin]" /></td>
-					</tr>
-				</table>
-			</form>
-		</div>
-
-
 	</div><!-- ende von #po3-hauptseiten-top -->
 
+		<!-- Startseite Tiles -->
+		<div id="po3-hauptseite-tile" >
+		<div class="row">
+			<div class="col-md-12">
+				<div class="po3-tile-row">
+					<a href="/goto_FB13-PhysikOnline_cat_49.html">
+					<div id="po3-tile-veranstaltungen" class="po3-tile">
+						<div class="po3-tile-caption">
+							<span class="po3-tile-caption-main">Veranstaltungen</span>
+						</div>
+					</div>
+					</a>
+				</div>
+			</div>
+		</div>
 
-	<div id="po3-hauptseite-tile" class="js-only">
-<!--
-<a href="/bewerbung/formular/" title="Kreativer, motiverter Kopf? Mach mit!">
-<img src="/local/bewerbung/aktion-jan2015/banner_2014c.jpg" alt="" style="width:100%; margin-bottom: 16px; border: 1px solid #b9b9b9;" />
-</a>
--->
-		<div class="po3-tile-row">
-			<a href="/goto_FB13-PhysikOnline_cat_49.html">
-			<div id="po3-tile-veranstaltungen" class="po3-tile">
-				<div class="po3-tile-caption">
-					<span class="po3-tile-caption-main">Veranstaltungen</span>
-				</div>
+		<div class="row po3-tile-row">
+			<div class="col-md-6 po3-tile-2col">
+				<a href="/goto_FB13-PhysikOnline_cat_41.html">
+					<div id="po3-tile-theo" class="po3-tile">
+						<div class="po3-tile-caption">
+							<span class="po3-tile-caption-main">Theoretische Physik</span>
+							<span class="po3-tile-caption-sub">Vorlesungen</span>
+						</div>
+					</div>
+				</a>
+				<a href="/goto_FB13-PhysikOnline_cat_74.html">
+					<div id="po3-tile-ebooks" class="po3-tile">
+						<div class="po3-tile-caption">
+							<span class="po3-tile-caption-main">eBooks</span>
+							<span class="po3-tile-caption-sub">Zusatzmaterial</span>
+						</div>
+					</div>
+				</a>
 			</div>
-			</a>
-		</div>
-		<div class="po3-tile-row po3-tile-2col">
-			<a href="/goto_FB13-PhysikOnline_cat_41.html">
-			<div id="po3-tile-theo" class="po3-tile">
-				<div class="po3-tile-caption">
-					<span class="po3-tile-caption-main">Theoretische Physik</span>
-					<span class="po3-tile-caption-sub">Vorlesungen</span>
-				</div>
+
+			<div class="col-md-6 po3-tile-2col">
+				<a href="/goto_FB13-PhysikOnline_cat_42.html">
+					<div id="po3-tile-exp" class="po3-tile">
+						<div class="po3-tile-caption">
+							<span class="po3-tile-caption-main">Experimentalphysik</span>
+							<span class="po3-tile-caption-sub">Vorlesungen</span>
+						</div>
+					</div>
+				</a>
+				<a href="https://riedberg.tv">
+					<div id="po3-tile-pwp" class="po3-tile">
+						<div class="po3-tile-caption">
+							<span class="po3-tile-caption-main">Riedberg TV</span>
+							<span class="po3-tile-caption-sub">Projekt</span>
+						</div>
+					</div>
+				</a>
 			</div>
-			</a>
-			<a href="/goto_FB13-PhysikOnline_cat_42.html">
-			<div id="po3-tile-exp" class="po3-tile">
-				<div class="po3-tile-caption">
-					<span class="po3-tile-caption-sub">Vorlesungen</span>
-					<span class="po3-tile-caption-main">Experimentalphysik</span>
-				</div>
-			</div>
-			</a>
-		</div>
-		<div class="po3-tile-row po3-tile-2col">
-			<a href="/goto_FB13-PhysikOnline_cat_74.html">
-			<div id="po3-tile-ebooks" class="po3-tile">
-				<div class="po3-tile-caption">
-					<span class="po3-tile-caption-main">eBooks</span>
-					<span class="po3-tile-caption-sub">Zusatzmaterial</span>
-				</div>
-			</div>
-			</a>
-			<a href="https://riedberg.tv">
-			<div id="po3-tile-pwp" class="po3-tile">
-				<div class="po3-tile-caption">
-					<span class="po3-tile-caption-sub">Projekt</span>
-					<span class="po3-tile-caption-main">Riedberg TV</span>
-				</div>
-			</div>
-			</a>
-<!-- 			<a href="http://podcast-wiki.physik.uni-frankfurt.de/">
-			<div id="po3-tile-pwp" class="po3-tile">
-				<div class="po3-tile-caption">
-					<span class="po3-tile-caption-sub">Projekt</span>
-					<span class="po3-tile-caption-main">Podcast Wiki Physik</span>
-				</div>
-			</div>
-			</a> -->
 		</div>
 		<div class="po3-tile-row">
 			<a href="#">
@@ -110,7 +122,10 @@
 			</div>
 			</a>
 		</div>
-	</div><!-- ende von #po3-hauptseiten-tile -->
+		</div>
+		<!-- Ende Startseite Tiles -->
+
+	
 
 	<!-- Kategorien-Auflistung -->
 	<div id="po3-hauptseite-list" class="print-show">

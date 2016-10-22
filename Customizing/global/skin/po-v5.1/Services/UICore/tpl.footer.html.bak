@@ -1,0 +1,89 @@
+<div class="po5Footer row">
+	<div class="col-xs-6 col-md-3">
+		<h3><a href="#load_physikonline_universe" class="po-universe footer">PhysikOnline</a></h3>
+		<ul>
+			<li><a href="/go/impressum" title="Kontaktadressen">Impressum</a></li>
+			<li><a href="/go/nutzungsvereinbarung" target="_blank">Nutzungsbedingungen</a></li>
+			<li><a href="/go/datenschutz">Datenschutzerkl&auml;rung</a></li>
+			<li id="js-only-feedback">Problem berichten</li>
+			<!--<a href="/projekt" title="Zum PhysikOnline-Projektbereich (Teambereich und Organisation)">Projekt</a>-->
+		</ul>
+	</div>
+	<div class="col-xs-6 col-md-3">
+		<h3><a href="#load_physikonline_universe" class="po-universe footer">Unterprojekte</a></h3>
+		<ul>
+			<li><a href="http://physikonline.uni-frankfurt.de" title="Mehr über PhysikOnline, unsere Projekte und Mitarbeiter">Über uns</a></li>
+			<li><a href="/projekt" title="Zum PhysikOnline-Projektbereich (Teambereich und Organisation)">Organisation</a></li>
+			<li><a href="http://riedberg.tv" title="Schaue Videos zu deinem Campus auf Riedberg.TV">Riedberg TV</a></li>
+			<li><a href="https://pokal.uni-frankfurt.de" title="Physik Onlines Kollaborative Arbeits- und Lernplattform">POKAL</a></li>
+		</ul>
+	</div>
+	<div class="hidden col-xs-6 col-md-2 js-only werkzeuge">
+		<h3>Seitenwerkzeuge</h3>
+		<ul>
+			<!-- per Javascript eingebunden: -->
+			<!--<li><a href="#">Kurzlink</a></li>-->
+			<!--<li><a href="#">Mobilversion</a></li>-->
+			<!--<li><a href="#">Feedback</a></li>-->
+		</ul>
+	</div>
+	<div class="col-sm-6 col-md-6">
+		<a href="#load_physikonline_universe" class="po-universe footer">PhysikOnline</a> ist ein student. Projekt des 
+		<a href="http://www.physik.uni-frankfurt.de">Fachbereichs Physik</a> der 
+		<a href="http://www.uni-frankfurt.de" title="Goethe-Universit&auml;t Frankfurt am Main">Goethe-Universit&auml;t</a>
+	</div>
+
+    <div class="hidden">
+        <bdo class="ilWhiteSpaceNowrap" dir="ltr">powered by ILIAS (v{ILIAS_VERSION})</bdo> | 
+        <!-- BEGIN items -->
+        <a href="{URL_ITEM}"<!-- BEGIN blank --> target="_blank"<!-- END blank -->>{TXT_ITEM}</a>
+        <!-- BEGIN item_separator --> | <!-- END item_separator -->
+        <!-- END items -->
+    </div>
+    
+    <!-- BEGIN dev_bl -->
+    <div id="devmodeBlock">
+    {MEMORY_USAGE}
+    {SESS_INFO}
+    <!-- BEGIN call_history -->
+    <center><br /><table border="0"><tr><td colspan="2">
+    <i>Controller History:</i></td></tr>
+    <!-- BEGIN c_entry --><tr><td class="small">- {C_ENTRY}</td><td class="small">{C_FILE}</td></tr><!-- END c_entry -->
+    </table></center>
+    <!-- END call_history -->
+    <!-- BEGIN included_files -->
+    <a name="devinclsthd"></a>
+    <br /><a href="#devinclsthd" onclick="$('#devinclst').toggle();"><i>Included Files</i> <span class="caret"></span></a>
+    <div id="devinclst" class="xsmall" style="display:none;">
+    <!-- BEGIN i_entry -->
+    {I_ENTRY}<br />
+    <!-- END i_entry -->
+
+    </div>
+    <!-- END included_files -->
+    <!-- BEGIN xhtml_validation -->
+    <table class="fullwidth_invisible"><tr><td class="ilInvisibleBorder">
+    {VALIDATION}
+    </td></tr></table>
+    <!-- END xhtml_validation -->
+    </div>
+    <!-- END dev_bl -->
+</div>
+<div class="clearfix"></div>
+
+<!-- piwik po3, siehe POTT #442 -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+
+  (function() {
+    var u="/logs/piwik/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "2"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><img src="/logs/piwik/piwik.php?idsite=2&amp;rec=1" style="border:0" alt="" /></noscript>
+<!-- End Piwik Code -->
